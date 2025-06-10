@@ -7,6 +7,8 @@ app = FastAPI(title="RAG API")
 # Registrar rutas
 app.include_router(upload.router)
 
-@app.get("/")
-def root():
-    return {"message": "Hola mundo desde FastAPI + RAG"}
+
+
+
+
+
