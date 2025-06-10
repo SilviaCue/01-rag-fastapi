@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .env
 venv/
+*.log
+storage/docs_raw/
+storage/docs_chunks/
