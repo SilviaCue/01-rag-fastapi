@@ -15,3 +15,5 @@ def get_embedding(text: str) -> list[float]:
     except Exception as e:
         print(" Error en Gemini embedding:", e)
         return []
+
+
