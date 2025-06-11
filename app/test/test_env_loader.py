@@ -1,0 +1,5 @@
+from app.config.settings import GEMINI_API_KEY, DOCS_RAW_PATH, CHUNK_SIZE
+
+print("GEMINI_API_KEY:", GEMINI_API_KEY)
+print("DOCS_RAW_PATH:", DOCS_RAW_PATH)
+print("CHUNK_SIZE:", CHUNK_SIZE)

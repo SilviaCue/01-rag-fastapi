@@ -1,13 +1,9 @@
-
-
-#endpoint /upload
-# ruta routers/upload.py
-#Subir archivos PDF, Word, etc.
-
 from fastapi import APIRouter, UploadFile, File
 import shutil
 import os
-from app.services.file_parser import extract_text_from_pdf  #  importar parser
+
+# Importamos la clase FileParser
+from app.services.file_parser import FileParser
 
 router = APIRouter()
 
@@ -26,8 +22,11 @@ async def upload_document(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    #Extraer texto
-    text = extract_text_from_pdf(file_path)
+    # Crear el parser
+    parser = FileParser(UPLOAD_DIR)
+    
+    # Extraer texto
+    text = parser.parse_document(file.filename)
     
     # Guardar texto en archivo .txt
     txt_filename = os.path.splitext(file.filename)[0] + ".txt"
@@ -42,9 +41,6 @@ async def upload_document(file: UploadFile = File(...)):
         "filename": file.filename,
         "text_file": txt_filename
     }
-
-
-
 
 
 
