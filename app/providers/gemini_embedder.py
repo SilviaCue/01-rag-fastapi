@@ -1,3 +1,4 @@
+
 import google.generativeai as genai
 from app.config.settings import GEMINI_API_KEY
 
@@ -12,5 +13,5 @@ def get_embedding(text: str) -> list[float]:
         )
         return response["embedding"]
     except Exception as e:
-        print(" Error en get_embedding:", e)
-        raise
+        print(" Error en Gemini embedding:", e)
+        return []
