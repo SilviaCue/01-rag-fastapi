@@ -1,0 +1,297 @@
+[
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 0,
+    "text": "Introducción\nLos centros de llamadas de emergencias sanita-\nrias se han convertido en una tercera puerta de\nentrada a los sistemas sanitarios, que ejercen in-\nfluencia sobre atención primaria y especializada.\nLas personas demandantes que se encuentran en\nuna situación de urgencia o emergencia realizan\nuna llamada y su episodio puede ser resuelto bien\ncon consejos sanitarios, bien con movilización de\nalgún recurso. La gestión de un centro de llama-\ndas de emergencias sanitarias se basa en ofrecer"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 1,
+    "text": "-\ndas de emergencias sanitarias se basa en ofrecer\nun nivel de servicio con respuesta rápida y equili-\nbrio de costes. La carga de trabajo se determina\natendiendo a los tiempos de asistencia y al volu-\nmen de demanda. Este trabajo se centra en el\npronóstico de este último aspecto. Además, la\nmejora en la eficiencia en la gestión de centros de\nemergencias adquiere especial significado en los\nperiodos de crisis económica profunda como el\nactual. Los instrumentos de pronóstico de las de-\nmanda de l"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 2,
+    "text": "s instrumentos de pronóstico de las de-\nmanda de llamadas recibidas son un elemento\nclave para una estrategia sostenida de mejora y\ncreación de valor.\nAunque tradicionalmente se ha utilizado el mé-\ntodo de las medias móviles, en el ámbito acadé-\nmico se ha prestado atención a otros métodos\nmás complejos, particularmente el análisis de se-\nEmergencias 2012; 24: 181-188\n181\nORIGINAL\nEvaluación de modelos de series temporales para\nla previsión de la demanda de emergencias sanitarias\nJOSÉ DÍAZ-HIERR"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 3,
+    "text": " demanda de emergencias sanitarias\nJOSÉ DÍAZ-HIERRO1, JOSÉ JESÚS MARTÍN MARTÍN2, ÁNGEL VILCHES ARENAS3,\nMARÍA PUERTO LÓPEZ DEL AMO GONZÁLEZ2, JOSÉ MARÍA PATÓN ARÉVALO1,\nCLARA VARO GONZÁLEZ4\n1Empresa Pública de Emergencias Sanitarias, Málaga, España. 2Universidad de Granada, España. 3Universidad\nde Sevilla, España. 4Investigador independiente, España.\nObjetivo: Evaluar las ventajas de la utilización conjunta de 6 modelos de series tempo-\nrales para mejorar la gestión de la demanda a corto plazo d"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 4,
+    "text": "a mejorar la gestión de la demanda a corto plazo de llamadas de emergencias\nsanitarias.\nMétodo: Se ha analizado la demanda de emergencias sanitarias en el Servicio Provin-\ncial de Málaga entre 2004 y 2008 mediante 6 modelos desarrollados con software es-\ntándar, tres modelos de descomposición y tres econométricos, que consideran meses\nestivales y valores atípicos, casos de gripe y número de pernoctaciones como variables\nexógenas. La comparación de modelos se ha realizado mediante test econométri"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 5,
+    "text": "e modelos se ha realizado mediante test econométricos\nhabituales: la raíz cuadrada del error cuadrático medio (RMSE), el error absoluto por-\ncentual medio (MAPE) y el máximo del error absoluto porcentual medio (MaxAPE) en-\ntre otros.\nResultados: Los modelos presentan un MAPE inferior al 5%. En la fase de estimación, el\nmodelo ARIMA con intervención presenta la menor RMSE. El modelo estructural armóni-\nco obtiene el menor recorrido entre el MAPE y MaxAPE. En la fase de validación, el mo-\ndelo ARI"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 6,
+    "text": " MaxAPE. En la fase de validación, el mo-\ndelo ARIMA con intervención muestra el peor ajuste, y el modelo estructural armónico y\nARIMAX los mejores.\nConclusiones: El empleo simultáneo de los modelos genera un intervalo de pronósticos\nde demanda de emergencias que mejora la planificación a corto plazo. Los modelos de\ndescomposición y ARIMA con intervención alertan ante cambios inesperados, mientras\nque los modelos que incorporan variables exógenas, ARIMAX y estructural armónico, in-\ntroducen esce"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 7,
+    "text": ", ARIMAX y estructural armónico, in-\ntroducen escenarios alternativos de planificación, mejoran el conocimiento de la deman-\nda y apoyan la toma de decisiones. Su implementación con software estándar disminuye\nlos costes de aplicación en centros de emergencias. [Emergencias 2012;24:181-188]\nPalabras clave: Emergencias sanitarias. Previsión. Tendencia. Organización y adminis-\ntración.\nCORRESPONDENCIA:\nJosé Díaz Hierro\nAvda. Benyamina\nUrb. Playamar, Torre 12, 2ºA\n29620 Torremolinos.\nMálaga, España"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 8,
+    "text": ", Torre 12, 2ºA\n29620 Torremolinos.\nMálaga, España\nE-mail: jdiaz@epes.es\nFECHA DE RECEPCIÓN:\n15-12-2011\nFECHA DE ACEPTACIÓN:\n10-2-2012\nCONFLICTO DE INTERESES:\nNinguno\nries temporales1-4, especialmente apropiados para\nlas previsiones a corto plazo, al permitir detectar\ncambios de comportamiento en la serie y posibili-\ntar una intervención rápida5. Existen dos aproxi-\nmaciones relevantes: los métodos clásicos de aná-\nlisis basados en la descomposición de la serie, y\nlos modelos econométricos, que "
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 9,
+    "text": "ión de la serie, y\nlos modelos econométricos, que permiten incor-\nporar variables exógenas que posibilitan el estudio\nde la causalidad2-4,6-12. El análisis comparativo de\ndistintos modelos, aunque más limitado13-15, sugie-\nre que una mayor complejidad no va asociada ne-\ncesariamente a mejoras significativas, y señala la\nutilidad de incorporar variables exógenas para\najustar las previsiones.\nEl objetivo del presente estudio es evaluar com-\nparativamente los modelos que mejor pronosti-\nquen las ll"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 10,
+    "text": "amente los modelos que mejor pronosti-\nquen las llamadas recibidas en un centro de emer-\ngencias de Málaga y valorar los potenciales efectos\nsinérgicos de su utilización conjunta. Es el primer\nestudio que combina 6 métodos de series tempo-\nrales, que incluyen las variables exógenas, suscepti-\nbles de ser resueltos con software estándar, y anali-\nza las ventajas comparativas de cada uno, así\ncomo el valor añadido de su utilización conjunta.\nMétodo\nSe ha realizado un estudio observacional des-\ncri"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 11,
+    "text": "\nSe ha realizado un estudio observacional des-\ncriptivo ecológico de las series temporales de las\nllamadas recibidas mensualmente desde enero de\n2004 a diciembre de 2008 en el centro de emer-\ngencias de la Empresa Pública de Emergencias Sa-\nnitarias (EPES) en Málaga. Se utilizó como periodo\nde estimación 2004-2007 y como periodo de vali-\ndación 2008 para valorar el poder predictivo de\nlos modelos. El ámbito de estudio es la atención\nurgente y emergente extrahospitalaria de la pro-\nvincia de Mála"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 12,
+    "text": "rgente extrahospitalaria de la pro-\nvincia de Málaga, con una población de\n1.600.000 habitantes. Las fuentes de información\nempleadas han sido el sistema de información de\nEPES, las estimaciones de la población de Mála-\nga16, el registro de pernoctaciones17 y el registro\nde enfermedades de declaración obligatorias18 del\nInstituto Nacional de Estadística.\nLa selección de los métodos se ha efectuado\ncombinando dos criterios: la adecuación de la es-\ntructura de los datos a los modelos y la existenc"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 13,
+    "text": "\ntructura de los datos a los modelos y la existencia\nde software estándar para su aplicación. Los 6 mo-\ndelos seleccionados han sido: armónico multipli-\ncativo, método X-11 de desestacionalización, ali-\nsado de Winters, autorregresivo integrado de\nmedias móviles (ARIMA) mediante el análisis de\nintervención con meses estivales y los valores atí-\npicos, ARIMA con función de transferencia de los\ncasos declarados de gripe (ARIMAX), y un modelo\nestructural armónico, con población, casos de gri-\npe y "
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 14,
+    "text": "tural armónico, con población, casos de gri-\npe y número de pernoctaciones como variables\nexógenas (Figura 1). Las técnicas y estadísticos\nutilizados para cada uno de los modelos se descri-\nben en la Tabla 119-23.\nLa comparación de modelos se ha realizado\nmediante la R2 estacionaria, la raíz cuadrada del\nerror cuadrático medio (RMSE), el error absoluto\nporcentual medio (MAPE), que debe ser inferior al\n5% para alinear los pronósticos con los objetivos\npresupuestarios, el MaxAPE (máximo del error "
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 15,
+    "text": "ivos\npresupuestarios, el MaxAPE (máximo del error ab-\nsoluto porcentual medio)24, y el criterio BIC (Baye-\nsian Information Criteria) normalizado25.\nEn los contrastes de hipótesis se ha considera-\ndo un nivel de significación de 0,05, e intervalos\nde confianza (IC) al 95%. El análisis se ha efectua-\ndo con los paquetes estadísticos SPSS v.18 y E-\nviews 5.1.\nJ. Díaz Hierro et al.\n182\nEmergencias 2012; 24: 181-188\nFigura 1. Modelos de series temporales. Fuente: Elaboración propia.\nResultados\nLas l"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 16,
+    "text": "ales. Fuente: Elaboración propia.\nResultados\nLas llamadas recibidas entre el 2004 y el 2007\npresentan un incremento continuo, desde un 4%\nhasta un 13% en 2007, con 572.674 llamadas. Se\nobserva tanto una tendencia creciente como esta-\ncionalidad, que muestra picos en diciembre-ene-\nro, y julio-agosto de cada año.\nSe ha identificado una estructura de depen-\ndencia para valores próximos que va decreciendo\npara valores lejanos y una estacionalidad semestral\n(1/0.16) que puede justificarse por un dob"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 17,
+    "text": "mestral\n(1/0.16) que puede justificarse por un doble com-\nponente estacional: efecto gripe y efecto vacacio-\nnes. El mayor rango de explicación de la variabili-\ndad se produce en el intervalo de frecuencias 0,1\na 0,2, estando 0,1 muy cerca de una componente\nestacional de periodo mensual. El Anexo I recoge\nlas estimaciones de los 6 modelos y en la Figura 2\nse pueden observar los modelos ajustados.\nEn el modelo armónico multiplicativo la línea de\najuste se mantiene cercana a los valores reales par"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 18,
+    "text": "juste se mantiene cercana a los valores reales para\nel año 2008 con un número total de llamadas pre-\nvistas un 2% inferior a las reales.\nEn el modelo X-11 de desestacionalización, la\nEVALUACIÓN DE MODELOS DE SERIES TEMPORALES PARA LA PREVISIÓN DE LA DEMANDA DE EMERGENCIAS SANITARIAS\nEmergencias 2012; 24: 181-188\n183\nTabla 1. Técnicas y test estadísticos aplicados\nModelos\nTendencia\nEstacionalidad\nPruebas generales\nPruebas\nParsimonia Bondad\nTest residuos\nSignificación\nespecíficas\nparámetros\nNormal"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 19,
+    "text": "siduos\nSignificación\nespecíficas\nparámetros\nNormalidad Heterocedasticidad Independencia Individual Conjunta\nAnálisis generales Ajuste funciones Correlogramas (ACF y\nlineal y\nACFP). Periodograma\ncuadrático\nsuavizado de ventana de\nTuckey-Hamming. Función\nde densidad espectral\nArmónico\nAjuste mínimo Transformada rápida de\nT\nF\nmultiplicativo\ncuadrático\nFourier con tres\nordinario\narmónicos: 16 máximos\ny 1/4 y 1/8 de cada onda\nMétodo X-11\nÍndices generales de\nT\nF\nvariación estacional por\nmétodo X-11\nA"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 20,
+    "text": "ales de\nT\nF\nvariación estacional por\nmétodo X-11\nAlisado de\nAjuste de nivel, tendencia y\nWinters\nestacionalidad: ecuaciones de Winters\nArima\nMétodo Box-Jenkins con análisis\nT\nF\nEstacionalidad:\nintervención\nde intervención\nTest de\nDickey-Fuller\naumentado\nArimax\nMétodo Box-Jenkins con análisis de\nT\nF\nEstacionalidad\nintervención y función de transferencia\nTest de\nmediante preblanqueo\nDickey-Fuller\naumentado\nCausalidad:\nTest de\nGranger\nEstructural\nRegresión\nTransformada rápida\nJarque-\nLjun-Box\nT\nF\nM"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 21,
+    "text": "gresión\nTransformada rápida\nJarque-\nLjun-Box\nT\nF\nMulticolinea-\narmónico\nmúltiple\nde Fourier con tres\nBera\nDurbin-\nlidad: Factor de\nstepwise\narmónicos\nWatson,\ninflación de la\nBreusch-\nvarianza, Índice\nGodfrey\nde condición y\nTest de\nFarrar-Glauber.\nEstabilidad\nEstructural:\nTest de Chow\ny Test CUSUM.\nAdecuación\nespecificación\nfuncional:\nTest RESET\nde Ramsey.\nExogeneidad:\nContraste de\nHausman\nLa aplicación de la hipótesis aditiva o multiplicativa de componentes se realiza calculando el coeficiente d"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 22,
+    "text": "componentes se realiza calculando el coeficiente de variación de Person aplicando de\ntransformaciones habituales sobre las series. Fuente: elaboración propia. T: test de la t de Student; F: test Anova.\nShapiro-Wilks\nLjung-Box\nWhite\nCriterio BIC\nR\n2 estacionaria, RMSE, MAPE, MaxAPE\ntendencia es parecida, y la línea de valores obser-\nvados está cercana al límite inferior del IC en\n2008 (Figura 2), al mostrar unos índices de varia-\nción estacional mensual mayores que 1 en los me-\nses de enero, marz"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 23,
+    "text": "ensual mayores que 1 en los me-\nses de enero, marzo, julio, agosto y diciembre y\nun número total de llamadas previstas un 5% su-\nperior a las reales.\nEn el modelo de alisado de Winters, la línea de\nvalores observados en el primer semestre se man-\ntiene ligeramente por debajo del límite inferior del\nIC para el año 2008 con un número total de lla-\nmadas previstas un 7% superior a las reales.\nEn el modelo ARIMA con análisis de interven-\nción, el mes de mayo del año 2005 supone un in-\ncremento en el"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 24,
+    "text": " de mayo del año 2005 supone un in-\ncremento en el nivel de la serie que afecta a los\nvalores posteriores cercanos y luego decae. El mes\nde enero del año 2006 muestra un valor inferior a\nla media del mismo periodo de años posteriores.\nA partir de marzo del año 2006 se produce un\naumento sostenido en el nivel de la serie. En el\nperiodo de estimación, los valores se ajustan ade-\ncuadamente, al presentar unos IC precisos. En el\naño 2008, la línea de los valores observados se\nmantiene dentro de los "
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 25,
+    "text": " los valores observados se\nmantiene dentro de los límites del IC, sin embar-\ngo los valores previstos superan un 7,21% a los\nvalores reales.\nJ. Díaz Hierro et al.\n184\nEmergencias 2012; 24: 181-188\nFigura 2. Ajuste y pronóstico de las llamadas de emergencias en Málaga de los 6 modelos para el período 2004-2008. LI: límite infe-\nrior, LS: límite superior. Fuente: Elaboración propia a partir de información interna de la Empresa Pública de Emergencias Sanitarias.\nEn el modelo ARIMAX elegido, las lla"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 26,
+    "text": "s Sanitarias.\nEn el modelo ARIMAX elegido, las llamadas re-\ncibidas se incrementan por los casos notificados\nde gripe en el mes anterior y el actual, así como\npor los casos notificados en el mismo mes del año\nanterior. Mayo de 2005 supone un incremento en\nel nivel de la serie que afecta a los valores poste-\nriores cercanos y luego decae. Como muestra la\nFigura 2, la línea de los valores observados se\nmantiene entre los límites de los IC en 2008, que\nsuperan los valores reales a los previstos. El"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 27,
+    "text": "que\nsuperan los valores reales a los previstos. El núme-\nro total de llamadas previstas es un 2,62% menor\nque las reales.\nEl modelo estructural armónico de regresión\nmúltiple obtiene una correlación entre las varia-\nbles de 0,78. La bondad del ajuste muestra un R2\ncorregido de 0,60. Como se observa en el gráfico\n2, el valor de enero de 2005 (acmé de epidemia\nde gripe) se ha captado adecuadamente. En el\naño 2008 la línea de los valores observados se\nmantiene entre los límites de los IC, a excepci"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 28,
+    "text": "se\nmantiene entre los límites de los IC, a excepción\nde febrero, marzo, agosto y diciembre. El número\ntotal de llamadas previstas es un 0,5% menor que\nlas reales.\nComparación sintética de los modelos\nLa Tabla 2 compara la bondad del ajuste de los\n6 métodos de pronóstico, y muestra en todos los\ncasos un MAPE inferior al 5%. En la fase de esti-\nmación, el modelo de menor RMSE es el ARIMA\ncon intervención, y el que presenta menor recorri-\ndo entre el MAPE y MaxAPE es el modelo estruc-\ntural armónic"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 29,
+    "text": "l MAPE y MaxAPE es el modelo estruc-\ntural armónico.\nEn la fase de validación, el modelo ARIMA con\nintervención es el de peor ajuste, frente al modelo\nARIMAX que presenta los mejores resultados. Los\nmodelos basados en la historia pasada (ARIMA,\nWinters, X-11) obtienen valores previstos mayores\nque los observados, hecho esperado por el creci-\nmiento sistemático anual.\nEl modelo armónico multiplicativo parte de la\nmisma tendencia que los modelos de series de\ntiempo. Sin embargo, la influencia de l"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 30,
+    "text": " series de\ntiempo. Sin embargo, la influencia de la compo-\nnente estacional va decreciendo con el transcurso\nde los años, la estimación es menor a lo observa-\ndo (1,95%).\nLos modelos con variables exógenas, ARIMAX\ny estructural armónico, obtienen unos resultados\nen términos de RMSE intermedios, aunque mejo-\nran en el periodo de validación. Sus errores en es-\ntimación anual se sitúan en el 2,62% y el 0,51%\nrespectivamente, y obtienen los mejores resulta-\ndos en RMSE.\nEl modelo ARIMAX presenta los"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 31,
+    "text": "esulta-\ndos en RMSE.\nEl modelo ARIMAX presenta los mejores resul-\ntados. La influencia histórica de la serie junto con\nel descenso de los casos notificados por gripe han\npronosticado un descenso de llamadas que ha re-\nsultado ser mayor que el observado para las reci-\nbidas.\nDiscusión\nEste estudio ha evaluado la utilización conjunta\nde 6 métodos de series temporales, desarrollados\ncon el software estándar, para mejorar el pronósti-\nco de la demanda de emergencias sanitarias. Al-\ngunos de sus resu"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 32,
+    "text": "a de emergencias sanitarias. Al-\ngunos de sus resultados coinciden con la eviden-\ncia empírica disponible; por un lado una mayor\ncomplejidad no va asociada necesariamente a me-\nEVALUACIÓN DE MODELOS DE SERIES TEMPORALES PARA LA PREVISIÓN DE LA DEMANDA DE EMERGENCIAS SANITARIAS\nEmergencias 2012; 24: 181-188\n185\nTabla 2. Comparación de la bondad del ajuste de los modelos de pronóstico de las llamadas de emergencias en Málaga en el periodo\n2004-2007 y en la fase de validación 2008\nComparación de mo"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 33,
+    "text": " y en la fase de validación 2008\nComparación de modelos\nEstadísticos\nArmónico\nX-11\nAlisado de\nARIMA\nARIMAX\nEstructural\nmultiplicativo\nDesestacionalización\nWinter\nintervención\n(2,2,0) (0,1,0)12\narmónico\nR2 estacionaria\n0,73\n0,73\n0,73\n0,84\n0,83\n0,73\nRMSE\n2.633,47\n2.709,37\n2.058,76\n1.988,46\n2.128,89\n2.393,98\nMAPE\n4,8%\n4,6%\n3,5%\n3,1%\n3,2%\n4,4%\nMaxAPE\n16,4%\n20,2%\n12,8%\n12,2%\n12,8%\n9,9%\nBIC normalizado\n15,5\n15,7\n15,9\nLjung-Box\nIndependencia\nIndependencia\nIndependencia\nIndependencia\nIndependencia\nIndep"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 34,
+    "text": "ia\nIndependencia\nIndependencia\nIndependencia\nIndependencia\nValores en periodo de validación (2008)\nEstadísticos\nArmónico\nX-11\nAlisado de\nARIMA\nARIMAX\nEstructural\nmultiplicativo\ndesestacionalización\nWinter\nintervención\n(2,2,0) (0,1,0)12\narmónico\nR2 estacionaria\n0,72\n0,74\n0,7\n0,48\n0,84\n0,74\nRMSE\n3.039,17\n2.673,34\n3.403,00\n3.643,39\n2.024,78\n2.503,27\nMAPE\n4,4%\n5,2%\n6,9%\n6,9%\n3,2%\n3,8%\nMaxAPE\n14,2%\n11,1%\n11,9%\n11,9%\n11,4%\n11,3%\nBIC normalizado\n16,2\n16,9\n15,5\nError estimación anual\n1,9%\n–5,1%\n–6,8%\n–7"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 35,
+    "text": ",9\n15,5\nError estimación anual\n1,9%\n–5,1%\n–6,8%\n–7,2%\n2,6%\n0,5%\nFuente: Elaboración propia a partir de información interna de la Empresa Pública de Emergencias Sanitarias\njoras del pronóstico, y por otro, confirma la im-\nportancia de incorporar variables exógenas para\nmejorar los resultados5,15.\nExiste variabilidad en los pronósticos de los\nmodelos; el modelo X-11, el alisado de Winters y\nARIMA con intervención, predicen mayor número\nde llamadas que las observadas, mientras que el\narmónico multi"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 36,
+    "text": "que las observadas, mientras que el\narmónico multiplicativo, el ARIMAX y el estructu-\nral armónico predicen menos. Los primeros son\nútiles como modelos de alerta ante comporta-\nmientos no habituales y los segundos proporcio-\nnan un mayor conocimiento explicativo de las va-\nriaciones de la demanda. Por ejemplo, el modelo\nARIMAX establece una asociación significativa en-\ntre las llamadas y los casos notificados de gripe,\npero sin embargo no encuentra relación con la\npoblación y las pernoctaciones,"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 37,
+    "text": "ra relación con la\npoblación y las pernoctaciones, posiblemente de-\nbido al componente autorregresivo, que captura\nla evolución en el mismo sentido de estas dos va-\nriables. Los resultados obtenidos en el modelo es-\ntructural armónico ponen de manifiesto la mayor\npropensión a llamar a centros de emergencias de\nlas personas afectadas por gripe y la menor de la\npoblación que pernocta.\nEl enfoque empleado permite la inclusión de\notras variables exógenas (nivel de polución, tasas\nde accidentes de tr"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 38,
+    "text": "enas (nivel de polución, tasas\nde accidentes de tráfico, tasa de incidencia de en-\nfermedades cardiovasculares, temperatura ambien-\ntal, etc.) que podrían aumentar el poder explicati-\nvo del modelo estructural armónico y ARIMAX26.\nLa visión conjunta de los modelos ofrece un\nrango de estimación anual de llamadas al servicio\nde emergencias para 2008, desde 557.672 hasta\n613.960, cuando las reales han sido 572.674. Este\nhecho enriquece la información al contemplar es-\ncenarios con posibles descenso"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 39,
+    "text": "n al contemplar es-\ncenarios con posibles descensos, hecho constata-\ndo en 2008, lo que permite planificar cursos de\nacción alternativos de los recursos y establecer\npronósticos que incorporen el conocimiento de\nmodelos cuantitativos alternativos.\nEste estudio presenta la limitación de la incier-\nta extrapolación de resultados a otras zonas geo-\ngráficas que pudieran verse más afectadas por las\nvariables exógenas mencionadas anteriormente.\nSin embargo, la aplicación de los modelos presen-\ntados "
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 40,
+    "text": "bargo, la aplicación de los modelos presen-\ntados es adecuada y recomendable para cualquier\ncentro de llamadas de emergencias sanitarias. En\nconclusión, la utilización conjunta de los distintos\nmétodos de análisis genera sinergias en el conoci-\nmiento de los escenarios de demanda de emer-\ngencias sanitarias, que contribuyen a una mayor\neficiencia en la planificación a corto plazo de los\nrecursos humanos disponibles, reduce costes y\nmejora la calidad simultáneamente. Su desarrollo\nmediante softwa"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 41,
+    "text": "dad simultáneamente. Su desarrollo\nmediante software estándar, disminuye los costes\nde aprendizaje y aplicación de forma estable y\nperiódica en los centros de emergencias.\nBibliografía\n1 Mandelbaum A. Call Centers. Research Bibliography with Abstracts.\nVersion 7, May, 2006. [revista electrónica]. (Consultado 10 Diciem-\nbre 2011) Disponible en: http://ie.technion.ac.il/serveng/Referen-\nces/US7_CC_avi.pdf.\n2 Baker JR, Fitzpatrick KE. Determination of an optimal forecast model\nfor ambulance demand "
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 42,
+    "text": "of an optimal forecast model\nfor ambulance demand using goal programming. J Oper Res Soc.\n1986;37:1047-59.\n3 Mabert, V. Short interval forecasting of emergency phone call (911)\nwork loads. J Oper Manag. 1985;5:259-71.\n4 Channouf N, L’Ecuyer P, Ingolfsson A, Avramidis. A. The application\nof forecasting techniques to modeling emergency medical system\ncalls in Calgary, Alberta. Health Care Manage Sci. 2007;10:25-45.\n5 Peña D. Análisis de series temporales. Madrid: Alianza S.A., 2010.\n6 Kamenetsky R"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 43,
+    "text": "orales. Madrid: Alianza S.A., 2010.\n6 Kamenetsky R, Shuman L, Wolfe H. Estimating need and demand for\nprehospital care. Oper Res. 1982;30:1148-67.\n7 McConnell CE, Wilson RW. The demand for prehospital emergency\nservices in an aging society. Soc Sci Med. 1998;46:1027-31.\n8 Matteson D, McLean M, Woodard D, Henderson SG. Forecasting\nEmergency Medical Service Call Arrival Rates. Ann Appl Stat.\n2011;5:1379-406.\n9 Zhu Z, McKnew MA, Lee J. Effects of time-varied arrival rates: an investiga-\ntion in eme"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 44,
+    "text": "me-varied arrival rates: an investiga-\ntion in emergency ambulance service systems. In: Proceedings of the 1992\nwinter simulation conference. Piscataway: IEEE Press; 1992. pp. 1180.\n10 Tych W, Pedregal DJ, Young PC, Davies J. An unobserved component\nmodel for multi-rate forecasting of telephone call demand: the de-\nsign of a forecasting support system. Int J Forecast. 2002;18:673-95.\n11 Weinberg J, Brown LD, Stroud R. Bayesian forecasting of an inhomo-\nnegeous poisson process with applications t"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 45,
+    "text": "nhomo-\nnegeous poisson process with applications to call center data. J Am\nStat Assoc. 2007;102:1185-99.\n12 Shen H, Huang JZ. Interday forecasting and intraday updating of call\ncenters arrivals. Manufacturing and service operations manage-\nments. 2008;10:391-410.\n13 Millán-Ruiz D, Pacheco J, Hidalgo JI, Vélez JL. Forecasting in a Multis-\nkill Call Centre. ICAISC'10 Proceedings of the 10th international con-\nference on Artificial intelligence and soft computing: Part II. Heidel-\nberg: Springer-Ve"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 46,
+    "text": "soft computing: Part II. Heidel-\nberg: Springer-Verlag Berlin; 2010.\n14 Setzler H, Saydam C, Park S. EMS Call Volume Predictions: A Com-\nparative Study. Comput Oper Res. 2009;36:1843-51.\n15 Taylor J. A comparison of univariate time series methods for forecas-\nting intradia arrivals at a call center. Manage Sci. 2008;54:253-65.\n16 Instituto Nacional de Estadística (2004 a 2008). Cifras oficiales de\npoblación: Revisión del Padrón Municipal. Madrid: Instituto Nacional\nde Estadística. (Consultado 11"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 47,
+    "text": " Instituto Nacional\nde Estadística. (Consultado 11 Diciembre 2012). Disponible en:\nh t t p : / / w w w. i n e . e s / j a x i / m e n u . d o ? t y p e = p c a x i s & p a t h =\n%2Ft20%2Fe260&file=inebase&L=0\n17 Instituto Nacional de Estadística (2004 a 2008). Encuesta de ocupación\nhotelera. Madrid: Instituto Nacional de Estadística. (Consultado 11 Diciem-\nbre 2012). Disponible en: http://www.ine.es/jaxi/menu.do?type=pca-\nxis&path=%2Ft11%2Fe162eoh&file=inebase&L=0\n18 Instituto Nacional de Estadí"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 48,
+    "text": "h&file=inebase&L=0\n18 Instituto Nacional de Estadística (2004 a 2008). Enfermedades de Declara-\nción Obligatoria. Madrid: Instituto Nacional de Estadística. (Consultado 11\nDiciembre 2012). Disponible en: http://www.ine.es/jaxi/menu.do?type=pca-\nxis&path=/t15/p063&file=inebase&L=0\n19 Casas Sánchez JM. Introducción a la estadística para economía. Ma-\ndrid: Centro de Estudios Ramón Areces, S.A.; 1999.\n20 Cáceres Hernández JJ, Martín Rodríguez G, Martín Álvarez FJ. Intro-\nducción al análisis univari"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 49,
+    "text": "tín Álvarez FJ. Intro-\nducción al análisis univariante de series temporales económicas. Ma-\ndrid: Delta Publicaciones Universitarias; 2008.\n21 Jenkins G y Watts D. Spectral Analysis and Its Applications. Londres:\nHolden-Day; 1969.\n22 Pérez López C. Econometría de las series temporales. Madrid: Pear-\nson Educación S.A.; 2006.\n23 Box G, Jenkins G. Time series analysis: Forecasting and control. San\nFrancisco: Holden-Day; 1970.\n24 Aguirre JA. Introducción al tratamiento de series temporales. Aplicac"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 50,
+    "text": "cción al tratamiento de series temporales. Aplicación\na las ciencias de la salud. Madrid: Ediciones Díaz de Santos, S.A.; 1994.\n25 Hernández Alonso J. Análisis de series temporales económicas II. Ma-\ndrid: ESIC Editorial; 2009.\n26 Carracedo Martínez E, Sánchez C, Taracido M, Saenz M, Jato V, Figueiras\nA. Effect of short-term exposure to air pollution and pollen on medical\nemergency calls: a case-crossover study in Spain. Allergy. 2008;63:347-53.\nJ. Díaz Hierro et al.\n186\nEmergencias 2012; 24: 18"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 51,
+    "text": "J. Díaz Hierro et al.\n186\nEmergencias 2012; 24: 181-188\nEVALUACIÓN DE MODELOS DE SERIES TEMPORALES PARA LA PREVISIÓN DE LA DEMANDA DE EMERGENCIAS SANITARIAS\nEmergencias 2012; 24: 181-188\n187\n1.Modelo Armónico multiplicativo: tendencia (Yt) y estacionalidad (Yt’)\nYt = 37.312,19 + 232,32 * t + et\net = Yt’\nYt’ = 0,99 – 0,015 * cos (\n2p * 16 * t ) + 0,029 * sen (\n2p * 16 * t ) + 0,023 * cos (\n2p * 4 * t ) +\n48\n48\n48\n+ 0,081 * sen (\n2p * 4 * t ) – 0,019 * cos (\n2p * 0,5 * t ) + 0,066 * sen (\n2p * 0,5"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 52,
+    "text": "19 * cos (\n2p * 0,5 * t ) + 0,066 * sen (\n2p * 0,5 * t )\n48\n48\n48\n2.Modelo X-11 Desestacionalización: tendencia (Yt) y estacionalidad (Índices)\nYt = 36.833,45 +  245,07 * t\nÍNDICES VARIACIÓN ESTACIONAL\nENE\n1,15\nJUL\n1,05\nFEB\n0,98\nAGO\n1,11\nMAR 1,01\nSEP\n0,93\nABR\n0,94\nOCT\n0,94\nMAY 0,94\nNOV\n0,91\nJUN\n0,96\nDIC\n1,08\n3.Modelo Alisado de Winters:\n4.Modelo ARIMA con análisis de intervención: (Llamadas = LL)\n(1 + 1,021Β + 0,611Β2)∇2∇12Ln(LL)t = at + 0,203∇2∇12I2005.5 – 0,185∇2∇12I2006.1 + 0,1222\n12E2006.3\n5"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 53,
+    "text": "12I2005.5 – 0,185∇2∇12I2006.1 + 0,1222\n12E2006.3\n5.Modelo ARIMA con función de transferencia (ARIMAX): (Llamadas = LL y Gripe = GR)\n(1 + 1,015Β+0,586Β2)∇2∇12Ln(LL)t = at + (–0,66-0,66B-1,358B12∇Ln(GR)t) + 0,201∇2∇12I2005.5\n6.Modelo Estructural Armónico:\nLlamadas = –59.869,6 + 0,67 * Población + 0,822 * Gripe + 0,099 * Pernoctaciones + et\nEstacionalidad residual: et = Yt\nYt’ = 507,95 – 138,22 * cos (\n2p * 16 * t ) + 749,65 * sen (\n2p * 16 * t ) + 1.347,02 * cos (\n2p * 4 * t ) +\n48\n48\n48\n+ 1.822,5"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 54,
+    "text": "1.347,02 * cos (\n2p * 4 * t ) +\n48\n48\n48\n+ 1.822,56 * sen (\n2p * 4 * t ) – 198,41 * cos (\n2p * 0,5 * t ) + 2.420,90 * sen (\n2p * 0,5 * t )\n48\n48\n48\nAnexo I. Ecuaciones de los modelos de series temporales ajustados para el pronóstico\nde llamadas\nEvaluation of time-series models for forecasting demand for emergency health care services\nDíaz-Hierro J, Martín Martín JJ, Vilches Arenas A, López del Amo González MP, Patón Arévalo JM, Varo González C\nObjective: To evaluate a combined set of 6 time-seri"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 55,
+    "text": "jective: To evaluate a combined set of 6 time-series models for improving the management of short-term calls for\nemergency health services.\nMethods: The demand for emergency health services in the province of Malaga was analyzed between 2004 and 2008.\nUsing standard software, we constructed and evaluated 3 decomposition models and 3 econometric models. The\nmodels considered summer months and atypical values, influenza cases, and number of overnight admissions as the\nexogenous inputs. We compared"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 56,
+    "text": "ht admissions as the\nexogenous inputs. We compared the models using the usual econometric tests, such as the root mean square error\n(RMSE), the mean absolute percentage error (MAPE), and the maximum absolute percentage error (MaxAPE) among\nothers.\nResults: The models had MAPEs under 5%. Autoregressive integrated moving average (ARIMA) modeling with\nintervention had the lowest RMSE. Harmonic analysis had the smallest difference between the MAPE and MaxAPE. In the\nvalidation phase, ARIMA with inte"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 57,
+    "text": "d MaxAPE. In the\nvalidation phase, ARIMA with intervention had the poorest fit, and harmonic analysis and ARIMA with exogenous input\nhad the best fits.\nConclusions: A forecast of the demand for emergency calls can be generated using 2 models simultaneously to improve\nshort-term planning. Decomposition models and ARIMA with intervention warn of unexpected changes, whereas ARIMA\nor other models with exogenous inputs and harmony component analysis can introduce alternative planning scenarios,\nimpro"
+  },
+  {
+    "document_id": "Emergencias-2012_24_3_181-8.pdf",
+    "chunk": 58,
+    "text": "an introduce alternative planning scenarios,\nimprove our understanding of demand, and facilitate decision-making. Implementing these models with standard\nsoftware decreases the cost of this approach in emergency services. [Emergencias 2012;24:181-188]\nKey words: Emergency care, prehospital. Forecasting. Trends. Organization and administration.\n188\nEmergencias 2012; 24: 181-188\nJ. Díaz Hierro et al.\n"
+  }
+]

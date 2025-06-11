@@ -1,4 +1,5 @@
-# services/file_parser.py
+# app/services/file_parser.py
+
 import os
 import fitz  # PyMuPDF
 from typing import Optional
