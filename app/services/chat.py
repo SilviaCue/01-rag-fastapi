@@ -1,22 +1,17 @@
 from app.services.retriever import Retriever
-from app.providers.gemini_embedder import genai
-from app.config.settings import GEMINI_API_KEY
+from app.config import settings
+from app.services.generation_selector import GenerationSelector
 
 class ChatRAG:
 
     def __init__(self):
-        self.retriever = Retriever(embedding_model="huggingface")  # Puedes cambiar al que quieras
-
-        # Inicializamos Gemini (modo generación)
-        genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel("models/gemini-1.5-pro-latest")
+        self.retriever = Retriever(embedding_model=settings.EMBEDDING_MODEL)
+        self.generator = GenerationSelector(settings.GENERATION_MODEL)
 
     def chat(self, question: str):
-        # 1️ Recuperar contexto
         resultados = self.retriever.retrieve(question, top_k=5)
         contexto = "\n".join([res["text"] for res in resultados])
 
-        # 2️ Preparar prompt
         prompt = f"""
 Eres un asistente experto en documentación interna. Utiliza el siguiente contexto para responder:
 
@@ -29,6 +24,5 @@ Pregunta:
 Respuesta:
 """
 
-        # 3️Generar respuesta con Gemini
-        respuesta = self.model.generate_content(prompt)
-        return respuesta.text.strip()
+        respuesta = self.generator.generate(prompt)
+        return respuesta
