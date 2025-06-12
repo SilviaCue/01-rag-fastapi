@@ -1,4 +1,14 @@
-# app/config/secret_keys.py
 
-# Sustituye aquí tu clave real de Gemini
-GEMINI_API_KEY = "AIzaSyD6KK3x3GBTMH9d8Tx40J-FUk15JfGYsH8"
+import json
+import os
+
+class SecretKeys:
+    def __init__(self):
+        path = os.path.join(os.path.dirname(__file__), '../../secret_keys.json')
+        with open(path, 'r', encoding='utf-8') as f:
+            keys = json.load(f)
+        self.gemini_api_key = keys.get('GEMINI_API_KEY')
+        self.huggingface_api_key = keys.get('HUGGINGFACE_API_KEY"')
+        self.openai_api_key= keys.get("OPENAI_API_KEY")
+        
+        
