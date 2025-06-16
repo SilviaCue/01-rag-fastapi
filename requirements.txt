@@ -7,3 +7,5 @@ google-generativeai
 sentence-transformers
 faiss-cpu
 openai
+pytesseract 
+pillow

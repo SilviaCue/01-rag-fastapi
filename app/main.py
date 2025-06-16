@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 from fastapi import FastAPI
-from app.routers import upload, chat # puedes ir agregando los demás luego
+from app.routers import upload, chat, download # puedes ir agregando los demás luego
 from fastapi.middleware.cors import CORSMiddleware
 from app.config.genai_client import configure_genai
 
@@ -28,6 +28,4 @@ app.add_middleware(
 # Incluir los routers
 app.include_router(upload.router)
 app.include_router(chat.router)
-
-
-
+app.include_router(download.router)
