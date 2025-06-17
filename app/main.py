@@ -1,31 +1,35 @@
 from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()
 
 from fastapi import FastAPI
-from app.routers import upload, chat, download # puedes ir agregando los demás luego
 from fastapi.middleware.cors import CORSMiddleware
-from app.config.genai_client import configure_genai
 
+# Importar los routers
+from app.routers import upload, chat, download, upload_one  # <-- Aquí cargas todos los routers que tienes
+
+# Gemini config
+from app.config.genai_client import configure_genai
 
 app = FastAPI(
     title="RAG API",
     version="0.1.0"
 )
-from app.config.genai_client import configure_genai
 
-# Inicializa la API de Gemini al arrancar el servidor
+# Inicializa Gemini al arrancar el servidor
 configure_genai()
 
-# Configurar CORS para permitir acceso desde Swagger y cualquier origen (por ahora)
+# Configurar CORS (por ahora abierto)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Puedes restringir esto luego para mayor seguridad
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Incluir los routers
+# Incluir routers
 app.include_router(upload.router)
 app.include_router(chat.router)
 app.include_router(download.router)
+app.include_router(upload_one.router)
+
