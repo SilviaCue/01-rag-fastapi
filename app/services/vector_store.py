@@ -24,16 +24,23 @@ class VectorStore:
             self.index = faiss.read_index(self.index_path)
             with open(self.metadata_path, "r", encoding="utf-8") as f:
                 self.metadata = json.load(f)
-            print(" Vector store cargado desde disco.")
+            print("Vector store cargado desde disco.")
         else:
             self.index = faiss.IndexFlatL2(self.embedding_dimension)
             self.metadata = []
-            print(" Nuevo vector store inicializado.")
+            self.save()
+            print("Nuevo vector store inicializado.")
 
     def save(self):
         faiss.write_index(self.index, self.index_path)
         with open(self.metadata_path, "w", encoding="utf-8") as f:
             json.dump(self.metadata, f, ensure_ascii=False, indent=2)
+
+    def reset(self):
+        self.index = faiss.IndexFlatL2(self.embedding_dimension)
+        self.metadata = []
+        self.save()
+        print("Vector store reseteado.")
 
     def index_chunks(self, chunks: list, document_id: str):
         selector = EmbeddingSelector(self.embedding_model)
@@ -44,7 +51,7 @@ class VectorStore:
             self.metadata.append({
                 "document_id": document_id,
                 "chunk": i,
-                "text": chunk_text  # <<--- AQUÍ guardamos el texto completo
+                "text": chunk_text
             })
         self.save()
 
@@ -61,7 +68,7 @@ class VectorStore:
                 results.append({
                     "document_id": meta["document_id"],
                     "chunk": meta["chunk"],
-                    "text": meta["text"],  # <<--- AQUÍ lo recuperamos
+                    "text": meta["text"],
                     "distance": float(dist)
                 })
         return results

@@ -7,13 +7,16 @@ from fastapi.responses import FileResponse
 class ChatRAG:
 
     def __init__(self):
-        self.retriever = Retriever(embedding_model=settings.EMBEDDING_MODEL)
+        self.retriever = Retriever()  # SIN argumentos aquí
         self.generator = GenerationSelector(settings.GENERATION_MODEL)
         self.upload_path = "storage/docs_raw"
 
     def chat(self, question: str):
         resultados = self.retriever.retrieve(question, top_k=5)
         contexto = "\n".join([res["text"] for res in resultados])
+
+        MAX_CONTEXT_LENGTH = 3000
+        contexto = contexto[:MAX_CONTEXT_LENGTH]
 
         prompt = f"""
 Eres un asistente experto en documentación interna. Usa el siguiente contexto para responder:
@@ -27,9 +30,11 @@ Pregunta:
 Respuesta:
 """
 
-        respuesta = self.generator.generate(prompt)
+        try:
+            respuesta = self.generator.generate(prompt)
+        except Exception as e:
+            respuesta = f"Error al generar respuesta: {str(e)}"
 
-        # Añadir enlaces si se mencionan nombres de archivo existentes
         for fname in os.listdir(self.upload_path):
             if fname.lower().endswith(".pdf") and fname.lower() in question.lower():
                 url = f"http://127.0.0.1:8000/download/{fname}"
