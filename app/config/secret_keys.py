@@ -8,7 +8,7 @@ class SecretKeys:
         with open(path, 'r', encoding='utf-8') as f:
             keys = json.load(f)
         self.gemini_api_key = keys.get('GEMINI_API_KEY')
-        self.huggingface_api_key = keys.get('HUGGINGFACE_API_KEY"')
+        self.huggingface_api_key = keys.get('HUGGINGFACE_API_KEY')
         self.openai_api_key= keys.get("OPENAI_API_KEY")
         
         

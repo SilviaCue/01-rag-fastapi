@@ -2428,5 +2428,200 @@
     "document_id": "clienteGEAR/introduccionICEARAGON.pdf",
     "chunk": 28,
     "text": "AS, F 109, 5 8, 7 48704 UA 4- C3 0-90:207553\na6/06/2025 Introduecion CEARAGON.odt\n\nPágina 1 de 13\n"
+  },
+  {
+    "document_id": "GenerarToken.pdf",
+    "chunk": 0,
+    "text": "V\n\nideacrium\n\nGENERACIÓN TOKEN PARA OBTENCIÓN DE LOG EN\nSERVICIOS IGEAR - EJEMPLO GCG\n\nne vec mor tmemos e 0 pobemes comola motrs etvón y o it exiorto n n eee\n\noe cec aic re moA maeime aa R20 2A U e aa B N IAO EA\n\nc o aaa a a ma a r men T a E\n\n"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 0,
+    "text": "Pasos a Seguir \n \nEn vuestro portátil. \n \nInstalar CUDA Toolkit 11.8 y cuDNN 11.8: \n \n1. CUDA Toolkit 11.8 ( desinstalar versiones anteriores o posteriores): \nDescargar e instalar desde NVIDIA CUDA Toolkit 11.8: \nhttps://developer.nvidia.com/cuda-11-8-0-download-archive \n \n2. cuDNN 11.8: \n- \nDescargar los archivos  cuDNN 11.8 desde \nhttps://developer.nvidia.com/rdp/cudnn-archive \n- \nDescargar esta versión: Download cuDNN v8.9.7 (December 5th, 2023), for \nCUDA 11.x \n- \nExtraer los archivos descar"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 1,
+    "text": "3), for \nCUDA 11.x \n- \nExtraer los archivos descargados . \n \n3. Copiar y Reemplazar Archivos de cuDNN: \n \n- \nIr a la carpeta de los archivos de cuDNN. \n- \nCopiar los archivos  bin,  include y lib y reemplázalos en los por los \nRCHIVOS correspondiendentes en de CUDA Toolkit: \nbin: \n- \nEnlace para encontrar el archivo  bin a reemplazar:   C:\\Program \nFiles\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin \ninclude: \n- \nEnlace para encontrar el archivo  includea reemplazar:   C:\\Program \nFiles\\NVIDIA GPU"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 2,
+    "text": "ncludea reemplazar:   C:\\Program \nFiles\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include \nlib: \n- \nEnlace para encontrar el archivo lib a reemplazar:   C:\\Program \nFiles\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64 \n \n \n \n \n \n \n4. Agregar Rutas de CUDA y cuDNN al PATH del Sistema: Abrir el menú \nInicio y buscar \"Variables de entorno\". \n \n \n5. Seleccionar \"variables de entorno del sistema\". Seleccionar la variable \nPath, luego hacer clic en \"Editar”. \n \n \n6. Agregar una a una cada ruta por sepa"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 3,
+    "text": "tar”. \n \n \n6. Agregar una a una cada ruta por separado y  haciendo clic en \"Nuevo\" \npara cada una de ellas: \n \n \n7. Aceptar todo para guardar. \n \n \n \n \n \n \n \n \n \n \n \n \n \nSiguientes pasos en Visual \n8. Reemplazar las instalaciones en requirement.txt por estas: \nfastapi \nuvicorn \ntorch==2.3.1+cu118 \ntorchvision==0.15.4+cu118 \ntorchaudio==2.3.1+cu118 \ndiffusers \nPillow \njinja2 \ntransformers \ntensorflow \naccelerate \n \n9. Instalar Dependencias:  pip install -r requirements.txt \n \n10. Ejecutar al app "
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 4,
+    "text": "nstall -r requirements.txt \n \n10. Ejecutar al app : uvicorn main:app --reload \n \n \n \n"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 0,
+    "text": "Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\n1\nGestión de tabla \nnormativa en RJT Visor 2D\nSesión de formación\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n2\nÍNDICE\n❑\nIntroducción\n❑\nConexión a tabla normativa (usando pgAdmin)\n❑\nVer datos de una categoría\n❑\nCombinación de varios filtros y comodines\n❑\nMostrar menos columnas y aplicar filtros\n❑\nNormalizar valores\n❑\nNotas finales\n❑\nDudas y/o preguntas.\nInstituto Geog"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 1,
+    "text": "otas finales\n❑\nDudas y/o preguntas.\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n3 \nIntroducción\n❑\nEl Visor 2D de Idearagon incluye posibilidad de consulta del RJT definido\n❑\nSe establecen categorías para reflejar la normativa asociada:\n–\nGeneral\n–\nEspecífica\n–\nOtros links\n❑\nLa definición de la normativa se gestiona en una tabla en base de datos\n–\nTabla editable desde herramienta pgAdmin (y otras)\n–\nConsultable usando lenguaje "
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 2,
+    "text": "a pgAdmin (y otras)\n–\nConsultable usando lenguaje SQL y con interfaz gráfica\n–\nAplicación de cambios inmediata\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n4 \nIntroducción\n❑\nPara cada elemento de la tabla se almacena:\n–\nIdentificadores (mantener secuencia)\n–\nTipo (Especifica, General o “Otros links”)\n–\nTema (relacionado con el visor)\n–\nCategoría  (según tipo toma unos valores u otros)\n–\nDescripción\n–\nPublicación (literal)\n–\nToo"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 3,
+    "text": "otros)\n–\nDescripción\n–\nPublicación (literal)\n–\nTooltip\n–\nUrl\n–\nELI (columna a borrar)\n–\nFecha alta y fecha baja\n❑\nLos valores de fecha alta y baja existentes no están bien formateados. Pendiente definir \nformato.\n❑\nLas URL de acceso en lo posible se han definido según iniciativa ELI para posible \nreaprovechamiento futuro + son persistentes en el tiempo\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n5 \nIntroducción\nTIPO\nTEMA\nCATEG"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 4,
+    "text": "va en RJT Visor 2D\n5 \nIntroducción\nTIPO\nTEMA\nCATEGO\nDESCRIP\nPUBLICACION\nTOOLTIP + URL\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n6 \nConexión a tabla normativa (usando pgAdmin)\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n7 \nConexión a tabla normativa (usando pgAdmin)\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla norm"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 5,
+    "text": "obierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n8 \nVer datos de una categoría\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n9 \nCombinación de varios filtros y comodines\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n10 \nMostrar menos columnas y aplicar filtros\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión d"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 6,
+    "text": " (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n11 \nNormalizar valores\n¡Cuidado con espacios en \nblanco!\nImportante ya que en el visor se agrupa según \ncatego\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n12 \nNotas finales\n❑\nSe puede editar directamente sobre la tabla, asegurándose de que se guardan cambios\n❑\nEl visor solo carga la normativa de cada categoría una vez, las siguientes veces las "
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 7,
+    "text": " cada categoría una vez, las siguientes veces las \ndebería reaprovechar => recargar el visor (F5)\n❑\nLa fecha alta/baja => ¿Fecha de publicación? ¿Fecha de entrada en vigor? ¿Fecha de la \nnorma?\n❑\nEl resultado de las consultas se puede exportar a otros formatos e incluso se puede \ncopiar y pegar en Excel para seguir trabajando.\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n13 \nNotas finales\n❑\nRecomendable trabajar siempre que sea"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 8,
+    "text": "as finales\n❑\nRecomendable trabajar siempre que sea para hacer pruebas en desarrollo\n❑\nEs muy recomendable hacer copia (resguardo) antes de empezar y restaurarla si hace \nfalta.\n"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 0,
+    "text": "Enviar al nuevo miembro de idearium este mail desde rrhh@idearium.eu Asunto: Creación de\ncuenta corporativa + onboarding Hola, he creado una nueva cuenta de correo corporativa para\nti. Según la política de cuentas de la empresa tu usuario es XXX. Si deseas otro nombre,\ncoméntamelo para cambiarlo. Por tanto, la cuenta de tu uusario de correo es:\nXXXX@idearium.eu El password es https://onetimesecret.com/private/XXXX Cambia el\npassword por el que prefieras Puedes entrar en modo web con https://mail"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 1,
+    "text": "efieras Puedes entrar en modo web con https://mail.one.com/ o\nconfigurar SMTP en tu cliente de correo preferido. Te recomiendo que la utilices cuando haya\nque hacer un envío de mail \"institucional\" A los clientes con los que ya tengas contacto con una\ncuenta tuya personal, puedes seguir manteniendo la tuya. Como prefieras. No soy estricto en\nesto. Quizá te sea de interés crear una regla de reenvío a tu cuenta personal, y así no tienes\nque mirar 2 cuentas. Es lo que hacemos habitualmente par así "
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 2,
+    "text": " cuentas. Es lo que hacemos habitualmente par así mirar solo nuestro email.\nPídeme ayuda si tienes dudas con la configuración. Aprovecho también para enviarte una guía\nde onboarding que te explicará algunos detalles de procedimientos internos de idearium. Es\nuna guía en constante evolución, por favor ayúdame a mantenerla actualizada para los\nsiguientes que puedan venir en el futuro. David ================= El día previo a la\nincorporación enviar a todo el equipo en CC: Asunto: Bienvenida XXX a I"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 3,
+    "text": "a todo el equipo en CC: Asunto: Bienvenida XXX a Idearium Hola a todos,\nquería informaros que desde mañana se incorpora a Idearium XXX YY. XX es Desarrolladora\nPython especialista en IA y va a entrar a trabajar en algunos temas con ZZZ. Si podéis, entrad\nmañana martes a las 9:15h en el meet de siempre y así hacemos ronda rápida de\npresentaciones del resto de componentes del equipo: https://meet.google.com/hkp-rnth-ygg Un\nsaludo y bienvenida! David\n"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 4,
+    "text": "d\n"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 0,
+    "text": "Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\n1\nGestión de tabla \nnormativa en RJT Visor 2D\nSesión de formación\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n2\nÍNDICE\n❑\nIntroducción\n❑\nConexión a tabla normativa (usando pgAdmin)\n❑\nVer datos de una categoría\n❑\nCombinación de varios filtros y comodines\n❑\nMostrar menos columnas y aplicar filtros\n❑\nNormalizar valores\n❑\nNotas finales\n❑\nDudas y/o preguntas.\nInstituto Geog"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 1,
+    "text": "otas finales\n❑\nDudas y/o preguntas.\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n3 \nIntroducción\n❑\nEl Visor 2D de Idearagon incluye posibilidad de consulta del RJT definido\n❑\nSe establecen categorías para reflejar la normativa asociada:\n–\nGeneral\n–\nEspecífica\n–\nOtros links\n❑\nLa definición de la normativa se gestiona en una tabla en base de datos\n–\nTabla editable desde herramienta pgAdmin (y otras)\n–\nConsultable usando lenguaje "
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 2,
+    "text": "a pgAdmin (y otras)\n–\nConsultable usando lenguaje SQL y con interfaz gráfica\n–\nAplicación de cambios inmediata\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n4 \nIntroducción\n❑\nPara cada elemento de la tabla se almacena:\n–\nIdentificadores (mantener secuencia)\n–\nTipo (Especifica, General o “Otros links”)\n–\nTema (relacionado con el visor)\n–\nCategoría  (según tipo toma unos valores u otros)\n–\nDescripción\n–\nPublicación (literal)\n–\nToo"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 3,
+    "text": "otros)\n–\nDescripción\n–\nPublicación (literal)\n–\nTooltip\n–\nUrl\n–\nELI (columna a borrar)\n–\nFecha alta y fecha baja\n❑\nLos valores de fecha alta y baja existentes no están bien formateados. Pendiente definir \nformato.\n❑\nLas URL de acceso en lo posible se han definido según iniciativa ELI para posible \nreaprovechamiento futuro + son persistentes en el tiempo\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n5 \nIntroducción\nTIPO\nTEMA\nCATEG"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 4,
+    "text": "va en RJT Visor 2D\n5 \nIntroducción\nTIPO\nTEMA\nCATEGO\nDESCRIP\nPUBLICACION\nTOOLTIP + URL\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n6 \nConexión a tabla normativa (usando pgAdmin)\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n7 \nConexión a tabla normativa (usando pgAdmin)\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla norm"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 5,
+    "text": "obierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n8 \nVer datos de una categoría\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n9 \nCombinación de varios filtros y comodines\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n10 \nMostrar menos columnas y aplicar filtros\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión d"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 6,
+    "text": " (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n11 \nNormalizar valores\n¡Cuidado con espacios en \nblanco!\nImportante ya que en el visor se agrupa según \ncatego\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n12 \nNotas finales\n❑\nSe puede editar directamente sobre la tabla, asegurándose de que se guardan cambios\n❑\nEl visor solo carga la normativa de cada categoría una vez, las siguientes veces las "
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 7,
+    "text": " cada categoría una vez, las siguientes veces las \ndebería reaprovechar => recargar el visor (F5)\n❑\nLa fecha alta/baja => ¿Fecha de publicación? ¿Fecha de entrada en vigor? ¿Fecha de la \nnorma?\n❑\nEl resultado de las consultas se puede exportar a otros formatos e incluso se puede \ncopiar y pegar en Excel para seguir trabajando.\nInstituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón\nFormación: Gestión de tabla normativa en RJT Visor 2D\n13 \nNotas finales\n❑\nRecomendable trabajar siempre que sea"
+  },
+  {
+    "document_id": "formacion_RJT_normativa.pdf",
+    "chunk": 8,
+    "text": "as finales\n❑\nRecomendable trabajar siempre que sea para hacer pruebas en desarrollo\n❑\nEs muy recomendable hacer copia (resguardo) antes de empezar y restaurarla si hace \nfalta.\n"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 0,
+    "text": "Enviar al nuevo miembro de idearium este mail desde rrhh@idearium.eu Asunto: Creación de\ncuenta corporativa + onboarding Hola, he creado una nueva cuenta de correo corporativa para\nti. Según la política de cuentas de la empresa tu usuario es XXX. Si deseas otro nombre,\ncoméntamelo para cambiarlo. Por tanto, la cuenta de tu uusario de correo es:\nXXXX@idearium.eu El password es https://onetimesecret.com/private/XXXX Cambia el\npassword por el que prefieras Puedes entrar en modo web con https://mail"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 1,
+    "text": "efieras Puedes entrar en modo web con https://mail.one.com/ o\nconfigurar SMTP en tu cliente de correo preferido. Te recomiendo que la utilices cuando haya\nque hacer un envío de mail \"institucional\" A los clientes con los que ya tengas contacto con una\ncuenta tuya personal, puedes seguir manteniendo la tuya. Como prefieras. No soy estricto en\nesto. Quizá te sea de interés crear una regla de reenvío a tu cuenta personal, y así no tienes\nque mirar 2 cuentas. Es lo que hacemos habitualmente par así "
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 2,
+    "text": " cuentas. Es lo que hacemos habitualmente par así mirar solo nuestro email.\nPídeme ayuda si tienes dudas con la configuración. Aprovecho también para enviarte una guía\nde onboarding que te explicará algunos detalles de procedimientos internos de idearium. Es\nuna guía en constante evolución, por favor ayúdame a mantenerla actualizada para los\nsiguientes que puedan venir en el futuro. David ================= El día previo a la\nincorporación enviar a todo el equipo en CC: Asunto: Bienvenida XXX a I"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 3,
+    "text": "a todo el equipo en CC: Asunto: Bienvenida XXX a Idearium Hola a todos,\nquería informaros que desde mañana se incorpora a Idearium XXX YY. XX es Desarrolladora\nPython especialista en IA y va a entrar a trabajar en algunos temas con ZZZ. Si podéis, entrad\nmañana martes a las 9:15h en el meet de siempre y así hacemos ronda rápida de\npresentaciones del resto de componentes del equipo: https://meet.google.com/hkp-rnth-ygg Un\nsaludo y bienvenida! David\n"
+  },
+  {
+    "document_id": "mail_bienvenida.pdf",
+    "chunk": 4,
+    "text": "d\n"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 0,
+    "text": "Pasos a Seguir \n \nEn vuestro portátil. \n \nInstalar CUDA Toolkit 11.8 y cuDNN 11.8: \n \n1. CUDA Toolkit 11.8 ( desinstalar versiones anteriores o posteriores): \nDescargar e instalar desde NVIDIA CUDA Toolkit 11.8: \nhttps://developer.nvidia.com/cuda-11-8-0-download-archive \n \n2. cuDNN 11.8: \n- \nDescargar los archivos  cuDNN 11.8 desde \nhttps://developer.nvidia.com/rdp/cudnn-archive \n- \nDescargar esta versión: Download cuDNN v8.9.7 (December 5th, 2023), for \nCUDA 11.x \n- \nExtraer los archivos descar"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 1,
+    "text": "3), for \nCUDA 11.x \n- \nExtraer los archivos descargados . \n \n3. Copiar y Reemplazar Archivos de cuDNN: \n \n- \nIr a la carpeta de los archivos de cuDNN. \n- \nCopiar los archivos  bin,  include y lib y reemplázalos en los por los \nRCHIVOS correspondiendentes en de CUDA Toolkit: \nbin: \n- \nEnlace para encontrar el archivo  bin a reemplazar:   C:\\Program \nFiles\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin \ninclude: \n- \nEnlace para encontrar el archivo  includea reemplazar:   C:\\Program \nFiles\\NVIDIA GPU"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 2,
+    "text": "ncludea reemplazar:   C:\\Program \nFiles\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include \nlib: \n- \nEnlace para encontrar el archivo lib a reemplazar:   C:\\Program \nFiles\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64 \n \n \n \n \n \n \n4. Agregar Rutas de CUDA y cuDNN al PATH del Sistema: Abrir el menú \nInicio y buscar \"Variables de entorno\". \n \n \n5. Seleccionar \"variables de entorno del sistema\". Seleccionar la variable \nPath, luego hacer clic en \"Editar”. \n \n \n6. Agregar una a una cada ruta por sepa"
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 3,
+    "text": "tar”. \n \n \n6. Agregar una a una cada ruta por separado y  haciendo clic en \"Nuevo\" \npara cada una de ellas: \n \n \n7. Aceptar todo para guardar. \n \n \n \n \n \n \n \n \n \n \n \n \n \nSiguientes pasos en Visual \n8. Reemplazar las instalaciones en requirement.txt por estas: \nfastapi \nuvicorn \ntorch==2.3.1+cu118 \ntorchvision==0.15.4+cu118 \ntorchaudio==2.3.1+cu118 \ndiffusers \nPillow \njinja2 \ntransformers \ntensorflow \naccelerate \n \n9. Instalar Dependencias:  pip install -r requirements.txt \n \n10. Ejecutar al app "
+  },
+  {
+    "document_id": "Pasos a Seguir.pdf",
+    "chunk": 4,
+    "text": "nstall -r requirements.txt \n \n10. Ejecutar al app : uvicorn main:app --reload \n \n \n \n"
   }
 ]

@@ -4,6 +4,7 @@ from app.services.file_parser import FileParser
 from app.services.text_splitter import TextSplitter
 from app.services.vector_store_singleton import vector_store_instance as vector_store
 
+
 router = APIRouter()
 
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
@@ -15,8 +16,12 @@ os.makedirs(DOCS_CHUNK, exist_ok=True)
 
 @router.post("/upload-one/")
 async def upload_one_document(file: UploadFile = File(...)):
-    # Guardamos el PDF en docs_raw
+    # Guardamos el PDF en docs_raw solo si no existe
     dest_path = os.path.join(DOCS_RAW, file.filename)
+
+    if os.path.exists(dest_path):
+        return {"message": f"El archivo '{file.filename}' ya existe y no se ha sobrescrito."}
+
     with open(dest_path, "wb") as buffer:
         buffer.write(await file.read())
 
@@ -40,7 +45,7 @@ async def upload_one_document(file: UploadFile = File(...)):
         chunks = splitter.split_text(text)
         vector_store.index_chunks(chunks, document_id=document_id)
 
-        return {"message": f"Documento '{file.filename}' procesado y indexado correctamente."}
+        return {"message": f"Documento '{file.filename}' procesado e indexado correctamente."}
 
     except Exception as e:
         raise HTTPException(500, f"Error al procesar el documento: {str(e)}")

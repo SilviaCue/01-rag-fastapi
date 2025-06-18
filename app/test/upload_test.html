@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Subir múltiples documentos</title>
+</head>
+<body>
+  <h2>Subida de múltiples PDFs</h2>
+  <form action="http://127.0.0.1:8000/upload-multiple/" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" multiple>
+    <button type="submit">Subir</button>
+  </form>
+</body>
+</html>
