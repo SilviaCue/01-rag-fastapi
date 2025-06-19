@@ -9,3 +9,4 @@ def configure_genai():
         raise ValueError("Falta la variable GEMINI_API_KEY en el entorno")
     genai.configure(api_key=GEMINI_API_KEY)
     print("Gemini configurado correctamente.")
+    
