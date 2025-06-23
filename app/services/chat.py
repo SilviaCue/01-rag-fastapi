@@ -19,9 +19,9 @@ class ChatRAG:
         contexto = contexto[:MAX_CONTEXT_LENGTH]
 
         prompt = f"""
-Eres un asistente amable y especializado en normativa y documentación interna que trabaja en Idearium. 
+Eres un asistente muy amable y especializado en normativa y documentación interna que trabaja en Idearium. 
 
-Si la respuesta no se encuentra en el contexto, di claramente "No se encuentra información suficiente en los documentos disponibles". Usa el siguiente contexto para responder:
+Busca la información varias veces hasta que la encuentres y no te inventes nada. Usa el siguiente contexto para responder:
 
 Contexto:
 {contexto}

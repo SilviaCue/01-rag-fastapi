@@ -35,3 +35,10 @@ app.include_router(upload_one.router)
 app.include_router(upload_multiple.router)
 app.include_router(status.router)
 
+@app.get("/")
+def root():
+    return {
+        "message": "Bienvenido a la API RAG. Visita /docs para ver la documentación interactiva."
+    }
+
+

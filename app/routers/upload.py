@@ -21,10 +21,16 @@ async def upload_all_documents():
     if not os.path.isdir(DOCS_RAW):
         raise HTTPException(500, f"Directorio no encontrado: {DOCS_RAW}")
 
-    pdf_files = glob.glob(os.path.join(DOCS_RAW, '**', '*.pdf'), recursive=True)
+    # Extensiones soportadas
+    extensiones = ["*.pdf", "*.docx", "*.xlsx", "*.xls", "*.png", "*.jpg", "*.jpeg", "*.tif", "*.tiff"]
 
-    if not pdf_files:
-        return {"message": "No se encontraron PDFs", "processed": 0, "errors": {}}
+    # Buscar todos los archivos con extensiones soportadas
+    all_files = []
+    for ext in extensiones:
+        all_files.extend(glob.glob(os.path.join(DOCS_RAW, '**', ext), recursive=True))
+
+    if not all_files:
+        return {"message": "No se encontraron documentos válidos", "processed": 0, "errors": {}}
 
     parser = FileParser(DOCS_RAW)
     splitter = TextSplitter(chunk_size=500)
@@ -32,7 +38,7 @@ async def upload_all_documents():
     processed = []
     errors = {}
 
-    for full_path in pdf_files:
+    for full_path in all_files:
         fname = os.path.relpath(full_path, DOCS_RAW)
         document_id = fname.replace("\\", "/")
 
