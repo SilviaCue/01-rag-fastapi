@@ -16918,5 +16918,785 @@
     "document_id": "clienteGEAR/introduccionICEARAGON.docx",
     "chunk": 27,
     "text": "2 de primer nivel.\nItem 3 de primer nivel con subitems.\nSubitem de segundo nivel.\nLas tablas se representarán así, incluyendo pie de tabla con secuencia tabla, y siendo referenciada desde el texto con su número como referencia cruzada:\nTabla 1: ejemplo de tabla\n"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 0,
+    "text": "\n\n\n\n\n\nOnBoarding\n\t\nManual de bienvenida a idearium consultores srl\n\n\n\n\nÍNDICE\n\nNos complace darte la bienvenida a Idearium Consultores SRL, esperamos que compartas nuestros objetivos en pro del éxito y que tengas una carrera larga y exitosa con nosotros. Idearium Consultores SRL está comprometida con la más alta calidad de servicio en todos los aspectos de nuestro negocio.\nEste manual del empleado ha sido creado para proporcionar pautas generales sobre el funcionamiento de la empresa y que sea m"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 1,
+    "text": " sobre el funcionamiento de la empresa y que sea más fácil tu integración y puesta al día en ella.\n2. ¿Quienes somos?\nIdearium Consultores SRL es una empresa fundada en 2009 y se dedicada a la consultoría en el ámbito de las tecnologías de la información, el desarrollo de SIG, SIT e IDES. \nPoco a poco hemos ido creciendo tanto en clientes como en trabajadores. Aunque el nombre oficial es Idearium Consultores, habitualmente nos referimos a la empresa simplemente como Idearium.\n3. Valores\nLos empl"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 2,
+    "text": "esa simplemente como Idearium.\n3. Valores\nLos empleados de la empresa tienen:\n- Compromiso con la integridad\n- Compromiso con la calidad\n- Compromiso con la innovación y la excelencia\n- Y sobre todo un compromiso en el trabajo en equipo\nTener buena disposición en el trabajo hace que un equipo funcione mejor y así poder ser más competentes en el mercado.\nIdearium cree que cada trabajador/a es igualmente importante y queremos que participes. Habla, ofrece tu punto de vista, haz sugerencias. No esp"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 3,
+    "text": " ofrece tu punto de vista, haz sugerencias. No esperes a que alguien pida tu opinión. Sé proactivo. Contribuye.\n4. Trabajo en Idearium\nLugar de trabajo y horario\nEn Idearium se ofrece la posibilidad de trabajar desde casa o trabajar en un puesto en oficina y el horario es flexible siempre y cuando se informe al supervisor/a o al jefe de la empresa y en función del cliente asignado.\nLa oficina está ubicada en la C/ Valle de Zuriza 19, portal 2, oficina 7 y 8, 50.015 Zaragoza.\nTambién se permite l"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 4,
+    "text": "icina 7 y 8, 50.015 Zaragoza.\nTambién se permite la opción mixta de teletrabajo-oficina. En general lo previsto es que haya puestos libres en la oficina, por lo que no hay que preocuparse de hacer reservas.\nLink de reuniones online\nLas reuniones internas y muchas con clientes las hacemos siempre en este link Te recomiendo añadirlo a marcadores: https://meet.google.com/hkp-rnth-ygg Si ya hay alguien, generar otro alternativo.\nCalendario compartido y mensajería instantánea \nTenemos un calendario c"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 5,
+    "text": " y mensajería instantánea \nTenemos un calendario compartido y canales de mensajería instantánea utilizando Gmail. Te recomiendo que envíes una cuenta de gmail para que te añada tu responsable a los mismos.\nFestivos y vacaciones\nLos días festivos los marca el calendario oficial de tu lugar de residencia, aunque es posible variarlo. Confirma con tu responsable cuál deseas seguir ya que influye en los festivos locales y autonómicos.\nCada trabajador/a tiene 23 días laborables de vacaciones al año (p"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 6,
+    "text": "a tiene 23 días laborables de vacaciones al año (por año completo trabajado). Estos se deben consultar con la persona encargada. Una vez acordados, hay que indicarlos en la excel compartida en la que aparecen las vacaciones de todo el equipo de la empresa. Si no tienes permisos para editar esta hoja, solicítalo a dportoles. (https://docs.google.com/spreadsheets/d/1WyDRufoOpSxSLbzKmcoUgZKKILg4p9L2TrkJ5wcUcu0/edit?usp=sharing). \nEn la  excel están los diferentes meses del año en los que cada traba"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 7,
+    "text": "los diferentes meses del año en los que cada trabajador/a tiene una fila que le corresponde. Las instrucciones de uso son las siguientes (aparecen estas mismas en la celda A1 de la propia excel): marcar H para días de vacaciones, marcar F para festivo, marcar A para vacaciones año anterior, y marcar P para otros asuntos (baja médica, etc.). Al marcarlo la casilla se pone de colo rojo. \nAl final de la excel está el recuento de días de vacaciones disponibles. Este se hace de manera automática conf"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 8,
+    "text": "isponibles. Este se hace de manera automática conforme vas rellenando en el calendario.\nAdemas de anotar las ausencias en la Excel hay que anotarlas también en el calendario compartido (ver apartado 3).\n\nReconocimiento médico\nEl reconocimiento médico se hará al incorporarte a la empresa y se renovará todos los años. Si no se desea realizar el reconocimiento médico habrá que escribir una carta renunciando a este reconocimiento.\nPara solicitar cita hay que enviar un correo electrónico a medicina@b"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 9,
+    "text": " hay que enviar un correo electrónico a medicina@balmarprevencion.com indicando tu nombre, el de la empresa (Idearium Consultores) y si se trata de un reconocimiento INICIAL, PERIÓDICO o por REINCORPORACIÓN.\nFichaje horario\nPara llevar a cabo el control horario diario existe una excel de horas subida a GitHub desde donde se puede descargar (https://github.com/Idearium-eu/Idearium/blob/master/plantillaFichajeHorario/Horario_2025.xlsx). Una vez la descargues, genera una copia en local para que sea"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 10,
+    "text": "descargues, genera una copia en local para que sea la tuya personal. \nEn el fichero excel hay varias hojas correspondientes a los meses. En estos están marcados en rojo los fines de semana, y en rosa los festivos correspondientes a la ciudad de Zaragoza (se pueden modificar según tus festivos). También hay en cada hoja un encabezado que es necesario rellenar: el ID empleado se corresponde con el DNI; el trabajador, con el nombre completo; Departamento, con el que corresponda. \nEn cada uno de los"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 11,
+    "text": "mento, con el que corresponda. \nEn cada uno de los días hay diferentes columnas a rellenar con el formato hh:mm: hora de entrada, hora de salida, horas extras y descanso (en el caso de hacerlo para comer). La columna de horas totales se calcula automáticamente una vez se han rellenado las anteriores. Al final de la hoja hay una celda verde, que también se calcula de manera automática, que hacer referencia al total de horas trabajadas dicho mes.  \nComo se indica en la leyenda de las hojas, hay qu"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 12,
+    "text": "\nComo se indica en la leyenda de las hojas, hay que marcar aquellos días que se corresponde con: ausencias, marcar con una A; L, día libre; V, vacaciones; y P, día de permiso. Además, es buena práctica copiar el formato de esa celda de la leyenda para traspasar el color.\nCuando el mes finaliza y están rellenadas tanto las celdas de horas como el encabezado, hay que exportarlo. En primer lugar, desde Archivo>Imprimir, se cambiará a formato A3 para que todo el contenido entre en un mismo folio. Po"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 13,
+    "text": " que todo el contenido entre en un mismo folio. Posteriormente, desde la opción Archivo>Guardar como, se exportará como PDF.  Este mismo PDF es necesario firmarlo y remitirlo a controlhorario@idearium.eu \n5. Directorios y accesos \nCuentas corporativas y servicios\nCorreo electrónico\nCada trabajador tendrá un correo electrónico corporativo xxxxx@idearium.eu siendo el  acceso webmail al proveedor actual el siguiente: https://login.one.com/mail. Te debería haber llegado, sino solicítalo a tu respons"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 14,
+    "text": "ebería haber llegado, sino solicítalo a tu responsable.\nFTP\nDisponemos de un servicio FTP para compartición de archivos grandes. Se puede utilizar filezilla / winscp (u otra aplicación) o mediante la web https://filemanager.one.com/\nCuentas VPN de cliente\nSegún el cliente final al que vayas a trabajar, es posible que necesites cuenta VPN o acceso a la intranet. Consulta con tu responsable si es el caso para proceder a solicitarlo.\nEn el caso de IGEAR se solicita a través de Marisa.\nGestión de ta"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 15,
+    "text": "GEAR se solicita a través de Marisa.\nGestión de tareas- Jira\nPara la gestión de tareas se utiliza Atlassian-JIRA, da conexión entre equipos y trabajadores. También como seguimiento de las tareas a realizar por cada uno de los trabajadores/as de Idearium.\nPeriódicamente hay reuniones de sprint en los que revisamos las tareas. Típicamente se hace en torno al día 1 y 15 de cada mes. El responsable del equipo te informará de cuándo se irán convocando.\nEs importante mantener al día el estado y person"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 16,
+    "text": ".\nEs importante mantener al día el estado y persona asignada de cada tarea. Los estados de las tareas son:\nTareas por hacer: la tarea no se ha iniciado.\nEn curso: la tarea se ha iniciado.\nBlocked: no se puede avanzar en la tarea por algún motivo. Si el motivo es que hay que hacer otra tarea antes, hay que vincularla con la relación is blocked by. Cualquier otro motivo se indicará como comentario (e.g.: pendiente de recibir datos necesarios, duda trasladada al cliente a la espera de respuesta, et"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 17,
+    "text": "trasladada al cliente a la espera de respuesta, etc.).\nTest: la tarea se ha finalizado y está pendiente de validación. Si la validación la tiene que hacer algún otro miembro del equipo hay que asignarle la tarea.\nPendientePro: se ha validado la tarea en el entorno de desarrollo y hay que pasarla a producción.\nFinalizada: la tarea no requiere ninguna acción adicional y se da por terminada.\nRepositorio (GitHub)\nDisponemos de un repositorio GIT de código en GitHub: https://github.com/Idearium-eu . "
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 18,
+    "text": "ódigo en GitHub: https://github.com/Idearium-eu . Lo utilizamos también para subir documentos en algún caso. Según tu perfil, lo utilizarás más o menos, por lo que dispondrás de usuario propio. (Esto va a dejar de ser así en GitHub cada uno tendrá su propio usuario) Los geógrafos de la empresa por ejemplo usan un usuario compartido, solicita credenciales a tu responsable.\nLos proyectos están organizados por temáticas y la estructura habitual de los proyectos es la siguiente:\ndata: datos, en el c"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 19,
+    "text": "os proyectos es la siguiente:\ndata: datos, en el caso que se considere de interés guardarlo.\ndistrib: distribución del software, en el caso de que no se pueda generar de forma automática a partir de los fuentes.\ndoc: documentación\nsrc: código fuente\nSolo se deben subir al repositorio archivos que no se puedan generar de forma automática. Por ejemplo si se dispone de un documento Word y se ha generado un pdf para enviarlo al cliente, el pdf no hay que subirlo. Igualmente con los archivos de salid"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 20,
+    "text": " que subirlo. Igualmente con los archivos de salida de procesos o la distribución.\nRRSS y Web\nLa dirección de la página web es https://www.idearium.eu/ donde se puede consultar proyectos en los que se ha ido trabajando y clientes para los que se trabaja. Si se te ocurre cómo mejorarla, sería fantástico escuchar tus propuestas.\nLas RRSS que utilizamos en Idearium es X @Idearium_eu. Puedes seguirnos y ¡así ganamos un follower!\nCuenta compartida gmail\nTenemos una cuenta compartida idearium.eu@gmail"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 21,
+    "text": "il\nTenemos una cuenta compartida idearium.eu@gmail.com para disponer de espacio drive al que subimos presentaciones, documentos, etc. en los que trabajar de forma compartida. También para entregas con cliente solemos utilizarlo aunque el FTP es otra solución. Esta cuenta sirve también para el acceso a los servicios de Google Cloud.\nSolicita la contraseña a tu responsable.\nProcedimientos de despliegue\nExplicar Gob Aragon (vía 4100)\nGestión de tareas\nExplicar\nOrganización del repositorio\nExplicar"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 22,
+    "text": "as\nExplicar\nOrganización del repositorio\nExplicar"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 0,
+    "text": "\n\n\n\n\n\nOnBoarding\n\t\nMANUAL DE BIENVENIDA AL CLIENTE: INSTITUTO GEOGRÁFICO DE ARAGÓN (IGEAR)\n\n\n\n\nÍNDICE\nBienvenida\nNos complace darte la bienvenida al Instituto Geográfico de Aragón (IGEAR), uno de los clientes de Idearium Consultores SRL. Idearium trabaja como asistencia técnica de acuerdo a los pliegos que ha ganado.\nEste manual ha sido creado para proporcionar pautas generales sobre el funcionamiento y la organización del IGEAR, y la Infraestructura de Conocimiento Espacial de Aragón (ICEARAGON"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 1,
+    "text": "tura de Conocimiento Espacial de Aragón (ICEARAGON).\n\n2. ¿Qué es IGEAR?\nDefinición\n“El Instituto Geográfico de Aragón es un órgano integrado en el Departamento competente en materia de ordenación del territorio. Corresponde al Instituto obtener, organizar y difundir la documentación e información sobre el territorio de la Comunidad Autónoma, a través de la gestión y coordinación de los instrumentos de información territorial regulados en esta Ley” (Art. 10, Decreto Legislativo 2/2015, de 17 de n"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 2,
+    "text": "” (Art. 10, Decreto Legislativo 2/2015, de 17 de noviembre)\n \tEl Instituto Geográfico de Aragón, con naturaleza de servicio integrado en el Departamento competente en materia de ordenación del territorio, es un servicio de apoyo a todas las unidades administrativas del Gobierno de Aragón, al resto de administraciones públicas y a la ciudadanía, en todo lo relacionado con la información y documentación geográfica sobre ordenación del territorio aragonés.\n\tEl Instituto Geográfico de Aragón (IGEAR)"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 3,
+    "text": "agonés.\n\tEl Instituto Geográfico de Aragón (IGEAR) tiene su origen en el Centro de Información Territorial de Aragón (CINTA) que nace a partir de las Directrices Generales de Ordenación Territorial, aprobadas por la Ley 7/1998.\n\tPosteriormente, la Ley 4/2009, de Ordenación del Territorio de Aragón (LOTA), redefine la finalidad de este centro y sus características indicando que le corresponde la obtención, organización y difusión de la documentación e información sobre el territorio de la Comunid"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 4,
+    "text": "ón e información sobre el territorio de la Comunidad Autónoma, a través de la gestión y coordinación de los instrumentos de información territorial regulados en esta norma.\nLa Ley 8/2014, modifica la ley anterior cambiando la denominación del Centro de Información Territorial de Aragón por la denominación actual de Instituto Geográfico de Aragón, ampliando sus competencias para dar paso hacia la gestión de la información geográfica en el sentido más amplio del concepto: elaboración, catalogación"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 5,
+    "text": "más amplio del concepto: elaboración, catalogación, mantenimiento, registro y difusión.\n\tLa naturaleza, funciones y actividades del IGEAR vienen definidas en su Reglamento aprobado por Decreto 81/2015.\nPersonal funcionario\nEl IGEAR cuenta con una plantilla de funcionarios compuesta por:\nDirector del IGEAR → Fernando López\nÁREA ADMINISTRATIVA\nJefe de Negociado Gestión Económica, Cont. e Inf. Territorial → Santiago Barriendo\nAdministrativo → José Ángel Martín\nAux. Administrativo → Amelia Iritia\nÁR"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 6,
+    "text": "ngel Martín\nAux. Administrativo → Amelia Iritia\nÁREA TÉCNICA\nJefa de Sección Inteligencia Geográfica → Raquel López\nJefa de Sección Producción e Innovación Cartográfica → vacante\nJefa de Sección de Sistemas de Información Territorial → María Luisa Pellicer\nTécnico de Documentación → Consuelo Susín\nFac. Sup. Especialista Geógrafo → Jóse Juan González\nFac. Sup. Especialista Geógrafo → Sandra García\nTécnico de Cartografía → Javier Sádaba\nTécnico de Cartografía → Luis Ignacio Gomollón\nTopógrafo → Ro"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 7,
+    "text": "Cartografía → Luis Ignacio Gomollón\nTopógrafo → Romualdo Abad\n\n3. Trabajo en IGEAR\nLugar de trabajo y contacto\nEl lugar en el que está actualmente el IGEAR es el Edificio Pignatelli (Paseo de María Agustín, 36 50071 Zaragoza). Como habrás visto hay una puerta con torno, por lo que para acceder necesitarás una tarjeta / ticket de acceso.\nEl teléfono de contacto del IGEAR es 976 715 605.\nY el correo electrónico: igear@aragon.es\nCorreo electrónico\nCada trabajador externo a la DGA (nuestro caso como"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 8,
+    "text": "ada trabajador externo a la DGA (nuestro caso como asesoría técnica) tendrá un correo electrónico xxxxx@ext.aragon.es siendo el acceso desde Microsoft Outlook. La contraseña de este hay que cambiarla cada 3 meses por seguridad. Para gestionar la contraseña, lo puedes hacer desde https://micuenta.aragon.es/mem/web/login;lang=es .\nEste correo y su respectiva contraseña son necesarios para poder hacer prácticamente cualquier cosa relacionada con ICEARAGON (uso de herramientas como PSA, sincro ...et"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 9,
+    "text": "ARAGON (uso de herramientas como PSA, sincro ...etc).\nActualmente es necesaria una doble autenticación. Para ello, deberás instalar en tu dispositivo móvil la aplicación Microsoft Authenticator, y seguir los pasos que se indican.\nCarpetas compartidas\nIGEAR tiene 2 carpetas compartidas localizadas en un servidor, a las que como personal externo tenemos acceso. Son V y W.\nPor un lado está W://, en la que cada uno de nosotros tiene una carpeta propia para su trabajo diario.\nPor otro lado está V://,"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 10,
+    "text": "a para su trabajo diario.\nPor otro lado está V://, en la que está todo el trabajo finalizado (documentos, manuales...), instaladores de programas de interés, rásters (ej:PNOA, vuelos antiguos, LiDAR) … Además en esta se localiza el documento “Servidores_IGEAR”, que almacena información de como conectarse a diferentes bases de datos, servidores, programas… y diferentes manuales de uso de aplicaciones.\nPara poder conectarte a estas carpetas por primera vez pide ayuda a un compañero o al personal d"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 11,
+    "text": "mera vez pide ayuda a un compañero o al personal de IGEAR.\nContacto Idearium – IGEAR\nLa presencialidad en el edificio es de 3-4 días por semana (dependiendo del calendario de teletrabajo), lo que facilita la comunicación.\nLa mayor parte de la relación, en cuanto a comunicación empresa-cliente se refiere, se mantiene con los funcionarios que llevan los proyectos. Actualmente son los dos  Téc. Sup. Especialistas (José Juan y Sandra).\nIgualmente, la información general del Instituto llega al correo"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 12,
+    "text": " información general del Instituto llega al correo electrónico @ext.aragon.es.\nEn algún caso excepcional, con los funcionarios que hacen de enlace, hay comunicación también por Chat de Google. Para tema de incidencias y nuevas tareas, se emplea la vía Jira.\nTeletrabajo\nPara teletrabajar y poder conectarte al ordenador que esta en el Edificio, tendrás que pedirle al Director del IGEAR que solicite al 4100, los permisos necesarios para que con tu correo @ext.aragon.es puedas hacerlo.\nExiste un man"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 13,
+    "text": "orreo @ext.aragon.es puedas hacerlo.\nExiste un manual de AST en el que se explica el procedimiento para, una vez tienes los permisos, poder conectarte de manera remota al equipo.\n\n4. ICEARAGON\nDefinición\nICEARAGON, es el paso al frente del Gobierno de Aragón para conseguir los objetivos marcados desde la Directiva Europea 2007/2/CE INSPIRE (Infrastructure for Spatial Information in Europe), la Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en Esp"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 14,
+    "text": "s y los servicios de información geográfica en España (LISIGE), y la Ley 3/2022, de 6 de octubre, de información geográfica de Aragón (LIGA) que tienen por objeto hacer disponible información geográfica relevante, concertada y de calidad de forma que se permita la formulación, implementación, monitorización y evaluación de las políticas de impacto o de dimensión territorial.\n\n\tICEARAGON se define como la organización de los conjuntos de datos georreferenciados del territorio de Aragón distribuid"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 15,
+    "text": "rreferenciados del territorio de Aragón distribuidos en diferentes sistemas de información geográfica, accesible por la red de Internet. Implica la suma de políticas, estándares, recursos humanos y tecnologías necesarias para descubrir, informar, distribuir, usar y mantener información geográfica.\n\n\tEn suma, es un sistema informático integrado por un conjunto de recursos (servidores, catálogos, datos, metadatos, servicios, aplicaciones y geoportales) con que se gestiona y trabaja la información "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 16,
+    "text": "les) con que se gestiona y trabaja la información geográfica (ya sea cartografía, planos, mapas, ortofotos, imágenes de satélite) para que sean públicos en Internet cumpliendo unas condiciones de interoperabilidad (normas, especificaciones, protocolos) que permiten que cualquier usuario ya sea público o privado, pueda utilizar la geoinformación a través de un navegador web.\nPortal\nLa dirección del portal web de ICEARAGON de acceso público es: https://icearagon.aragon.es/portal/ . Desde aquí hay "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 17,
+    "text": "ps://icearagon.aragon.es/portal/ . Desde aquí hay vínculos a multitud de páginas web relacionadas con la Infraestructura o el IGEAR. También hay acceso directo a las aplicaciones que muestran los datos espaciales, y los ponen a disposición de los usuarios (visualización, descarga o servicios web).\nTe recomiendo que inviertas el tiempo suficiente en investigar todos los rincones de este portal, que va a ser tu “nueva casa” mientras sigas ligado al IGEAR.\nFigura 1: aspecto del portal web de ICEARA"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 18,
+    "text": " IGEAR.\nFigura 1: aspecto del portal web de ICEARAGON\nAplicaciones\nLa sección de la web que engloba el conjunto de aplicaciones geográficas desarrolladas en virtud del componente político (marco legal e instrumentos del Sistema Cartográfico de Aragón), geográfico (geodatos, metadatos y servicios), tecnológico (estándares, hardware y software) y social (Necesidades y demandas internas y externas de los actores) de ICEAragon.\nLas aplicaciones geográficas explotan la geoinformación a través de los "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 19,
+    "text": "áficas explotan la geoinformación a través de los servicios habilitados con el fin de facilitar el descubrimiento (catálogo y buscador), el registro (registro), la visualización (visores -2D, 3D, SIOSE, RJT, etc.-), el análisis (visores, cartoteca, aplicaciones temáticas, servicios) y la descarga (descargas, GNSS, etc.) de la IG.\nEstas aplicaciones permiten la visualización, consulta o descarga de datos de los cuáles es propietario el IGEAR u otro Departamento del Gobierno de Aragón que ha conce"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 20,
+    "text": "o Departamento del Gobierno de Aragón que ha concedido los permisos.\nAlgunos ejemplos: Visor 2D, Atlas, SITA, Cartoteca, Descargas… (https://icearagon.aragon.es/portal/aplicaciones.jsp)\nServicios Web\nEn dicho portal hay una sección dedicada a la difusión de la información geográfica de Aragón mediante Servicios Web OGC (Open Geospatial Consortium), siguiendo las recomendaciones de la Directiva 2007/2/CE INSPIRE. Está compuesta por páginas informativas detallando el listado de direcciones de acce"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 21,
+    "text": "tivas detallando el listado de direcciones de acceso a los servicios web disponibles, así como páginas específicas de cada uno de los servicios web desarrollados, formas de acceso y uso de los mismos a través de navegadores web (clientes ligeros) o clientes pesados ya sean de software libre o propietario (ej: SIG).\n\tEl directorio de servicios web desplegados en ICEARAGON agrupados por los diferentes tipos, es el siguiente: https://icearagon.aragon.es/directorio_ws.jsp.\nDentro de ICEARAGON\nHasta "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 22,
+    "text": "n.es/directorio_ws.jsp.\nDentro de ICEARAGON\nHasta aquí es lo que ve el público general. Ahora vamos a pasar a la parte de gestión y mantenimiento de la Infraestructura.\nDatos\nLos datos que muestran las aplicaciones que ve el público, están almacenados en bases de datos (BD), que se dividen en esquemas. IGEAR es propietario de un esquema (carto) y a la vez mantiene otros 4 generales (geopub, geoext, georca, geores) donde se vuelca información del resto de Departamentos. Cada Departamento también "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 23,
+    "text": "resto de Departamentos. Cada Departamento también cuenta con un esquema propio (EJ: saludp, oma, dagma...).\n\tPara visualizar estas BD, puedes hacerlo desde un SIG o desde programas gestores de BD, como Postgres u Oracle.\n\tDentro de estas BD, hay:\nTablas\nCon componente espacial, si tiene campo de geometría (se puede cargar en un SIG y tiene representación espacial) → esta puede ser de tipo punto, línea o polígono\nSin componente espacial, si no tienen dicho campo.\nVistas → provienen de tablas o de"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 24,
+    "text": "nen dicho campo.\nVistas → provienen de tablas o de otras vistas, permitiendo seleccionar solo una parte, añadiendo campos de otra…\nProcedimientos (solo en Oracle) → bloque de código PL/SQL almacenado en la base de datos que ejecuta una secuencia de instrucciones de forma estructurada y reutilizable\nFunciones → bloque de código almacenado que devuelve un valor y puede ejecutarse dentro de consultas SQL para realizar cálculos, transformaciones o lógica de negocio.\nEn relación a los datos ráster, e"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 25,
+    "text": "gica de negocio.\nEn relación a los datos ráster, estos están almacenados en V://.\nServidores web\nToda la información almacenada en las BD que quiera ponerse a disposición del público (aplicaciones o servicios web) hay que publicarla en la web desde unos servidores.\nPara publicar en la web esta información tenemos varias formas:\nSi la BD es de Oracle, la publicación se hace desde ArcGIS Server / Enterprise.\nSi es desde Postgres (lo más habitual) se publica desde Geoserver.\nPSA\nPara mantener las a"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 26,
+    "text": "e publica desde Geoserver.\nPSA\nPara mantener las aplicaciones frontales (las que ve el público) de la Infraestructura, contamos con la Plataforma de Servicios y Aplicaciones de IGEAR (PSA, https://icearagon.aragon.es/psa/). Esta permite el acceso a diferentes aplicaciones de gestión de ICEARAGON. Para acceder necesitarás tu correo @ext.aragon.es y que te den los permisos necesarios para poder acceder a ellas.\n"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 0,
+    "text": "\n\n\n\n\n\nMaterial formativo\n\t\nMANUAL DE INTRODUCCIÓN A la INFRAESTRUCTURA DE CONOCIMIENTO ESPACIAL de aragón (ICEARAGON) \n\nÍNDICE\n\nNos complace darte la bienvenida al Instituto Geográfico de Aragón.\nEste manual ha sido creado para proporcionar pautas generales sobre el funcionamiento y la organización de ICEARAGÓN, la Infraestructura de Conocimiento Espacial de Aragón. \n2. Introducción a ICEARAGÓN\nDefinición\nICEARAGON, es el paso al frente del Gobierno de Aragón para conseguir los objetivos marcado"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 1,
+    "text": "rno de Aragón para conseguir los objetivos marcados desde la Directiva Europea 2007/2/CE INSPIRE (Infrastructure for Spatial Information in Europe), la Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE), y la Ley 3/2022, de 6 de octubre, de información geográfica de Aragón (LIGA) que tienen por objeto hacer disponible información geográfica relevante, concertada y de calidad de forma que se permita la formulación, implementación, m"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 2,
+    "text": "a que se permita la formulación, implementación, monitorización y evaluación de las políticas de impacto o de dimensión territorial.\n\n\tICEARAGON se define como la organización de los conjuntos de datos georreferenciados del territorio de Aragón distribuidos en diferentes sistemas de información geográfica, accesible por la red de Internet. Implica la suma de políticas, estándares, recursos humanos y tecnologías necesarias para descubrir, informar, distribuir, usar y mantener información geográfi"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 3,
+    "text": ", distribuir, usar y mantener información geográfica.\n\n\tEn suma, es un sistema informático integrado por un conjunto de recursos (servidores, catálogos, datos, metadatos, servicios, aplicaciones y geoportales) con que se gestiona y trabaja la información geográfica (ya sea cartografía, planos, mapas, ortofotos, imágenes de satélite) para que sean públicos en Internet cumpliendo unas condiciones de interoperabilidad (normas, especificaciones, protocolos) que permiten que cualquier usuario ya sea "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 4,
+    "text": "ocolos) que permiten que cualquier usuario ya sea público o privado, pueda utilizar la geoinformación a través de un navegador web. \nPortal\nLa dirección del portal web de ICEARAGON de acceso público es: https://icearagon.aragon.es/portal/ . Desde aquí hay acceso a múltitud de páginas web relacionadas con la Infraestructura o IGEAR. También hay acceso directo a las aplicaciones que muestran los datos espaciales, y los ponen a disposición de los usuarios (visualización, descarga o servicios web).\n"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 5,
+    "text": "uarios (visualización, descarga o servicios web).\nTe recomiendo que inviertas el tiempo suficiente en investigar todos los rincones de este portal, que va a ser tu “nueva casa” mientras sigas ligado al IGEAR.\n3. ARQUITECTURA DE DATOS\nLos datos se almacenan en bases de datos estructuradas en esquemas. Para poder publicar en la web estos mismos es necesario emplear un servidor. Posteriormente, las aplicaciones muestran lo que el servidor ha publicado.\nEntornos\nEl proceso brevemente explicado arrib"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 6,
+    "text": "do.\nEntornos\nEl proceso brevemente explicado arriba hay que multiplicarlo por 3. Es decir, ICEARAGON tiene 3 entornos en los que tanto las BD (con toda su información), servidores y aplicaciones están replicadas completamente (o deberían). Estos 3 entornos son:\nDesarrollo → es el sitio en el que puedes hacer pruebas\nProducción/Gestión → paso intermedio entre las pruebas y los resultados definitivos\nPublicación → lo que ya es definitivo y está correcto. Se muestra al usuario final/público\n Durant"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 7,
+    "text": "recto. Se muestra al usuario final/público\n Durante la lectura de los siguientes aparatados en relación a la arquitectura -BD, servidores y aplicaciones-, tienes que tener en mente que todos ellos están replicados en esos 3 entornos. Se va a hacer referencia en los mismos a diferentes denominaciones, enlaces… que tienen cada uno de ellos.\nEs necesario mencionar que cada uno de estos entornos tiene su propio flujo cerrado y no se pueden ni deben mezclar. Para mostrar algo en una aplicación en el "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 8,
+    "text": "ezclar. Para mostrar algo en una aplicación en el entorno de Publicación, tiene que estar publicado en el servidor de Publicación y que estar almacenado en la BD de Publicación. Un ejemplo incorrecto sería intentar mostrar algo en una aplicación de Publicación, que esta publicado o almacenado en Desarrollo/Gestión. De todos modos, si por alguna confusión lo intentases no sería posible porque, como se ha mencionado, son flujos cerrados que no se ven unos a otros.\nEl flujo de trabajo correcto es c"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 9,
+    "text": "en unos a otros.\nEl flujo de trabajo correcto es comienza probando en el entorno de Desarrollo. Cuando se ha comprobado que funciona correctamente, se replica en Gestión y finalmente, en Publicación que es de cara al público.\nBases de datos (BD)\nEn el Gobierno de Aragón se trabaja con bases de datos (BD, de ahora en adelante) de las que son propietarios cada uno de los Departamentos (SALUD, Energía, Medio Ambiente...) y a las que el IGEAR tiene acceso, puesto que es el encargado -en la mayoría d"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 10,
+    "text": "cceso, puesto que es el encargado -en la mayoría de los casos- de ponerlas a disposición del público.\nDentro de las que el IGEAR es propietario encontramos: bdideaigar y bdidearagon. Estas a su vez se organizan en esquemas:\nBDIDEAIGAR\nCarto\nAtlas\nAtlas3\nIcearagon\n...\nBDIDEARAGON\nCarto → es el esquema propietario del IGEAR, así como otros Dpto tienen el suyo propio (ej: saludp = Salud). La información generada por el IGEAR debería estar aquí.\nGeoext* → almacena información proveniente de fuentes "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 11,
+    "text": "xt* → almacena información proveniente de fuentes externa (Catastro, IGN...)\nGeopub* → almacena información pública, que NO oficial\nGeorca* → almacena información oficial (está recogida en el Registro Cartográfico de Aragón)\nGeores* → almacena información restringida\nIcearagon\n…\n*En los esquemas Geos hay información de muchos Departamentos, y es desde estos de dónde se publica en las diferentes apps\nEstas BD están en 2 Sistemas de Gestión de BD, Postrgres y Oracle. No contienen exactamente la mi"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 12,
+    "text": "Postrgres y Oracle. No contienen exactamente la misma información. La principal diferencia entre ambos es que el primero de ellos es OpenSource, y el segundo es privado. Anteriormente a la aparición de ArcGIS Pro, ArcGIS solo permitía conectarse a BD Oracle, pero con el nuevo porgrama ya es posible hacerlo también a Postrgres. Por su parte QGIS, da menos problemas al conectarse a BD Postgres. En IGEAR y su Infraestructura, se emplea presencialmente Postgres.\nEn ellas almacenan tablas -que pueden"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 13,
+    "text": "te Postgres.\nEn ellas almacenan tablas -que pueden tener o no una columna de geometría-, y vistas -que provienen de tablas o de otras vistas, permitiendo seleccionar solo una parte, añadiendo campos de otra...-.\nFigura 1: previsualización aspecto bdidearagon desde pgAdmin\nAcceso y conexiones a las BD\nPara acceder a la información de la BD hay varias maneras de conectarse:\nDesde un SIG\nDesde un gestor de BD\nPGAdmin para las bd de Postgres (las que terminan en V)\nToad para las bd de Oracle (las qu"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 14,
+    "text": " terminan en V)\nToad para las bd de Oracle (las que terminan en Z)\nLa conexión es diferente dependiendo del entorno en el que quieras trabajar y del gestor de bd:\nDesarrollo → biz-01 y biv-02\nProducción/Gestión → boz-01 y bov-02\nPublicación → bov-03\nPídele a un compañer@ que te ayude a conectarte a ellas (hay diferentes contraseñas).\n\nServidores\nToda la información almacenada en las BD que quiera ponerse a disposición del público hay que publicarla en la web. De esta manera, puede ser utilizada "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 15,
+    "text": "la en la web. De esta manera, puede ser utilizada por nuestras propias aplicaciones y por los usuarios de servicios web (WMS, WMTS…).\nPara publicar en la web esta información tenemos varias formas dependiendo: \nSi la BD es de Oracle, la publicación se hace desde ArcGIS Server / Enterprise → se publica desde aquí toda la información en formato ráster porque anteriormente la otra opción no lo permitía. \nSi es desde Postgres (lo más habitual) se publica desde Geoserver. Como se ha comentado anterio"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 16,
+    "text": "lica desde Geoserver. Como se ha comentado anteriormente todo está multiplicado por los entornos. Así encontramos:\nDesarrollo → https://idearagondes.aragon.es/geoserver/web/?11 \nProducción/Gestión → https://gestion4-idearagon.aragon.es/geoserver/web/?0 \nPublicación → como ya sabes este es el entorno “de cara al público”. Por ello, por si hay algún problema con el servidor los datos dejarán de verse. Para evitar esto, existen 2 nodos, por si uno se cae que siga el otro funcionando (aunque vaya al"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 17,
+    "text": "e cae que siga el otro funcionando (aunque vaya algo más lento). Si ambos nodos funcionan correctamente, las consultas a los datos en web se dividen para que su funcionamiento sea más rápido. Cuando publicas un dato en uno de ellos, es necesario hacerlo también en el otro. Los nodos servidores de Publicación son: https://gestion1-idearagon.aragon.es/geoserver/web/ y https://gestion2-idearagon.aragon.es/geoserver/web/ \nAdemás de introducir la información a publicar, es necesario especificar el es"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 18,
+    "text": "rmación a publicar, es necesario especificar el estilo con el que se quiere visualizar posteriormente (exportar como .sld desde QGIS).\nAplicaciones\nY al final de todo este flujo tenemos las aplicaciones. Son los clientes que van a consumir los datos publicados por los servidores (independientemente de si son por ArcGIS Server / Enterprise o Geoserver) y los van a poner a disposición del usuario final -público general en el caso del entorno de Publicación-.\nAlgunas de estas aplicaciones que muest"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 19,
+    "text": "licación-.\nAlgunas de estas aplicaciones que muestran datos siguiendo este flujo de BD-Servidor-App son: Buscador, Visor 2D, Atlas, Cartoteca, Toponimia, SITA, Descargas, Servicos WMS, WMTS..… Si bien cada una de ellas requiere de algunos pasos más para lograr mostrar los datos (existen manuales de cada una de ellas, pregúntales a tus compañer@s que seguro te los pueden compartir).\nPara acceder a los entornos de esas aplicaciones, los enlaces son: \nDesarrollo → https://icearagondes.aragon.es/por"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 20,
+    "text": ": \nDesarrollo → https://icearagondes.aragon.es/portal/ (se añade des, tras icearagon)\nProducción/Gestión → no hay\nPublicación → https://icearagon.aragon.es/portal/ \n\n4. Aplicación de gestión de ICEARAGÓN\nAdemás de las aplicaciones mencionadas anteriormente (aplicaciones frontales), existen aplicaciones para facilitar la gestión de los datos, y de las mismas aplicaciones frontales.\nEstas aplicaciones se aglutinan en la Plataforma de Servicios y Aplicaciones de IGEAR (PSA). Como en todo, existen v"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 21,
+    "text": "licaciones de IGEAR (PSA). Como en todo, existen varios entornos, que permiten gestionar los datos y aplicaciones de estos mismos (ej: Desarrollo con Desarrollo), sin cruzarse con otros. Los enlaces a los entornos de PSA:\nDesarrollo → https://icearagondes.aragon.es/psa/ (se añade des, tras icearagon)\nProducción/Gestión → no hay\nPublicación → https://icearagon.aragon.es/psa/ \nFigura 2: aspecto de la PSA\nEn la PSA puedes tener más o menos permisos y en función de ellos aparecerán más o menos cuadr"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 22,
+    "text": "y en función de ellos aparecerán más o menos cuadrados. Si necesitas para algo específico más permisos, consúltalo con la persona de la DGA que gestione las cuentas.\nA continuación, se van a explicar algunas de las herramientas o se indicará si hay ya un Manual disponible para su utilización.\nGeodatos\nEdición de geodatos\nSincronización de geodatos\nValidador de geometrías\nCarga masiva de geodatos (GeoDataLoader)\nSe empela para subir capas del\nTest de geometrías\nDescargas\nCatálogo\nCISA\nAtlas\nGrafo"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 23,
+    "text": " de geometrías\nDescargas\nCatálogo\nCISA\nAtlas\nGrafo\n5. METADATOS- GEONETWORK-RCA? FILEZILLA?\nTítulo de segundo nivel\nEn el caso de....\nTítulo de tercer nivel\nLos párrafos utilizarán el estilo “Cuerpo de texto”. Utilizar negrita para destacar elementos importantes e itálica para palabras en otros idiomas como por ejemplo feature. El uso de subrayado se utiliza para destacar alguna parte también, pero no se suele usar.\nLa redacción debe ser siempre en impersonal, evitando la primera persona del sin"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 24,
+    "text": "en impersonal, evitando la primera persona del singular o del plural.\nSi hay código hay que usar este tipo de estilo:\nselect distinct st_srid(<<columna_geom>>) from <<tabla>>;\nSi tiene sentido, mejor si puede ser con sintaxis coloreada (por ejemplo, no tiene mucho sentido para comandos de shell, pero sí para código javascript). Evitar pantallazos de código en lo posible. Para ello copiar el código en https://tohtml.com, seleccionar el lenguaje y el estilo eclipse y trasladar el resultado al docu"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 25,
+    "text": "el estilo eclipse y trasladar el resultado al documento word. Se recomienda cambiar tabuladores por dos espacios para que no quede muy estirado:\nselect distinct st_srid(<<columna_geom>>) from <<tabla>>;\n\nif (rs_esquema.next()) {\n  if (rs_esquema.getString(\"esquema\") != \"\") {\n    if (! rs_esquema.getString(\"esquema\").equals(\"boundingbox\")) {\n      xmin = rs_esquema.getString(\"xmin_f\");\n      ymin = rs_esquema.getString(\"ymin_f\");\n      xmax = rs_esquema.getString(\"xmax_f\");\n      ymax = rs_esquem"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 26,
+    "text": "squema.getString(\"xmax_f\");\n      ymax = rs_esquema.getString(\"ymax_f\");\n    }\n  }\n}\n\nLas figuras se referenciarán en el texto entre paréntesis y con su número (3), añadiendo en el menú desde “Insertar Referencia cruzada”. En el pie de figura se utilizará el estilo caption la secuencia Ilustración (ver ejemplo). Es importante que siempre haya pie de figura.\nFigura 3: pie de figura\nLas listas de elementos se mostrarán así:\nItem primer nivel.\nItem 2 de primer nivel.\nItem 3 de primer nivel con subi"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 27,
+    "text": "2 de primer nivel.\nItem 3 de primer nivel con subitems.\nSubitem de segundo nivel.\nLas tablas se representarán así, incluyendo pie de tabla con secuencia tabla, y siendo referenciada desde el texto con su número como referencia cruzada:\nTabla 1: ejemplo de tabla\n"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 0,
+    "text": "\n\n\n\n\n\nOnBoarding\n\t\nManual de bienvenida a idearium consultores srl\n\n\n\n\nÍNDICE\n\nNos complace darte la bienvenida a Idearium Consultores SRL, esperamos que compartas nuestros objetivos en pro del éxito y que tengas una carrera larga y exitosa con nosotros. Idearium Consultores SRL está comprometida con la más alta calidad de servicio en todos los aspectos de nuestro negocio.\nEste manual del empleado ha sido creado para proporcionar pautas generales sobre el funcionamiento de la empresa y que sea m"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 1,
+    "text": " sobre el funcionamiento de la empresa y que sea más fácil tu integración y puesta al día en ella.\n2. ¿Quienes somos?\nIdearium Consultores SRL es una empresa fundada en 2009 y se dedicada a la consultoría en el ámbito de las tecnologías de la información, el desarrollo de SIG, SIT e IDES. \nPoco a poco hemos ido creciendo tanto en clientes como en trabajadores. Aunque el nombre oficial es Idearium Consultores, habitualmente nos referimos a la empresa simplemente como Idearium.\n3. Valores\nLos empl"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 2,
+    "text": "esa simplemente como Idearium.\n3. Valores\nLos empleados de la empresa tienen:\n- Compromiso con la integridad\n- Compromiso con la calidad\n- Compromiso con la innovación y la excelencia\n- Y sobre todo un compromiso en el trabajo en equipo\nTener buena disposición en el trabajo hace que un equipo funcione mejor y así poder ser más competentes en el mercado.\nIdearium cree que cada trabajador/a es igualmente importante y queremos que participes. Habla, ofrece tu punto de vista, haz sugerencias. No esp"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 3,
+    "text": " ofrece tu punto de vista, haz sugerencias. No esperes a que alguien pida tu opinión. Sé proactivo. Contribuye.\n4. Trabajo en Idearium\nLugar de trabajo y horario\nEn Idearium se ofrece la posibilidad de trabajar desde casa o trabajar en un puesto en oficina y el horario es flexible siempre y cuando se informe al supervisor/a o al jefe de la empresa y en función del cliente asignado.\nLa oficina está ubicada en la C/ Valle de Zuriza 19, portal 2, oficina 7 y 8, 50.015 Zaragoza.\nTambién se permite l"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 4,
+    "text": "icina 7 y 8, 50.015 Zaragoza.\nTambién se permite la opción mixta de teletrabajo-oficina. En general lo previsto es que haya puestos libres en la oficina, por lo que no hay que preocuparse de hacer reservas.\nLink de reuniones online\nLas reuniones internas y muchas con clientes las hacemos siempre en este link Te recomiendo añadirlo a marcadores: https://meet.google.com/hkp-rnth-ygg Si ya hay alguien, generar otro alternativo.\nCalendario compartido y mensajería instantánea \nTenemos un calendario c"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 5,
+    "text": " y mensajería instantánea \nTenemos un calendario compartido y canales de mensajería instantánea utilizando Gmail. Te recomiendo que envíes una cuenta de gmail para que te añada tu responsable a los mismos.\nFestivos y vacaciones\nLos días festivos los marca el calendario oficial de tu lugar de residencia, aunque es posible variarlo. Confirma con tu responsable cuál deseas seguir ya que influye en los festivos locales y autonómicos.\nCada trabajador/a tiene 23 días laborables de vacaciones al año (p"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 6,
+    "text": "a tiene 23 días laborables de vacaciones al año (por año completo trabajado). Estos se deben consultar con la persona encargada. Una vez acordados, hay que indicarlos en la excel compartida en la que aparecen las vacaciones de todo el equipo de la empresa. Si no tienes permisos para editar esta hoja, solicítalo a dportoles. (https://docs.google.com/spreadsheets/d/1WyDRufoOpSxSLbzKmcoUgZKKILg4p9L2TrkJ5wcUcu0/edit?usp=sharing). \nEn la  excel están los diferentes meses del año en los que cada traba"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 7,
+    "text": "los diferentes meses del año en los que cada trabajador/a tiene una fila que le corresponde. Las instrucciones de uso son las siguientes (aparecen estas mismas en la celda A1 de la propia excel): marcar H para días de vacaciones, marcar F para festivo, marcar A para vacaciones año anterior, y marcar P para otros asuntos (baja médica, etc.). Al marcarlo la casilla se pone de colo rojo. \nAl final de la excel está el recuento de días de vacaciones disponibles. Este se hace de manera automática conf"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 8,
+    "text": "isponibles. Este se hace de manera automática conforme vas rellenando en el calendario.\nAdemas de anotar las ausencias en la Excel hay que anotarlas también en el calendario compartido (ver apartado 3).\n\nReconocimiento médico\nEl reconocimiento médico se hará al incorporarte a la empresa y se renovará todos los años. Si no se desea realizar el reconocimiento médico habrá que escribir una carta renunciando a este reconocimiento.\nPara solicitar cita hay que enviar un correo electrónico a medicina@b"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 9,
+    "text": " hay que enviar un correo electrónico a medicina@balmarprevencion.com indicando tu nombre, el de la empresa (Idearium Consultores) y si se trata de un reconocimiento INICIAL, PERIÓDICO o por REINCORPORACIÓN.\nFichaje horario\nPara llevar a cabo el control horario diario existe una excel de horas subida a GitHub desde donde se puede descargar (https://github.com/Idearium-eu/Idearium/blob/master/plantillaFichajeHorario/Horario_2025.xlsx). Una vez la descargues, genera una copia en local para que sea"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 10,
+    "text": "descargues, genera una copia en local para que sea la tuya personal. \nEn el fichero excel hay varias hojas correspondientes a los meses. En estos están marcados en rojo los fines de semana, y en rosa los festivos correspondientes a la ciudad de Zaragoza (se pueden modificar según tus festivos). También hay en cada hoja un encabezado que es necesario rellenar: el ID empleado se corresponde con el DNI; el trabajador, con el nombre completo; Departamento, con el que corresponda. \nEn cada uno de los"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 11,
+    "text": "mento, con el que corresponda. \nEn cada uno de los días hay diferentes columnas a rellenar con el formato hh:mm: hora de entrada, hora de salida, horas extras y descanso (en el caso de hacerlo para comer). La columna de horas totales se calcula automáticamente una vez se han rellenado las anteriores. Al final de la hoja hay una celda verde, que también se calcula de manera automática, que hacer referencia al total de horas trabajadas dicho mes.  \nComo se indica en la leyenda de las hojas, hay qu"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 12,
+    "text": "\nComo se indica en la leyenda de las hojas, hay que marcar aquellos días que se corresponde con: ausencias, marcar con una A; L, día libre; V, vacaciones; y P, día de permiso. Además, es buena práctica copiar el formato de esa celda de la leyenda para traspasar el color.\nCuando el mes finaliza y están rellenadas tanto las celdas de horas como el encabezado, hay que exportarlo. En primer lugar, desde Archivo>Imprimir, se cambiará a formato A3 para que todo el contenido entre en un mismo folio. Po"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 13,
+    "text": " que todo el contenido entre en un mismo folio. Posteriormente, desde la opción Archivo>Guardar como, se exportará como PDF.  Este mismo PDF es necesario firmarlo y remitirlo a controlhorario@idearium.eu \n5. Directorios y accesos \nCuentas corporativas y servicios\nCorreo electrónico\nCada trabajador tendrá un correo electrónico corporativo xxxxx@idearium.eu siendo el  acceso webmail al proveedor actual el siguiente: https://login.one.com/mail. Te debería haber llegado, sino solicítalo a tu respons"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 14,
+    "text": "ebería haber llegado, sino solicítalo a tu responsable.\nFTP\nDisponemos de un servicio FTP para compartición de archivos grandes. Se puede utilizar filezilla / winscp (u otra aplicación) o mediante la web https://filemanager.one.com/\nCuentas VPN de cliente\nSegún el cliente final al que vayas a trabajar, es posible que necesites cuenta VPN o acceso a la intranet. Consulta con tu responsable si es el caso para proceder a solicitarlo.\nEn el caso de IGEAR se solicita a través de Marisa.\nGestión de ta"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 15,
+    "text": "GEAR se solicita a través de Marisa.\nGestión de tareas- Jira\nPara la gestión de tareas se utiliza Atlassian-JIRA, da conexión entre equipos y trabajadores. También como seguimiento de las tareas a realizar por cada uno de los trabajadores/as de Idearium.\nPeriódicamente hay reuniones de sprint en los que revisamos las tareas. Típicamente se hace en torno al día 1 y 15 de cada mes. El responsable del equipo te informará de cuándo se irán convocando.\nEs importante mantener al día el estado y person"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 16,
+    "text": ".\nEs importante mantener al día el estado y persona asignada de cada tarea. Los estados de las tareas son:\nTareas por hacer: la tarea no se ha iniciado.\nEn curso: la tarea se ha iniciado.\nBlocked: no se puede avanzar en la tarea por algún motivo. Si el motivo es que hay que hacer otra tarea antes, hay que vincularla con la relación is blocked by. Cualquier otro motivo se indicará como comentario (e.g.: pendiente de recibir datos necesarios, duda trasladada al cliente a la espera de respuesta, et"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 17,
+    "text": "trasladada al cliente a la espera de respuesta, etc.).\nTest: la tarea se ha finalizado y está pendiente de validación. Si la validación la tiene que hacer algún otro miembro del equipo hay que asignarle la tarea.\nPendientePro: se ha validado la tarea en el entorno de desarrollo y hay que pasarla a producción.\nFinalizada: la tarea no requiere ninguna acción adicional y se da por terminada.\nRepositorio (GitHub)\nDisponemos de un repositorio GIT de código en GitHub: https://github.com/Idearium-eu . "
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 18,
+    "text": "ódigo en GitHub: https://github.com/Idearium-eu . Lo utilizamos también para subir documentos en algún caso. Según tu perfil, lo utilizarás más o menos, por lo que dispondrás de usuario propio. (Esto va a dejar de ser así en GitHub cada uno tendrá su propio usuario) Los geógrafos de la empresa por ejemplo usan un usuario compartido, solicita credenciales a tu responsable.\nLos proyectos están organizados por temáticas y la estructura habitual de los proyectos es la siguiente:\ndata: datos, en el c"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 19,
+    "text": "os proyectos es la siguiente:\ndata: datos, en el caso que se considere de interés guardarlo.\ndistrib: distribución del software, en el caso de que no se pueda generar de forma automática a partir de los fuentes.\ndoc: documentación\nsrc: código fuente\nSolo se deben subir al repositorio archivos que no se puedan generar de forma automática. Por ejemplo si se dispone de un documento Word y se ha generado un pdf para enviarlo al cliente, el pdf no hay que subirlo. Igualmente con los archivos de salid"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 20,
+    "text": " que subirlo. Igualmente con los archivos de salida de procesos o la distribución.\nRRSS y Web\nLa dirección de la página web es https://www.idearium.eu/ donde se puede consultar proyectos en los que se ha ido trabajando y clientes para los que se trabaja. Si se te ocurre cómo mejorarla, sería fantástico escuchar tus propuestas.\nLas RRSS que utilizamos en Idearium es X @Idearium_eu. Puedes seguirnos y ¡así ganamos un follower!\nCuenta compartida gmail\nTenemos una cuenta compartida idearium.eu@gmail"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 21,
+    "text": "il\nTenemos una cuenta compartida idearium.eu@gmail.com para disponer de espacio drive al que subimos presentaciones, documentos, etc. en los que trabajar de forma compartida. También para entregas con cliente solemos utilizarlo aunque el FTP es otra solución. Esta cuenta sirve también para el acceso a los servicios de Google Cloud.\nSolicita la contraseña a tu responsable.\nProcedimientos de despliegue\nExplicar Gob Aragon (vía 4100)\nGestión de tareas\nExplicar\nOrganización del repositorio\nExplicar"
+  },
+  {
+    "document_id": "Bienvenida_Idearium.docx",
+    "chunk": 22,
+    "text": "as\nExplicar\nOrganización del repositorio\nExplicar"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 0,
+    "text": "\n\n\n\n\n\nOnBoarding\n\t\nMANUAL DE BIENVENIDA AL CLIENTE: INSTITUTO GEOGRÁFICO DE ARAGÓN (IGEAR)\n\n\n\n\nÍNDICE\nBienvenida\nNos complace darte la bienvenida al Instituto Geográfico de Aragón (IGEAR), uno de los clientes de Idearium Consultores SRL. Idearium trabaja como asistencia técnica de acuerdo a los pliegos que ha ganado.\nEste manual ha sido creado para proporcionar pautas generales sobre el funcionamiento y la organización del IGEAR, y la Infraestructura de Conocimiento Espacial de Aragón (ICEARAGON"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 1,
+    "text": "tura de Conocimiento Espacial de Aragón (ICEARAGON).\n\n2. ¿Qué es IGEAR?\nDefinición\n“El Instituto Geográfico de Aragón es un órgano integrado en el Departamento competente en materia de ordenación del territorio. Corresponde al Instituto obtener, organizar y difundir la documentación e información sobre el territorio de la Comunidad Autónoma, a través de la gestión y coordinación de los instrumentos de información territorial regulados en esta Ley” (Art. 10, Decreto Legislativo 2/2015, de 17 de n"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 2,
+    "text": "” (Art. 10, Decreto Legislativo 2/2015, de 17 de noviembre)\n \tEl Instituto Geográfico de Aragón, con naturaleza de servicio integrado en el Departamento competente en materia de ordenación del territorio, es un servicio de apoyo a todas las unidades administrativas del Gobierno de Aragón, al resto de administraciones públicas y a la ciudadanía, en todo lo relacionado con la información y documentación geográfica sobre ordenación del territorio aragonés.\n\tEl Instituto Geográfico de Aragón (IGEAR)"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 3,
+    "text": "agonés.\n\tEl Instituto Geográfico de Aragón (IGEAR) tiene su origen en el Centro de Información Territorial de Aragón (CINTA) que nace a partir de las Directrices Generales de Ordenación Territorial, aprobadas por la Ley 7/1998.\n\tPosteriormente, la Ley 4/2009, de Ordenación del Territorio de Aragón (LOTA), redefine la finalidad de este centro y sus características indicando que le corresponde la obtención, organización y difusión de la documentación e información sobre el territorio de la Comunid"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 4,
+    "text": "ón e información sobre el territorio de la Comunidad Autónoma, a través de la gestión y coordinación de los instrumentos de información territorial regulados en esta norma.\nLa Ley 8/2014, modifica la ley anterior cambiando la denominación del Centro de Información Territorial de Aragón por la denominación actual de Instituto Geográfico de Aragón, ampliando sus competencias para dar paso hacia la gestión de la información geográfica en el sentido más amplio del concepto: elaboración, catalogación"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 5,
+    "text": "más amplio del concepto: elaboración, catalogación, mantenimiento, registro y difusión.\n\tLa naturaleza, funciones y actividades del IGEAR vienen definidas en su Reglamento aprobado por Decreto 81/2015.\nPersonal funcionario\nEl IGEAR cuenta con una plantilla de funcionarios compuesta por:\nDirector del IGEAR → Fernando López\nÁREA ADMINISTRATIVA\nJefe de Negociado Gestión Económica, Cont. e Inf. Territorial → Santiago Barriendo\nAdministrativo → José Ángel Martín\nAux. Administrativo → Amelia Iritia\nÁR"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 6,
+    "text": "ngel Martín\nAux. Administrativo → Amelia Iritia\nÁREA TÉCNICA\nJefa de Sección Inteligencia Geográfica → Raquel López\nJefa de Sección Producción e Innovación Cartográfica → vacante\nJefa de Sección de Sistemas de Información Territorial → María Luisa Pellicer\nTécnico de Documentación → Consuelo Susín\nFac. Sup. Especialista Geógrafo → Jóse Juan González\nFac. Sup. Especialista Geógrafo → Sandra García\nTécnico de Cartografía → Javier Sádaba\nTécnico de Cartografía → Luis Ignacio Gomollón\nTopógrafo → Ro"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 7,
+    "text": "Cartografía → Luis Ignacio Gomollón\nTopógrafo → Romualdo Abad\n\n3. Trabajo en IGEAR\nLugar de trabajo y contacto\nEl lugar en el que está actualmente el IGEAR es el Edificio Pignatelli (Paseo de María Agustín, 36 50071 Zaragoza). Como habrás visto hay una puerta con torno, por lo que para acceder necesitarás una tarjeta / ticket de acceso.\nEl teléfono de contacto del IGEAR es 976 715 605.\nY el correo electrónico: igear@aragon.es\nCorreo electrónico\nCada trabajador externo a la DGA (nuestro caso como"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 8,
+    "text": "ada trabajador externo a la DGA (nuestro caso como asesoría técnica) tendrá un correo electrónico xxxxx@ext.aragon.es siendo el acceso desde Microsoft Outlook. La contraseña de este hay que cambiarla cada 3 meses por seguridad. Para gestionar la contraseña, lo puedes hacer desde https://micuenta.aragon.es/mem/web/login;lang=es .\nEste correo y su respectiva contraseña son necesarios para poder hacer prácticamente cualquier cosa relacionada con ICEARAGON (uso de herramientas como PSA, sincro ...et"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 9,
+    "text": "ARAGON (uso de herramientas como PSA, sincro ...etc).\nActualmente es necesaria una doble autenticación. Para ello, deberás instalar en tu dispositivo móvil la aplicación Microsoft Authenticator, y seguir los pasos que se indican.\nCarpetas compartidas\nIGEAR tiene 2 carpetas compartidas localizadas en un servidor, a las que como personal externo tenemos acceso. Son V y W.\nPor un lado está W://, en la que cada uno de nosotros tiene una carpeta propia para su trabajo diario.\nPor otro lado está V://,"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 10,
+    "text": "a para su trabajo diario.\nPor otro lado está V://, en la que está todo el trabajo finalizado (documentos, manuales...), instaladores de programas de interés, rásters (ej:PNOA, vuelos antiguos, LiDAR) … Además en esta se localiza el documento “Servidores_IGEAR”, que almacena información de como conectarse a diferentes bases de datos, servidores, programas… y diferentes manuales de uso de aplicaciones.\nPara poder conectarte a estas carpetas por primera vez pide ayuda a un compañero o al personal d"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 11,
+    "text": "mera vez pide ayuda a un compañero o al personal de IGEAR.\nContacto Idearium – IGEAR\nLa presencialidad en el edificio es de 3-4 días por semana (dependiendo del calendario de teletrabajo), lo que facilita la comunicación.\nLa mayor parte de la relación, en cuanto a comunicación empresa-cliente se refiere, se mantiene con los funcionarios que llevan los proyectos. Actualmente son los dos  Téc. Sup. Especialistas (José Juan y Sandra).\nIgualmente, la información general del Instituto llega al correo"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 12,
+    "text": " información general del Instituto llega al correo electrónico @ext.aragon.es.\nEn algún caso excepcional, con los funcionarios que hacen de enlace, hay comunicación también por Chat de Google. Para tema de incidencias y nuevas tareas, se emplea la vía Jira.\nTeletrabajo\nPara teletrabajar y poder conectarte al ordenador que esta en el Edificio, tendrás que pedirle al Director del IGEAR que solicite al 4100, los permisos necesarios para que con tu correo @ext.aragon.es puedas hacerlo.\nExiste un man"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 13,
+    "text": "orreo @ext.aragon.es puedas hacerlo.\nExiste un manual de AST en el que se explica el procedimiento para, una vez tienes los permisos, poder conectarte de manera remota al equipo.\n\n4. ICEARAGON\nDefinición\nICEARAGON, es el paso al frente del Gobierno de Aragón para conseguir los objetivos marcados desde la Directiva Europea 2007/2/CE INSPIRE (Infrastructure for Spatial Information in Europe), la Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en Esp"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 14,
+    "text": "s y los servicios de información geográfica en España (LISIGE), y la Ley 3/2022, de 6 de octubre, de información geográfica de Aragón (LIGA) que tienen por objeto hacer disponible información geográfica relevante, concertada y de calidad de forma que se permita la formulación, implementación, monitorización y evaluación de las políticas de impacto o de dimensión territorial.\n\n\tICEARAGON se define como la organización de los conjuntos de datos georreferenciados del territorio de Aragón distribuid"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 15,
+    "text": "rreferenciados del territorio de Aragón distribuidos en diferentes sistemas de información geográfica, accesible por la red de Internet. Implica la suma de políticas, estándares, recursos humanos y tecnologías necesarias para descubrir, informar, distribuir, usar y mantener información geográfica.\n\n\tEn suma, es un sistema informático integrado por un conjunto de recursos (servidores, catálogos, datos, metadatos, servicios, aplicaciones y geoportales) con que se gestiona y trabaja la información "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 16,
+    "text": "les) con que se gestiona y trabaja la información geográfica (ya sea cartografía, planos, mapas, ortofotos, imágenes de satélite) para que sean públicos en Internet cumpliendo unas condiciones de interoperabilidad (normas, especificaciones, protocolos) que permiten que cualquier usuario ya sea público o privado, pueda utilizar la geoinformación a través de un navegador web.\nPortal\nLa dirección del portal web de ICEARAGON de acceso público es: https://icearagon.aragon.es/portal/ . Desde aquí hay "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 17,
+    "text": "ps://icearagon.aragon.es/portal/ . Desde aquí hay vínculos a multitud de páginas web relacionadas con la Infraestructura o el IGEAR. También hay acceso directo a las aplicaciones que muestran los datos espaciales, y los ponen a disposición de los usuarios (visualización, descarga o servicios web).\nTe recomiendo que inviertas el tiempo suficiente en investigar todos los rincones de este portal, que va a ser tu “nueva casa” mientras sigas ligado al IGEAR.\nFigura 1: aspecto del portal web de ICEARA"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 18,
+    "text": " IGEAR.\nFigura 1: aspecto del portal web de ICEARAGON\nAplicaciones\nLa sección de la web que engloba el conjunto de aplicaciones geográficas desarrolladas en virtud del componente político (marco legal e instrumentos del Sistema Cartográfico de Aragón), geográfico (geodatos, metadatos y servicios), tecnológico (estándares, hardware y software) y social (Necesidades y demandas internas y externas de los actores) de ICEAragon.\nLas aplicaciones geográficas explotan la geoinformación a través de los "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 19,
+    "text": "áficas explotan la geoinformación a través de los servicios habilitados con el fin de facilitar el descubrimiento (catálogo y buscador), el registro (registro), la visualización (visores -2D, 3D, SIOSE, RJT, etc.-), el análisis (visores, cartoteca, aplicaciones temáticas, servicios) y la descarga (descargas, GNSS, etc.) de la IG.\nEstas aplicaciones permiten la visualización, consulta o descarga de datos de los cuáles es propietario el IGEAR u otro Departamento del Gobierno de Aragón que ha conce"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 20,
+    "text": "o Departamento del Gobierno de Aragón que ha concedido los permisos.\nAlgunos ejemplos: Visor 2D, Atlas, SITA, Cartoteca, Descargas… (https://icearagon.aragon.es/portal/aplicaciones.jsp)\nServicios Web\nEn dicho portal hay una sección dedicada a la difusión de la información geográfica de Aragón mediante Servicios Web OGC (Open Geospatial Consortium), siguiendo las recomendaciones de la Directiva 2007/2/CE INSPIRE. Está compuesta por páginas informativas detallando el listado de direcciones de acce"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 21,
+    "text": "tivas detallando el listado de direcciones de acceso a los servicios web disponibles, así como páginas específicas de cada uno de los servicios web desarrollados, formas de acceso y uso de los mismos a través de navegadores web (clientes ligeros) o clientes pesados ya sean de software libre o propietario (ej: SIG).\n\tEl directorio de servicios web desplegados en ICEARAGON agrupados por los diferentes tipos, es el siguiente: https://icearagon.aragon.es/directorio_ws.jsp.\nDentro de ICEARAGON\nHasta "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 22,
+    "text": "n.es/directorio_ws.jsp.\nDentro de ICEARAGON\nHasta aquí es lo que ve el público general. Ahora vamos a pasar a la parte de gestión y mantenimiento de la Infraestructura.\nDatos\nLos datos que muestran las aplicaciones que ve el público, están almacenados en bases de datos (BD), que se dividen en esquemas. IGEAR es propietario de un esquema (carto) y a la vez mantiene otros 4 generales (geopub, geoext, georca, geores) donde se vuelca información del resto de Departamentos. Cada Departamento también "
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 23,
+    "text": "resto de Departamentos. Cada Departamento también cuenta con un esquema propio (EJ: saludp, oma, dagma...).\n\tPara visualizar estas BD, puedes hacerlo desde un SIG o desde programas gestores de BD, como Postgres u Oracle.\n\tDentro de estas BD, hay:\nTablas\nCon componente espacial, si tiene campo de geometría (se puede cargar en un SIG y tiene representación espacial) → esta puede ser de tipo punto, línea o polígono\nSin componente espacial, si no tienen dicho campo.\nVistas → provienen de tablas o de"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 24,
+    "text": "nen dicho campo.\nVistas → provienen de tablas o de otras vistas, permitiendo seleccionar solo una parte, añadiendo campos de otra…\nProcedimientos (solo en Oracle) → bloque de código PL/SQL almacenado en la base de datos que ejecuta una secuencia de instrucciones de forma estructurada y reutilizable\nFunciones → bloque de código almacenado que devuelve un valor y puede ejecutarse dentro de consultas SQL para realizar cálculos, transformaciones o lógica de negocio.\nEn relación a los datos ráster, e"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 25,
+    "text": "gica de negocio.\nEn relación a los datos ráster, estos están almacenados en V://.\nServidores web\nToda la información almacenada en las BD que quiera ponerse a disposición del público (aplicaciones o servicios web) hay que publicarla en la web desde unos servidores.\nPara publicar en la web esta información tenemos varias formas:\nSi la BD es de Oracle, la publicación se hace desde ArcGIS Server / Enterprise.\nSi es desde Postgres (lo más habitual) se publica desde Geoserver.\nPSA\nPara mantener las a"
+  },
+  {
+    "document_id": "clienteGEAR/Bienvenida_IGEAR.docx",
+    "chunk": 26,
+    "text": "e publica desde Geoserver.\nPSA\nPara mantener las aplicaciones frontales (las que ve el público) de la Infraestructura, contamos con la Plataforma de Servicios y Aplicaciones de IGEAR (PSA, https://icearagon.aragon.es/psa/). Esta permite el acceso a diferentes aplicaciones de gestión de ICEARAGON. Para acceder necesitarás tu correo @ext.aragon.es y que te den los permisos necesarios para poder acceder a ellas.\n"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 0,
+    "text": "\n\n\n\n\n\nMaterial formativo\n\t\nMANUAL DE INTRODUCCIÓN A la INFRAESTRUCTURA DE CONOCIMIENTO ESPACIAL de aragón (ICEARAGON) \n\nÍNDICE\n\nNos complace darte la bienvenida al Instituto Geográfico de Aragón.\nEste manual ha sido creado para proporcionar pautas generales sobre el funcionamiento y la organización de ICEARAGÓN, la Infraestructura de Conocimiento Espacial de Aragón. \n2. Introducción a ICEARAGÓN\nDefinición\nICEARAGON, es el paso al frente del Gobierno de Aragón para conseguir los objetivos marcado"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 1,
+    "text": "rno de Aragón para conseguir los objetivos marcados desde la Directiva Europea 2007/2/CE INSPIRE (Infrastructure for Spatial Information in Europe), la Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE), y la Ley 3/2022, de 6 de octubre, de información geográfica de Aragón (LIGA) que tienen por objeto hacer disponible información geográfica relevante, concertada y de calidad de forma que se permita la formulación, implementación, m"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 2,
+    "text": "a que se permita la formulación, implementación, monitorización y evaluación de las políticas de impacto o de dimensión territorial.\n\n\tICEARAGON se define como la organización de los conjuntos de datos georreferenciados del territorio de Aragón distribuidos en diferentes sistemas de información geográfica, accesible por la red de Internet. Implica la suma de políticas, estándares, recursos humanos y tecnologías necesarias para descubrir, informar, distribuir, usar y mantener información geográfi"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 3,
+    "text": ", distribuir, usar y mantener información geográfica.\n\n\tEn suma, es un sistema informático integrado por un conjunto de recursos (servidores, catálogos, datos, metadatos, servicios, aplicaciones y geoportales) con que se gestiona y trabaja la información geográfica (ya sea cartografía, planos, mapas, ortofotos, imágenes de satélite) para que sean públicos en Internet cumpliendo unas condiciones de interoperabilidad (normas, especificaciones, protocolos) que permiten que cualquier usuario ya sea "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 4,
+    "text": "ocolos) que permiten que cualquier usuario ya sea público o privado, pueda utilizar la geoinformación a través de un navegador web. \nPortal\nLa dirección del portal web de ICEARAGON de acceso público es: https://icearagon.aragon.es/portal/ . Desde aquí hay acceso a múltitud de páginas web relacionadas con la Infraestructura o IGEAR. También hay acceso directo a las aplicaciones que muestran los datos espaciales, y los ponen a disposición de los usuarios (visualización, descarga o servicios web).\n"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 5,
+    "text": "uarios (visualización, descarga o servicios web).\nTe recomiendo que inviertas el tiempo suficiente en investigar todos los rincones de este portal, que va a ser tu “nueva casa” mientras sigas ligado al IGEAR.\n3. ARQUITECTURA DE DATOS\nLos datos se almacenan en bases de datos estructuradas en esquemas. Para poder publicar en la web estos mismos es necesario emplear un servidor. Posteriormente, las aplicaciones muestran lo que el servidor ha publicado.\nEntornos\nEl proceso brevemente explicado arrib"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 6,
+    "text": "do.\nEntornos\nEl proceso brevemente explicado arriba hay que multiplicarlo por 3. Es decir, ICEARAGON tiene 3 entornos en los que tanto las BD (con toda su información), servidores y aplicaciones están replicadas completamente (o deberían). Estos 3 entornos son:\nDesarrollo → es el sitio en el que puedes hacer pruebas\nProducción/Gestión → paso intermedio entre las pruebas y los resultados definitivos\nPublicación → lo que ya es definitivo y está correcto. Se muestra al usuario final/público\n Durant"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 7,
+    "text": "recto. Se muestra al usuario final/público\n Durante la lectura de los siguientes aparatados en relación a la arquitectura -BD, servidores y aplicaciones-, tienes que tener en mente que todos ellos están replicados en esos 3 entornos. Se va a hacer referencia en los mismos a diferentes denominaciones, enlaces… que tienen cada uno de ellos.\nEs necesario mencionar que cada uno de estos entornos tiene su propio flujo cerrado y no se pueden ni deben mezclar. Para mostrar algo en una aplicación en el "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 8,
+    "text": "ezclar. Para mostrar algo en una aplicación en el entorno de Publicación, tiene que estar publicado en el servidor de Publicación y que estar almacenado en la BD de Publicación. Un ejemplo incorrecto sería intentar mostrar algo en una aplicación de Publicación, que esta publicado o almacenado en Desarrollo/Gestión. De todos modos, si por alguna confusión lo intentases no sería posible porque, como se ha mencionado, son flujos cerrados que no se ven unos a otros.\nEl flujo de trabajo correcto es c"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 9,
+    "text": "en unos a otros.\nEl flujo de trabajo correcto es comienza probando en el entorno de Desarrollo. Cuando se ha comprobado que funciona correctamente, se replica en Gestión y finalmente, en Publicación que es de cara al público.\nBases de datos (BD)\nEn el Gobierno de Aragón se trabaja con bases de datos (BD, de ahora en adelante) de las que son propietarios cada uno de los Departamentos (SALUD, Energía, Medio Ambiente...) y a las que el IGEAR tiene acceso, puesto que es el encargado -en la mayoría d"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 10,
+    "text": "cceso, puesto que es el encargado -en la mayoría de los casos- de ponerlas a disposición del público.\nDentro de las que el IGEAR es propietario encontramos: bdideaigar y bdidearagon. Estas a su vez se organizan en esquemas:\nBDIDEAIGAR\nCarto\nAtlas\nAtlas3\nIcearagon\n...\nBDIDEARAGON\nCarto → es el esquema propietario del IGEAR, así como otros Dpto tienen el suyo propio (ej: saludp = Salud). La información generada por el IGEAR debería estar aquí.\nGeoext* → almacena información proveniente de fuentes "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 11,
+    "text": "xt* → almacena información proveniente de fuentes externa (Catastro, IGN...)\nGeopub* → almacena información pública, que NO oficial\nGeorca* → almacena información oficial (está recogida en el Registro Cartográfico de Aragón)\nGeores* → almacena información restringida\nIcearagon\n…\n*En los esquemas Geos hay información de muchos Departamentos, y es desde estos de dónde se publica en las diferentes apps\nEstas BD están en 2 Sistemas de Gestión de BD, Postrgres y Oracle. No contienen exactamente la mi"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 12,
+    "text": "Postrgres y Oracle. No contienen exactamente la misma información. La principal diferencia entre ambos es que el primero de ellos es OpenSource, y el segundo es privado. Anteriormente a la aparición de ArcGIS Pro, ArcGIS solo permitía conectarse a BD Oracle, pero con el nuevo porgrama ya es posible hacerlo también a Postrgres. Por su parte QGIS, da menos problemas al conectarse a BD Postgres. En IGEAR y su Infraestructura, se emplea presencialmente Postgres.\nEn ellas almacenan tablas -que pueden"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 13,
+    "text": "te Postgres.\nEn ellas almacenan tablas -que pueden tener o no una columna de geometría-, y vistas -que provienen de tablas o de otras vistas, permitiendo seleccionar solo una parte, añadiendo campos de otra...-.\nFigura 1: previsualización aspecto bdidearagon desde pgAdmin\nAcceso y conexiones a las BD\nPara acceder a la información de la BD hay varias maneras de conectarse:\nDesde un SIG\nDesde un gestor de BD\nPGAdmin para las bd de Postgres (las que terminan en V)\nToad para las bd de Oracle (las qu"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 14,
+    "text": " terminan en V)\nToad para las bd de Oracle (las que terminan en Z)\nLa conexión es diferente dependiendo del entorno en el que quieras trabajar y del gestor de bd:\nDesarrollo → biz-01 y biv-02\nProducción/Gestión → boz-01 y bov-02\nPublicación → bov-03\nPídele a un compañer@ que te ayude a conectarte a ellas (hay diferentes contraseñas).\n\nServidores\nToda la información almacenada en las BD que quiera ponerse a disposición del público hay que publicarla en la web. De esta manera, puede ser utilizada "
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 15,
+    "text": "la en la web. De esta manera, puede ser utilizada por nuestras propias aplicaciones y por los usuarios de servicios web (WMS, WMTS…).\nPara publicar en la web esta información tenemos varias formas dependiendo: \nSi la BD es de Oracle, la publicación se hace desde ArcGIS Server / Enterprise → se publica desde aquí toda la información en formato ráster porque anteriormente la otra opción no lo permitía. \nSi es desde Postgres (lo más habitual) se publica desde Geoserver. Como se ha comentado anterio"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 16,
+    "text": "lica desde Geoserver. Como se ha comentado anteriormente todo está multiplicado por los entornos. Así encontramos:\nDesarrollo → https://idearagondes.aragon.es/geoserver/web/?11 \nProducción/Gestión → https://gestion4-idearagon.aragon.es/geoserver/web/?0 \nPublicación → como ya sabes este es el entorno “de cara al público”. Por ello, por si hay algún problema con el servidor los datos dejarán de verse. Para evitar esto, existen 2 nodos, por si uno se cae que siga el otro funcionando (aunque vaya al"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 17,
+    "text": "e cae que siga el otro funcionando (aunque vaya algo más lento). Si ambos nodos funcionan correctamente, las consultas a los datos en web se dividen para que su funcionamiento sea más rápido. Cuando publicas un dato en uno de ellos, es necesario hacerlo también en el otro. Los nodos servidores de Publicación son: https://gestion1-idearagon.aragon.es/geoserver/web/ y https://gestion2-idearagon.aragon.es/geoserver/web/ \nAdemás de introducir la información a publicar, es necesario especificar el es"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 18,
+    "text": "rmación a publicar, es necesario especificar el estilo con el que se quiere visualizar posteriormente (exportar como .sld desde QGIS).\nAplicaciones\nY al final de todo este flujo tenemos las aplicaciones. Son los clientes que van a consumir los datos publicados por los servidores (independientemente de si son por ArcGIS Server / Enterprise o Geoserver) y los van a poner a disposición del usuario final -público general en el caso del entorno de Publicación-.\nAlgunas de estas aplicaciones que muest"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 19,
+    "text": "licación-.\nAlgunas de estas aplicaciones que muestran datos siguiendo este flujo de BD-Servidor-App son: Buscador, Visor 2D, Atlas, Cartoteca, Toponimia, SITA, Descargas, Servicos WMS, WMTS..… Si bien cada una de ellas requiere de algunos pasos más para lograr mostrar los datos (existen manuales de cada una de ellas, pregúntales a tus compañer@s que seguro te los pueden compartir).\nPara acceder a los entornos de esas aplicaciones, los enlaces son: \nDesarrollo → https://icearagondes.aragon.es/por"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 20,
+    "text": ": \nDesarrollo → https://icearagondes.aragon.es/portal/ (se añade des, tras icearagon)\nProducción/Gestión → no hay\nPublicación → https://icearagon.aragon.es/portal/ \n\n4. Aplicación de gestión de ICEARAGÓN\nAdemás de las aplicaciones mencionadas anteriormente (aplicaciones frontales), existen aplicaciones para facilitar la gestión de los datos, y de las mismas aplicaciones frontales.\nEstas aplicaciones se aglutinan en la Plataforma de Servicios y Aplicaciones de IGEAR (PSA). Como en todo, existen v"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 21,
+    "text": "licaciones de IGEAR (PSA). Como en todo, existen varios entornos, que permiten gestionar los datos y aplicaciones de estos mismos (ej: Desarrollo con Desarrollo), sin cruzarse con otros. Los enlaces a los entornos de PSA:\nDesarrollo → https://icearagondes.aragon.es/psa/ (se añade des, tras icearagon)\nProducción/Gestión → no hay\nPublicación → https://icearagon.aragon.es/psa/ \nFigura 2: aspecto de la PSA\nEn la PSA puedes tener más o menos permisos y en función de ellos aparecerán más o menos cuadr"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 22,
+    "text": "y en función de ellos aparecerán más o menos cuadrados. Si necesitas para algo específico más permisos, consúltalo con la persona de la DGA que gestione las cuentas.\nA continuación, se van a explicar algunas de las herramientas o se indicará si hay ya un Manual disponible para su utilización.\nGeodatos\nEdición de geodatos\nSincronización de geodatos\nValidador de geometrías\nCarga masiva de geodatos (GeoDataLoader)\nSe empela para subir capas del\nTest de geometrías\nDescargas\nCatálogo\nCISA\nAtlas\nGrafo"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 23,
+    "text": " de geometrías\nDescargas\nCatálogo\nCISA\nAtlas\nGrafo\n5. METADATOS- GEONETWORK-RCA? FILEZILLA?\nTítulo de segundo nivel\nEn el caso de....\nTítulo de tercer nivel\nLos párrafos utilizarán el estilo “Cuerpo de texto”. Utilizar negrita para destacar elementos importantes e itálica para palabras en otros idiomas como por ejemplo feature. El uso de subrayado se utiliza para destacar alguna parte también, pero no se suele usar.\nLa redacción debe ser siempre en impersonal, evitando la primera persona del sin"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 24,
+    "text": "en impersonal, evitando la primera persona del singular o del plural.\nSi hay código hay que usar este tipo de estilo:\nselect distinct st_srid(<<columna_geom>>) from <<tabla>>;\nSi tiene sentido, mejor si puede ser con sintaxis coloreada (por ejemplo, no tiene mucho sentido para comandos de shell, pero sí para código javascript). Evitar pantallazos de código en lo posible. Para ello copiar el código en https://tohtml.com, seleccionar el lenguaje y el estilo eclipse y trasladar el resultado al docu"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 25,
+    "text": "el estilo eclipse y trasladar el resultado al documento word. Se recomienda cambiar tabuladores por dos espacios para que no quede muy estirado:\nselect distinct st_srid(<<columna_geom>>) from <<tabla>>;\n\nif (rs_esquema.next()) {\n  if (rs_esquema.getString(\"esquema\") != \"\") {\n    if (! rs_esquema.getString(\"esquema\").equals(\"boundingbox\")) {\n      xmin = rs_esquema.getString(\"xmin_f\");\n      ymin = rs_esquema.getString(\"ymin_f\");\n      xmax = rs_esquema.getString(\"xmax_f\");\n      ymax = rs_esquem"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 26,
+    "text": "squema.getString(\"xmax_f\");\n      ymax = rs_esquema.getString(\"ymax_f\");\n    }\n  }\n}\n\nLas figuras se referenciarán en el texto entre paréntesis y con su número (3), añadiendo en el menú desde “Insertar Referencia cruzada”. En el pie de figura se utilizará el estilo caption la secuencia Ilustración (ver ejemplo). Es importante que siempre haya pie de figura.\nFigura 3: pie de figura\nLas listas de elementos se mostrarán así:\nItem primer nivel.\nItem 2 de primer nivel.\nItem 3 de primer nivel con subi"
+  },
+  {
+    "document_id": "clienteGEAR/introduccionICEARAGON.docx",
+    "chunk": 27,
+    "text": "2 de primer nivel.\nItem 3 de primer nivel con subitems.\nSubitem de segundo nivel.\nLas tablas se representarán así, incluyendo pie de tabla con secuencia tabla, y siendo referenciada desde el texto con su número como referencia cruzada:\nTabla 1: ejemplo de tabla\n"
   }
 ]

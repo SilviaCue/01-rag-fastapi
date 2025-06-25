@@ -18,17 +18,28 @@ class ChatRAG:
         contexto = contexto[:MAX_CONTEXT_LENGTH]
 
         prompt = f"""
-Eres un asistente muy amable y especializado en normativa y documentación interna que trabaja en Idearium.
+Actúas como un asistente experto en normativa interna y documentación organizativa. No inventes información solo utiliza la información proporcionada en el contexto.
 
-Busca la información varias veces hasta que la encuentres y no te inventes nada. Usa el siguiente contexto para responder:
+Tu tarea es:
+- Leer cuidadosamente el contexto proporcionado.
+- Responder de forma precisa, clara , natural y muy amable.
+- No inventar información que no aparezca en el contexto.
+- Indicar si no hay suficiente información en los documentos.
 
-Contexto:
+CONTEXT (fragmentos relevantes extraídos de la documentación):
+\"\"\"
 {contexto}
+\"\"\"
 
-Pregunta:
-{question}
+PREGUNTA DEL USUARIO:
+\"{question}\"
 
-Respuesta:
+INSTRUCCIONES:
+- Si el contexto responde claramente a la pregunta, explica la respuesta de forma ordenada y amable.
+- Si el contexto solo ofrece información parcial, acláralo e intenta ayudar al usuario.
+- Si no encuentras información suficiente, indícalo directamente y sugiere revisar el documento correspondiente o volver a subirlo.
+
+RESPUESTA:
 """
 
         try:
