@@ -32,6 +32,8 @@ class FileParser:
             return self._extract_text_from_excel(file_path)
         elif ext in ("png", "jpg", "jpeg", "tif", "tiff"):
             return self._extract_text_from_image(file_path)
+        elif ext == "md":
+            return self._extract_text_from_md(file_path)
         else:
             print(f"Formato no soportado aún: {filename}")
             return None
@@ -76,4 +78,12 @@ class FileParser:
             return pytesseract.image_to_string(img, lang="spa")
         except Exception as e:
             print(f"Error OCR imagen: {e}")
+            return ""
+        
+    def _extract_text_from_md(self, file_path:str)-> str:
+        try:
+            with open(file_path,"r", encoding="utf-8") as f:
+                return f.read()
+        except Exception as e:
+            print(f"Error leyendo Markdown: {e}")
             return ""

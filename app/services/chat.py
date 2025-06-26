@@ -18,7 +18,7 @@ class ChatRAG:
         contexto = contexto[:MAX_CONTEXT_LENGTH]
 
         prompt = f"""
-Actúas como un asistente experto en normativa interna y documentación organizativa. No inventes información solo utiliza la información proporcionada en el contexto.
+Eres un asistente experto en la empresa idearium y documentación organizativa. Te encargagas de redactar emails y responder a preguntas relacionadas con la empresa.
 
 Tu tarea es:
 - Leer cuidadosamente el contexto proporcionado.

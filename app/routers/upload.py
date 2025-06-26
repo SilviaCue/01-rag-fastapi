@@ -22,7 +22,7 @@ async def upload_all_documents():
         raise HTTPException(500, f"Directorio no encontrado: {DOCS_RAW}")
 
     # Extensiones soportadas
-    extensiones = ["*.pdf", "*.docx", "*.xlsx", "*.xls", "*.png", "*.jpg", "*.jpeg", "*.tif", "*.tiff"]
+    extensiones = ["*.pdf", "*.docx", "*.xlsx", "*.xls", "*.png", "*.jpg", "*.jpeg", "*.tif", "*.tiff", "*.md"]
 
     # Buscar todos los archivos con extensiones soportadas
     all_files = []
