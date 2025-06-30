@@ -1,7 +1,9 @@
 import pandas as pd
 import os
 
-ruta = "storage/docs_raw/idearium/rrhh/vacaciones_personal/vacacionesIdearium.xlsx"
+ruta = "storage/docs_raw/idearium/rrhh/vacaciones_personal/vacacionesIdearium.xlsx" # en mi carpeta local
+
+
 nombres_cache = None
 
 def obtener_nombres_vacaciones():

@@ -3,8 +3,15 @@ import re
 from app.services.retriever import Retriever
 from app.config import settings
 from app.services.generation_selector import GenerationSelector
-from app.services.vacaciones_service import obtener_nombres_vacaciones
 from app.routers.vacaciones import contar_dias_vacaciones  # <-- Import directo aquí
+from app.routers.vacaciones_drive import contar_dias_vacaciones_drive  # <-- NUEVO para leer desde Google Sheets
+
+# Versión local:
+# from app.services.vacaciones_service import obtener_nombres_vacaciones
+
+# Versión desde Google Sheets:
+from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_drive as obtener_nombres_vacaciones
+
 
 class ChatRAG:
 
@@ -20,8 +27,12 @@ class ChatRAG:
 
         if nombre_detectado and "vacacion" in question.lower():
             try:
-                # Ahora llamada directa, sin requests ni HTTP interno:
-                datos = contar_dias_vacaciones(nombre_detectado)
+                usar_google_sheets = True  # <-- CAMBIA AQUÍ entre True (online) o False (local)
+                if usar_google_sheets:
+                    datos = contar_dias_vacaciones_drive(nombre_detectado)
+                else:
+                    datos = contar_dias_vacaciones(nombre_detectado)
+
                 return (
                     f"{datos['persona']} tiene {datos['dias_vacaciones']} días de vacaciones, "
                     f"{datos['festivos']} festivos y {datos['otros_permisos']} otros permisos. "
