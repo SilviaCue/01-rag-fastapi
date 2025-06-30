@@ -1,7 +1,10 @@
 import os
+import re
 from app.services.retriever import Retriever
 from app.config import settings
 from app.services.generation_selector import GenerationSelector
+from app.services.vacaciones_service import obtener_nombres_vacaciones
+from app.routers.vacaciones import contar_dias_vacaciones  # <-- Import directo aquí
 
 class ChatRAG:
 
@@ -11,11 +14,25 @@ class ChatRAG:
         self.upload_path = "storage/docs_raw"
 
     def chat(self, question: str):
-        resultados = self.retriever.retrieve(question, top_k=5)
-        contexto = "\n".join([res["text"] for res in resultados])
+        nombres_validos = obtener_nombres_vacaciones()
+        print("Nombres detectados en el Excel:", nombres_validos)
+        nombre_detectado = next((n for n in nombres_validos if n in question.lower()), None)
 
-        MAX_CONTEXT_LENGTH = 3000
-        contexto = contexto[:MAX_CONTEXT_LENGTH]
+        if nombre_detectado and "vacacion" in question.lower():
+            try:
+                # Ahora llamada directa, sin requests ni HTTP interno:
+                datos = contar_dias_vacaciones(nombre_detectado)
+                return (
+                    f"{datos['persona']} tiene {datos['dias_vacaciones']} días de vacaciones, "
+                    f"{datos['festivos']} festivos y {datos['otros_permisos']} otros permisos. "
+                    f"En total hay {datos['total_marcados']} días marcados en el calendario."
+                )
+            except Exception as e:
+                return f"Error al consultar los días de vacaciones: {str(e)}"
+
+        # --- RAG NORMAL (esto no cambia nada) ---
+        resultados = self.retriever.retrieve(question, top_k=5)
+        contexto = "\n".join([res["text"] for res in resultados])[:3000]
 
         prompt = f"""
 Eres un asistente experto en la empresa idearium y documentación organizativa. Te encargagas de redactar emails y responder a preguntas relacionadas con la empresa.
@@ -27,9 +44,7 @@ Tu tarea es:
 - Indicar si no hay suficiente información en los documentos.
 
 CONTEXT (fragmentos relevantes extraídos de la documentación):
-\"\"\"
-{contexto}
-\"\"\"
+\"\"\"{contexto}\"\"\"
 
 PREGUNTA DEL USUARIO:
 \"{question}\"
@@ -47,12 +62,11 @@ RESPUESTA:
         except Exception as e:
             respuesta = f"Error al generar respuesta: {str(e)}"
 
-        # Incluir enlaces solo si el usuario lo solicita
-        if "descargar" in question.lower() or "pdf" in question.lower() or "documento" in question.lower():
+        # Si el usuario pide documentos (esto no cambia nada)
+        if any(x in question.lower() for x in ["descargar", "pdf", "documento"]):
             documentos_utilizados = {res["document_id"] for res in resultados}
             for doc in documentos_utilizados:
                 nombre_archivo = os.path.basename(doc)
-
                 for ext in [".pdf", ".docx"]:
                     if not nombre_archivo.endswith(ext):
                         archivo_con_ext = f"{nombre_archivo}{ext}"
@@ -63,6 +77,6 @@ RESPUESTA:
                     if os.path.isfile(ruta_completa):
                         url = f"http://127.0.0.1:8000/download/{archivo_con_ext}"
                         respuesta += f"\n\nPuedes descargar el documento '{archivo_con_ext}' aquí: {url}"
-                        break  # Solo incluye una vez por documento
+                        break
 
         return respuesta
