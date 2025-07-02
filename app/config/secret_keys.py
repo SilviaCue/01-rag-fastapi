@@ -12,3 +12,7 @@ class SecretKeys:
         self.openai_api_key= keys.get("OPENAI_API_KEY")
         
         
+          # Fuentes de vacaciones
+        self.usar_google_sheets = keys.get("usar_google_sheets", False)
+        self.usar_google_calendar = keys.get("usar_google_calendar", True)
+        self.usar_excel_local = keys.get("usar_excel_local", False)
