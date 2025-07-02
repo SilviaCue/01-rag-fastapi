@@ -3,8 +3,8 @@ import re
 from app.services.retriever import Retriever
 from app.config import settings
 from app.services.generation_selector import GenerationSelector
-from app.routers.vacaciones import contar_dias_vacaciones  # <-- Import directo aquí
-from app.routers.vacaciones_drive import contar_dias_vacaciones_drive  # <-- NUEVO para leer desde Google Sheets
+from app.routers.vacaciones import contar_dias_vacaciones
+from app.routers.vacaciones_drive import contar_dias_vacaciones_drive
 
 # Versión local:
 # from app.services.vacaciones_service import obtener_nombres_vacaciones
@@ -30,18 +30,30 @@ class ChatRAG:
                 usar_google_sheets = True  # <-- CAMBIA AQUÍ entre True (online) o False (local)
                 if usar_google_sheets:
                     datos = contar_dias_vacaciones_drive(nombre_detectado)
+                    respuesta = (
+                        f"{datos['persona']} tiene {datos['vacaciones_disfrutadas']} días de vacaciones disfrutadas, "
+                        f"{datos['vacaciones_reservadas']} días de vacaciones reservadas, "
+                        f"{datos['festivos_disfrutados']} festivos disfrutados, {datos['festivos_futuros']} festivos futuros, "
+                        f"{datos['otros_permisos_disfrutados']} días por otros permisos disfrutados y "
+                        f"{datos['otros_permisos_reservados']} días por otros permisos reservados. "
+                        f"Además, tiene {datos['vacaciones_anteriores']} días de vacaciones del año anterior. "
+                        f"Días restantes según calendario: {datos['restantes']}. "
+                        f"En total hay {datos['total_marcados']} días marcados en el calendario."
+                    )
                 else:
                     datos = contar_dias_vacaciones(nombre_detectado)
+                    respuesta = (
+                        f"{datos['persona']} tiene {datos['dias_vacaciones']} días de vacaciones, "
+                        f"{datos['festivos']} festivos y {datos['otros_permisos']} otros permisos. "
+                        f"En total hay {datos['total_marcados']} días marcados en el calendario."
+                    )
 
-                return (
-                    f"{datos['persona']} tiene {datos['dias_vacaciones']} días de vacaciones, "
-                    f"{datos['festivos']} festivos y {datos['otros_permisos']} otros permisos. "
-                    f"En total hay {datos['total_marcados']} días marcados en el calendario."
-                )
+                return respuesta
+
             except Exception as e:
                 return f"Error al consultar los días de vacaciones: {str(e)}"
 
-        # --- RAG NORMAL (esto no cambia nada) ---
+        # --- RAG NORMAL ---
         resultados = self.retriever.retrieve(question, top_k=5)
         contexto = "\n".join([res["text"] for res in resultados])[:3000]
 
@@ -53,6 +65,7 @@ Tu tarea es:
 - Responder de forma precisa, clara , natural y muy amable.
 - No inventar información que no aparezca en el contexto.
 - Indicar si no hay suficiente información en los documentos.
+
 
 CONTEXT (fragmentos relevantes extraídos de la documentación):
 \"\"\"{contexto}\"\"\"
@@ -73,7 +86,7 @@ RESPUESTA:
         except Exception as e:
             respuesta = f"Error al generar respuesta: {str(e)}"
 
-        # Si el usuario pide documentos (esto no cambia nada)
+        # Si el usuario pide documentos
         if any(x in question.lower() for x in ["descargar", "pdf", "documento"]):
             documentos_utilizados = {res["document_id"] for res in resultados}
             for doc in documentos_utilizados:
