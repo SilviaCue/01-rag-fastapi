@@ -112,15 +112,23 @@ CONTEXT (fragmentos relevantes extraídos de la documentación):
 PREGUNTA DEL USUARIO:
 \"{question}\"
 
-INSTRUCCIONES:
+INSTRUCCIONES GENERALES:
 - Si el contexto responde claramente a la pregunta, explica la respuesta de forma ordenada y amable.
 - Si el contexto solo ofrece información parcial, acláralo e intenta ayudar al usuario.
 - Si no encuentras información suficiente, indícalo directamente y sugiere revisar el documento correspondiente o volver a subirlo.
-Para las respeustas a vacaciones - Calcula el total de días.
-- Muestra cada periodo de vacaciones claramente con sus fechas y duración.
-- Luego resume el total de días de forma amable y profesional.
 
-RESPUESTA:
+INSTRUCCIONES ESPECIALES PARA VACACIONES (Google Calendar):
+- Calcula el total de días laborables de vacaciones (excluye fines de semana si es posible).
+- Muestra cada periodo de vacaciones con fecha exacta de inicio y de fin, ambas incluidas.
+- Asegúrate de que el día de inicio sea el primer día en que comienza el descanso, y el de fin, el último día que incluye el permiso.
+- Resume al final la cantidad total de días laborables disfrutados.
+
+🔹 Ejemplo de respuesta deseada:
+"Silvia ha disfrutado de un total de 4 días laborables de vacaciones en 2025. 
+- Del 12 al 14 de junio (3 días laborables).
+- El 15 de mayo (1 día).
+
+Actualmente no tiene más vacaciones registradas para este año."
 """
 
         try:
