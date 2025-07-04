@@ -16,7 +16,6 @@ from app.services.vacaciones_googlecalendar import (
 )
 from app.services.chat_utils import responder_con_gemini
 
-
 class ChatRAG:
 
     def __init__(self):
@@ -41,6 +40,10 @@ class ChatRAG:
 
         pregunta_lower = question.lower()
         nombre_detectado = next((n for n in nombres_validos if re.search(rf'\b{re.escape(n)}\b', pregunta_lower)), None)
+
+        # --- Detecta año en la pregunta (por ejemplo, "2024", "2025", etc)
+        match_anio = re.search(r"(20\d{2})", pregunta_lower)
+        anio = int(match_anio.group(1)) if match_anio else 2025  # 2025 por defecto
 
         # Configuración de fuente activa
         usar_google_sheets = settings.USAR_GOOGLE_SHEETS
@@ -85,8 +88,9 @@ class ChatRAG:
                         f"En total hay {datos['total_marcados']} días marcados en el calendario."
                     )
                 elif usar_google_calendar:
-                    periodos = obtener_periodos_vacaciones(nombre_detectado)
-                    print(f"[DEBUG] Periodos de vacaciones encontrados para {nombre_detectado}: {periodos}")
+                    # --- SOLO ESTA LÍNEA: pasa el año detectado
+                    periodos = obtener_periodos_vacaciones(nombre_detectado, anio=anio)
+                    print(f"[DEBUG] Periodos de vacaciones encontrados para {nombre_detectado} ({anio}): {periodos}")
                     return responder_con_gemini(nombre_detectado, periodos, self.generator)
                 else:
                     return "No hay ninguna fuente de vacaciones activa."

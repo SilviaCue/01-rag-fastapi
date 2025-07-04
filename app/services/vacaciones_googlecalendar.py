@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 from dateutil import parser
 
-CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbxlrznVQvAT9d2HpLA1fwjUAzouXbHuT84ii3EVyd5LUihAo-i2WCKRidIx9mDQezbrpg/exec"
+CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbzmub9wwhq38XodVJuE1dRVRp4KU9uxP7GH2ySLp0IKU4sO7PkKYkp10W-vngSayrb7/exec"
 
 # Devuelve quién está de vacaciones HOY
 def obtener_vacaciones_desde_calendar():
@@ -32,10 +32,11 @@ def obtener_vacaciones_desde_calendar():
         print(f"Error leyendo calendario: {e}")
         return []
 
-# Devuelve periodos de vacaciones de una persona
-def obtener_periodos_vacaciones(nombre_buscado):
+# --- CAMBIO AQUI SOLO ---
+# Ahora acepta "anio" como argumento (por defecto 2025) y lo pasa como parámetro GET a la URL
+def obtener_periodos_vacaciones(nombre_buscado, anio=2025):
     try:
-        response = requests.get(CALENDAR_JSON_URL)
+        response = requests.get(CALENDAR_JSON_URL, params={'anio': anio})
         response.raise_for_status()
         datos = response.json()
 
@@ -73,7 +74,6 @@ def obtener_periodos_vacaciones(nombre_buscado):
     except Exception as e:
         print(f"Error al obtener vacaciones: {e}")
         return []
-
 
 # Devuelve lista de nombres válidos extraídos del JSON
 def obtener_lista_nombres_desde_calendar():
