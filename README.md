@@ -1,150 +1,138 @@
 RAG API - Sistema de Asistente Documental con FastAPI
+Este proyecto implementa un sistema completo RAG (Retrieval Augmented Generation) para asistencia documental interna, gestión de vacaciones y generación de emails, todo conectado a fuentes corporativas y documentos internos.
+Permite cargar, procesar, indexar y consultar documentos (PDF, Word, Excel, imágenes, Markdown) mediante búsqueda semántica y generación contextual con IA.
 
-Este proyecto implementa un sistema completo RAG (Retrieval Augmented Generation) para asistencia documental interna. Está diseñado para permitir la carga, procesamiento, indexación y consulta de documentos mediante técnicas de búsqueda semántica y generación de texto con IA.
-
-Tecnologías usadas:
-
+Tecnologías usadas
 FastAPI (backend principal)
 
 FAISS (almacenamiento vectorial)
 
-HuggingFace sentence-transformers (embeddings)
+HuggingFace sentence-transformers y Gemini (embeddings)
 
-Gemini API (embeddings y generación de texto)
+Gemini API 1.5 Pro (generación de texto)
 
-OpenAI API (generación de texto)
+PyMuPDF, python-docx, pandas (lectura de PDF, Word, Excel)
 
-PyMuPDF (lectura de PDFs)
+pytesseract (OCR integrado para PDFs escaneados e imágenes)
 
-pytesseract (OCR integrado para PDFs escaneados)
+Google Calendar (consulta y cálculo automático de vacaciones)
 
+Swagger UI para documentación interactiva
 
+Nota:
+El código tiene preparado soporte para OpenAI (embeddings/generación) y para futuros cambios de modelo, pero actualmente NO está en uso (ni requiere clave API de OpenAI).
 
-Estructura del proyecto:
-
+Estructura del proyecto
+pgsql
+Copiar
+Editar
 idearium_rag_fastapi/
-│
 ├── app/
 │   ├── admin/
-│   │   └── reset_vector_store.py
 │   ├── config/
-│   │   ├── secret_keys.py
-│   │   └── settings.py
 │   ├── models/
 │   ├── providers/
-│   │   ├── gemini_embedder.py
-│   │   ├── gemini_generator.py
-│   │   ├── hf_embedder.py
-│   │   ├── openai_embedder.py
-│   │   └── openai_generator.py
 │   ├── routers/
-│   │   ├── chat.py
-│   │   ├── download.py
-│   │   ├── upload.py
-│   │   ├── upload_one.py
-│   │   └── upload_multiple.py
 │   └── services/
-│       ├── file_parser.py
-│       ├── model_selector.py
-│       ├── text_splitter.py
-│       ├── vector_store.py
-│       ├── vector_store_singleton.py
-│       ├── generation_selector.py
-│       └── embedding_selector.py
-│
 ├── storage/
 │   ├── docs_raw/
 │   ├── docs_chunks/
 │   └── vector_index/
-│       ├── index.faiss
-│       └── metadata.json
-│
 ├── secret_keys.json
 ├── main.py
 ├── requirements.txt
 └── README.md
+Flujo de trabajo
+Carga de documentos
 
-Flujo de trabajo:
+Se colocan en storage/docs_raw/
 
-Los documentos se colocan en storage/docs_raw/
+Soporte: PDF, DOCX, XLS/XLSX, MD, imágenes
 
-El endpoint /upload-all/ procesa todos los PDFs (soporta subcarpetas)
+El endpoint /upload-all/ procesa y trocea todos los documentos (soporta subcarpetas)
 
-Si un PDF es escaneado, se activa el OCR automáticamente
+OCR automático si el documento no tiene texto (PDF escaneado, imágenes)
 
-El texto extraído se convierte en embeddings semánticos
+Indexado semántico
 
-Los embeddings se almacenan en FAISS junto con metadatos
+El texto extraído se convierte en embeddings usando Gemini o HuggingFace
 
-Las consultas se realizan mediante el endpoint /chat/
+Se almacena en FAISS junto a metadatos de origen
 
-Se recuperan los chunks más relevantes y se genera una respuesta contextualizada
+Consultas
 
-Ejecución del proyecto:
+El endpoint /chat/ permite preguntas en lenguaje natural (onboarding, emails, resúmenes, vacaciones…)
 
-1. Instalar dependencias:
+Recupera los fragmentos más relevantes y genera una respuesta contextualizada (por defecto Gemini 1.5 Pro)
+
+Gestión especial de preguntas sobre vacaciones, integración directa con Google Calendar
+
+Vacaciones y eventos
+
+Cálculo automático de periodos y días disfrutados por persona y año
+
+Respuestas personalizadas: "¿Cuántos días ha tomado Silvia en 2025?"
+
+Onboarding: generación de emails personalizados usando fragmentos del manual interno
+
+Ejecución del proyecto
+Instalar dependencias:
+
 
 pip install -r requirements.txt
+Configurar claves API:
 
+Crear el archivo secret_keys.json:
 
-2. Configurar las claves API:
-
-Crear el archivo secret_keys.json con el siguiente formato:
+json
 
 {
   "GEMINI_API_KEY": "tu_clave_gemini",
   "HUGGINGFACE_API_KEY": "tu_clave_huggingface",
-  "OPENAI_API_KEY": "tu_clave_openai"
+  "usar_google_sheets": false,
+  "usar_google_calendar": true,
+  "usar_excel_local": false
 }
+No es necesario poner la clave OpenAI salvo que quieras probar la integración en el futuro.
 
+Arrancar FastAPI:
 
-3. Arrancar FastAPI:
-
-Desde la raíz del proyecto:
 
 uvicorn app.main:app --reload
-
-La documentación interactiva Swagger UI estará disponible en:
-
+Acceso a Swagger UI:
 http://127.0.0.1:8000/docs
 
-Gestión del índice vectorial
+Funcionalidades destacadas (2025)
+Soporte multiformato: PDF, Word, Excel, Markdown, imágenes (con OCR).
 
+Carga masiva: /upload-all/ soporta carpetas y subcarpetas.
 
-Para limpiar el índice vectorial y cargar nuevos documentos desde cero:
+Onboarding inteligente: Redacción automática de emails de bienvenida basados SOLO en manual interno.
+
+Gestión de vacaciones avanzada:
+
+Integración en tiempo real con Google Calendar para consulta por persona y año
+
+Soporte para diferentes fuentes: Google Sheets, Excel, Calendar
+
+Respuestas naturales y claras (“Silvia ha disfrutado de 12 días…”)
+
+Generación de resúmenes, emails y respuestas corporativas solo usando contexto REAL.
+
+Embeddings configurables: Gemini o HuggingFace.
+
+Selector dinámico de modelo generador: fácil cambiar a futuro.
+
+OCR automático: sin configuración extra, solo requiere Tesseract instalado.
+
+Gestión y limpieza de índice vectorial:
 
 python -m app.admin.reset_vector_store
+Consideraciones actuales
+El sistema NO usa OpenAI por defecto: el código está preparado, pero Gemini es el modelo de generación activo.
 
+Las respuestas dependen de la calidad y amplitud de los documentos cargados.
 
-Procesar documentos:
+El sistema prioriza seguridad y no inventar datos: todo lo que responde está en el contexto/documento.
 
-Colocar los archivos PDF en storage/docs_raw/
-
-Llamar al endpoint /upload-all/ (vía Swagger UI o cliente API)
-
-Consultar el RAG
-
-El endpoint /chat/ permite realizar consultas semánticas:
-
-{
-  "question": "Dame un resumen del protocolo de bienvenida"
-}
-
-
-Consideraciones actuales:
-
-Soporte actual: solo PDFs
-
-OCR automático para PDFs escaneados
-
-Embeddings configurables (Gemini o HuggingFace)
-
-Generación de respuestas: Gemini o OpenAI
-
-Selector de modelos: EmbeddingSelector y GenerationSelector
-
-Subida masiva de documentos: /upload-all/
-
-Requisitos para Windows:
-
-Instalar Tesseract OCR.
+Para Windows: requiere instalación de Tesseract OCR descarga aquí: https://github.com/tesseract-ocr/tesseract
