@@ -93,3 +93,42 @@ def obtener_lista_nombres_desde_calendar():
     except Exception as e:
         print(f"Error al obtener nombres desde el calendario: {e}")
         return []
+# Días de vacaciones laborables anuales por defecto
+DIAS_VACACIONES_POR_DEFECTO = 23
+
+# Devuelve resumen con disfrutadas y pendientes
+def obtener_resumen_vacaciones_con_pendientes(nombre, anio=2025):
+    """
+    Devuelve un resumen textual de vacaciones disfrutadas y días pendientes.
+    """
+    nombre = nombre.strip().lower()
+    periodos = obtener_periodos_vacaciones(nombre, anio=anio)
+
+    if not periodos:
+        return f"No hay vacaciones registradas para {nombre.title()} en {anio}."
+
+    total_disfrutados = 0
+    detalles = []
+    for inicio, fin, duracion in periodos:
+        dias_laborables = 0
+        for i in range(duracion):
+            dia = inicio + timedelta(days=i)
+            if dia.weekday() < 5:  # Lunes a Viernes
+                dias_laborables += 1
+        total_disfrutados += dias_laborables
+        detalles.append(
+            f"- Del {inicio.strftime('%d de %B')} al {fin.strftime('%d de %B')} ({dias_laborables} días laborables)"
+        )
+
+    pendientes = DIAS_VACACIONES_POR_DEFECTO - total_disfrutados
+    if pendientes < 0:
+        pendientes = 0
+
+    resumen = (
+        f"{nombre.title()} ha disfrutado de un total de {total_disfrutados} días laborables de vacaciones en {anio}:\n\n"
+        + "\n".join(detalles)
+        + f"\n\nTotal de días laborables disfrutados en {anio}: {total_disfrutados}\n"
+        + f"Días pendientes en {anio}: {pendientes}"
+    )
+
+    return resumen

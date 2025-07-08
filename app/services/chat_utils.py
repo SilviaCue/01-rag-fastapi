@@ -13,7 +13,8 @@ def contar_laborables(inicio: datetime.date, fin: datetime.date) -> int:
 
 def responder_con_gemini(nombre: str, resumen_dias: list, generator):
     """
-    Redacta una respuesta clara y natural usando Gemini.
+     Genera una respuesta clara y profesional usando Gemini para las vacaciones de un empleado.
+    
 
     Args:
         nombre: Nombre de la persona (en minúsculas).
@@ -39,12 +40,19 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator):
 Contexto:
 {contexto}
 
-Instrucciones:
-- Calcula el total de días laborables de vacaciones (lunes a viernes).
-- Resume los periodos con fechas de inicio y fin exactas.
+Instrucciones para redactar la respuesta:
+- Calcula y comunica el total de días laborables de vacaciones disfrutados (lunes a viernes).
+- Resume los periodos con las fechas exactas de inicio y fin, ambas incluidas.
 - Redacta la respuesta de forma clara, directa, amable y profesional.
-- Evita repetir literalmente la lista. Resume los datos de forma natural.
-- Limítate a los datos del contexto.
+- Evita repetir literalmente la lista: resume y hazlo natural, pero incluye siempre el dato de días y fechas.
+- Limítate a la información del contexto, sin inventar nada.
+- Al final, muestra el total de días laborables disfrutados en 2025.
+
+Ejemplo de respuesta deseada:
+"Silvia ha disfrutado de un total de 4 días laborables de vacaciones en 2025:
+- Del 12 al 14 de junio (3 días laborables).
+- El 15 de mayo (1 día).
+Actualmente no tiene más vacaciones registradas para este año."
 
 Pregunta:
 ¿Cuántos días de vacaciones ha tomado {nombre.title()} en 2025 y en qué fechas?

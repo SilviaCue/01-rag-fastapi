@@ -1,7 +1,7 @@
 import os
 import re
-from app.services.retriever import Retriever
-from app.config import settings
+from app.services.retriever import Retriever # Para buscar fragmentos relevantes en los documentos indexados (vector store).Se usa para el flujo RAG general, no calendar.
+from app.config import settings #Carga la configuración global modelo usado
 from app.services.generation_selector import GenerationSelector
 from app.routers.vacaciones import contar_dias_vacaciones
 from app.routers.vacaciones_drive import contar_dias_vacaciones_drive
@@ -11,8 +11,8 @@ from app.services.vacaciones_service import obtener_nombres_vacaciones
 from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_drive as obtener_nombres_vacaciones
 from app.services.vacaciones_googlecalendar import (
     obtener_vacaciones_desde_calendar as obtener_vacaciones_google_calendar,
-    obtener_periodos_vacaciones,
     obtener_lista_nombres_desde_calendar,
+    obtener_resumen_vacaciones_con_pendientes,
 )
 from app.services.chat_utils import responder_con_gemini
 
@@ -88,21 +88,20 @@ class ChatRAG:
                         f"En total hay {datos['total_marcados']} días marcados en el calendario."
                     )
                 elif usar_google_calendar:
-                    # --- SOLO ESTA LÍNEA: pasa el año detectado
-                    periodos = obtener_periodos_vacaciones(nombre_detectado, anio=anio)
-                    print(f"[DEBUG] Periodos de vacaciones encontrados para {nombre_detectado} ({anio}): {periodos}")
-                    return responder_con_gemini(nombre_detectado, periodos, self.generator)
+                      # Respuesta directa con vacaciones disfrutadas y pendientes (sin Gemini)
+                    respuesta = obtener_resumen_vacaciones_con_pendientes(nombre_detectado, anio=anio)
+                    return respuesta
                 else:
                     return "No hay ninguna fuente de vacaciones activa."
 
         except Exception as e:
             return f"Error al consultar los días de vacaciones: {str(e)}"
 
-        resultados = self.retriever.retrieve(question, top_k=5)
-        contexto = "\n".join([res["text"] for res in resultados])[:3000]
+        resultados = self.retriever.retrieve(question, top_k=12)
+        contexto = "\n".join([res["text"] for res in resultados])[:4000]
 
         prompt = f"""
-Eres un asistente experto en la empresa Idearium y documentación organizativa. Tu tarea es responder de forma amable, profesional y basada SOLO en el contexto proporcionado. NO inventes información. Tienes que responder a preguntas relacionadas con la empresa.
+Eres un asistente experto en la empresa Idearium y documentación organizativa. Tu tarea es responder de forma muy amable, profesional y basada SOLO en el contexto proporcionado. NO inventes información. Tienes que responder a preguntas relacionadas con la empresa.
 
 Tu tarea es:
 - Leer cuidadosamente el contexto proporcionado.
@@ -122,33 +121,40 @@ INSTRUCCIONES GENERALES:
 - Si no encuentras información suficiente, indícalo directamente y sugiere revisar el documento correspondiente o volver a subirlo.
 
 
-INSTRUCCIONES PARA EMAIL DE BIENVENIDA Y ONBOARDING:
-- Si la pregunta es para dar la bienvenida a una nueva persona (palabras clave: bienvenida, onboarding, incorporación, nuevo/a compañero/a), redacta un email claro y profesional dirigido a esa persona, SOLO con la información real encontrada en el contexto (manual de OnBoarding y fragmentos recuperados).
-- Lee atentamente todo el contexto recuperado, identifica y utiliza todos los apartados importantes: modalidad de trabajo (presencial, teletrabajo o mixto), dirección de la oficina, horarios, calendario, fichaje, procedimiento para pedir vacaciones/festivos, accesos, enlaces útiles, correo electrónico y cuentas, así como cualquier otro dato esencial de bienvenida.
-- Si aparecen enlaces en el contexto, inclúyelos en el email. Si hay instrucciones concretas (por ejemplo, para acceder a una herramienta o solicitar acceso), indícalas en el texto.
-- Si el contexto es fragmentario o falta información que parece importante (por ejemplo, ves referencias en el índice pero no ves el contenido), indícalo amablemente y sugiere revisar el manual de bienvenida o consultar a Recursos Humanos para más detalles.
+NSTRUCCIONES PARA EMAIL DE BIENVENIDA Y ONBOARDING:
+- Si la pregunta es para dar la bienvenida a una nueva persona (palabras clave: bienvenida, onboarding, incorporación, nuevo/a compañero/a, bienvenida a [nombre]), redacta un email claro y profesional dirigido a esa persona, SOLO con la información real encontrada en el contexto (manual de OnBoarding y fragmentos recuperados).
+- Organiza el email de bienvenida en estos bloques claros (omite los que falten en el contexto):
+    • Quiénes somos y a qué nos dedicamos
+    • Valores de la empresa
+    • Modalidad de trabajo y dirección de la oficina
+    • Horarios y fichaje horario (enlace o pasos si aparecen)
+    • Calendario y cómo se solicitan vacaciones/festivos (incluye enlaces si aparecen)
+    • Accesos importantes: correo, Google Calendar, repositorios, etc.
+    • Otros recursos: enlaces, emails de contacto, reuniones online, etc.
+- Usa siempre un tono cercano, profesional y claro.
+- Si falta algún dato importante (lo ves en el índice pero no está en el contenido), dilo amablemente y sugiere revisar el manual adjunto o contactar con RRHH.
 - NO inventes, NO rellenes huecos: utiliza exclusivamente la información real recuperada aquí. Resume bien los puntos clave y no repitas textos innecesarios.
+- Termina el email con una despedida cordial y ofrece ayuda para cualquier duda.
 - Estructura el email con saludo inicial, resumen práctico y despedida profesional y amable.
 
+Ejemplo de estructura de email (ajusta el nombre según la pregunta):
+Asunto: Bienvenida a Idearium, Ana
 
-Ejemplo de saludo inicial:
-"Asunto: Bienvenida a Idearium, Ana.
 Hola Ana:
-Te damos la bienvenida a Idearium. Aquí tienes la información clave para tus primeros días..."
+
+Te damos la bienvenida a Idearium. Aquí tienes la información clave para tu incorporación:
+
+- Horario y fichaje: ...
+- Vacaciones y festivos: ...
+- Accesos importantes: ...
+- Otros recursos: ...
+
+Si necesitas más información, consulta el Manual de Bienvenida o contacta con RRHH.
+
+Un saludo cordial,
+El equipo de Idearium
 
 
-INSTRUCCIONES ESPECIALES PARA VACACIONES (Google Calendar):
-- Calcula el total de días laborables de vacaciones (excluye fines de semana si es posible).
-- Muestra cada periodo de vacaciones con fecha exacta de inicio y de fin, ambas incluidas.
-- Asegúrate de que el día de inicio sea el primer día en que comienza el descanso, y el de fin, el último día que incluye el permiso.
-- Resume al final la cantidad total de días laborables disfrutados.
-
-🔹 Ejemplo de respuesta deseada:
-"Silvia ha disfrutado de un total de 4 días laborables de vacaciones en 2025. 
-- Del 12 al 14 de junio (3 días laborables).
-- El 15 de mayo (1 día).
-
-Actualmente no tiene más vacaciones registradas para este año."
 """
 
         try:
