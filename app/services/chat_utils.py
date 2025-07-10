@@ -37,6 +37,7 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator):
     contexto = f"{nombre.title()} ha tomado vacaciones en los siguientes periodos de 2025:\n" + "\n".join(detalles)
 
     prompt = f"""
+     ¡Responde diciendo primero: SOY GEMINI!
 Contexto:
 {contexto}
 

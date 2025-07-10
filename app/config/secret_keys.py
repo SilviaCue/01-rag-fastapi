@@ -16,3 +16,11 @@ class SecretKeys:
         self.usar_google_sheets = keys.get("usar_google_sheets", False)
         self.usar_google_calendar = keys.get("usar_google_calendar", True)
         self.usar_excel_local = keys.get("usar_excel_local", False)
+        
+# secret_keys.py
+# Gestiona la carga de claves y parámetros sensibles (API keys) desde secret_keys.json.
+# Define la clase SecretKeys para acceder de forma segura a las credenciales 
+# y opciones  para elegir la fuente de datos de vacaciones (Google Calendar, Google Sheets o Excel local).
+
+
+

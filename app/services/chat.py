@@ -13,6 +13,7 @@ from app.services.vacaciones_googlecalendar import (
     obtener_vacaciones_desde_calendar as obtener_vacaciones_google_calendar,
     obtener_lista_nombres_desde_calendar,
     obtener_resumen_vacaciones_con_pendientes,
+    obtener_periodos_vacaciones,
 )
 from app.services.chat_utils import responder_con_gemini
 
@@ -88,9 +89,9 @@ class ChatRAG:
                         f"En total hay {datos['total_marcados']} días marcados en el calendario."
                     )
                 elif usar_google_calendar:
-                      # Respuesta directa con vacaciones disfrutadas y pendientes (sin Gemini)
-                    respuesta = obtener_resumen_vacaciones_con_pendientes(nombre_detectado, anio=anio)
-                    return respuesta
+                    resumen_dias = obtener_periodos_vacaciones(nombre_detectado, anio=anio)
+                    respuesta = responder_con_gemini(nombre_detectado, resumen_dias, self.generator)
+                    return respuesta     
                 else:
                     return "No hay ninguna fuente de vacaciones activa."
 
@@ -101,6 +102,7 @@ class ChatRAG:
         contexto = "\n".join([res["text"] for res in resultados])[:4000]
 
         prompt = f"""
+       
 Eres un asistente experto en la empresa Idearium y documentación organizativa. Tu tarea es responder de forma muy amable, profesional y basada SOLO en el contexto proporcionado. NO inventes información. Tienes que responder a preguntas relacionadas con la empresa.
 
 Tu tarea es:
