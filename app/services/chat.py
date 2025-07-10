@@ -1,7 +1,7 @@
 import os
 import re
-from app.services.retriever import Retriever # Para buscar fragmentos relevantes en los documentos indexados (vector store).Se usa para el flujo RAG general, no calendar.
-from app.config import settings #Carga la configuración global modelo usado
+from app.services.retriever import Retriever  # Para RAG general, no calendar
+from app.config import settings
 from app.services.generation_selector import GenerationSelector
 from app.routers.vacaciones import contar_dias_vacaciones
 from app.routers.vacaciones_drive import contar_dias_vacaciones_drive
@@ -10,9 +10,7 @@ from app.routers.vacaciones_drive import contar_dias_vacaciones_drive
 from app.services.vacaciones_service import obtener_nombres_vacaciones
 from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_drive as obtener_nombres_vacaciones
 from app.services.vacaciones_googlecalendar import (
-    obtener_vacaciones_desde_calendar as obtener_vacaciones_google_calendar,
     obtener_lista_nombres_desde_calendar,
-    obtener_resumen_vacaciones_con_pendientes,
     obtener_periodos_vacaciones,
 )
 from app.services.chat_utils import responder_con_gemini
@@ -52,16 +50,7 @@ class ChatRAG:
         usar_excel_local = settings.USAR_EXCEL_LOCAL
 
         try:
-            if "hoy" in pregunta_lower and any(pal in pregunta_lower for pal in ["vacacion", "vacaciones"]):
-                if usar_google_calendar:
-                    nombres_hoy = obtener_vacaciones_google_calendar()
-                    if nombres_hoy:
-                        return f"Hoy están de vacaciones: {', '.join(n.title() for n in nombres_hoy)}."
-                    else:
-                        return "Hoy no hay nadie marcado como de vacaciones en el calendario."
-                else:
-                    return "La fuente Google Calendar está desactivada."
-
+            # VACACIONES CON NOMBRE (Google Calendar, Excel o Google Sheets)
             if nombre_detectado and any(pal in pregunta_lower for pal in ["vacacion", "vacaciones", "ausencia", "permiso"]):
                 print("Pregunta recibida:", question)
                 print("Nombre detectado:", nombre_detectado)
@@ -91,18 +80,18 @@ class ChatRAG:
                 elif usar_google_calendar:
                     resumen_dias = obtener_periodos_vacaciones(nombre_detectado, anio=anio)
                     respuesta = responder_con_gemini(nombre_detectado, resumen_dias, self.generator)
-                    return respuesta     
+                    return respuesta
                 else:
                     return "No hay ninguna fuente de vacaciones activa."
 
         except Exception as e:
             return f"Error al consultar los días de vacaciones: {str(e)}"
 
+        # Si no es pregunta de vacaciones, usa RAG normal
         resultados = self.retriever.retrieve(question, top_k=12)
         contexto = "\n".join([res["text"] for res in resultados])[:4000]
 
         prompt = f"""
-       
 Eres un asistente experto en la empresa Idearium y documentación organizativa. Tu tarea es responder de forma muy amable, profesional y basada SOLO en el contexto proporcionado. NO inventes información. Tienes que responder a preguntas relacionadas con la empresa.
 
 Tu tarea es:
@@ -112,7 +101,7 @@ Tu tarea es:
 - Indicar si no hay suficiente información en los documentos.
 
 CONTEXT (fragmentos relevantes extraídos de la documentación):
-\"\"\"{contexto}\"\"\"  
+\"\"\"{contexto}\"\"\"
 
 PREGUNTA DEL USUARIO:
 \"{question}\"
@@ -121,7 +110,6 @@ INSTRUCCIONES GENERALES:
 - Si el contexto responde claramente a la pregunta, explica la respuesta de forma ordenada y amable.
 - Si el contexto solo ofrece información parcial, acláralo e intenta ayudar al usuario.
 - Si no encuentras información suficiente, indícalo directamente y sugiere revisar el documento correspondiente o volver a subirlo.
-
 
 NSTRUCCIONES PARA EMAIL DE BIENVENIDA Y ONBOARDING:
 - Si la pregunta es para dar la bienvenida a una nueva persona (palabras clave: bienvenida, onboarding, incorporación, nuevo/a compañero/a, bienvenida a [nombre]), redacta un email claro y profesional dirigido a esa persona, SOLO con la información real encontrada en el contexto (manual de OnBoarding y fragmentos recuperados).
@@ -155,8 +143,6 @@ Si necesitas más información, consulta el Manual de Bienvenida o contacta con 
 
 Un saludo cordial,
 El equipo de Idearium
-
-
 """
 
         try:

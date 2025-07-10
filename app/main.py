@@ -10,9 +10,6 @@ from app.routers import upload, chat, download, upload_one, upload_multiple, sta
 # Gemini config
 from app.config.genai_client import configure_genai
 
-# Google Calendar config
-from app.routers import vacaciones_calendar
-
 
 
 
@@ -42,7 +39,7 @@ app.include_router(upload_one.router)
 app.include_router(upload_multiple.router)
 app.include_router(status.router)
 app.include_router(vacaciones.router)
-app.include_router(vacaciones_calendar.router)
+
 
 @app.get("/")
 def root():

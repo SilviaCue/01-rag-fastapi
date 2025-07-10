@@ -1,4 +1,4 @@
-
+# app/services/chat_utils.py
 
 from datetime import datetime, timedelta
 
@@ -13,16 +13,15 @@ def contar_laborables(inicio: datetime.date, fin: datetime.date) -> int:
 
 def responder_con_gemini(nombre: str, resumen_dias: list, generator):
     """
-     Genera una respuesta clara y profesional usando Gemini para las vacaciones de un empleado.
-    
+    Genera una respuesta clara y profesional usando IA (Gemini/OpenAI) para las vacaciones de un empleado.
 
     Args:
         nombre: Nombre de la persona (en minúsculas).
         resumen_dias: lista de tuplas (fecha_inicio, fecha_fin, duración).
-        generator: instancia de GenerationSelector (Gemini u otro modelo).
+        generator: instancia de GenerationSelector (Gemini u OpenAI).
 
     Returns:
-        Respuesta redactada por Gemini.
+        Respuesta redactada por la IA.
     """
     if not resumen_dias:
         return f"No hay vacaciones registradas para {nombre.title()} en 2025."
@@ -37,7 +36,7 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator):
     contexto = f"{nombre.title()} ha tomado vacaciones en los siguientes periodos de 2025:\n" + "\n".join(detalles)
 
     prompt = f"""
-     ¡Responde diciendo primero: SOY GEMINI!
+   
 Contexto:
 {contexto}
 
