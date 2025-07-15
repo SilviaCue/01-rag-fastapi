@@ -11,12 +11,14 @@ from app.services.vacaciones_service import obtener_nombres_vacaciones
 from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_drive as obtener_nombres_vacaciones
 from app.services.vacaciones_googlecalendar import (
     obtener_lista_nombres_desde_calendar,
-    obtener_periodos_vacaciones,
+    obtener_periodos_evento,
+    filtrar_por_mes,  
+    filtrar_por_semana,  
+    filtrar_por_dia 
 )
 from app.services.chat_utils import responder_con_gemini
 
 class ChatRAG:
-
     def __init__(self):
         self.retriever = Retriever()
         self.generator = GenerationSelector(settings.GENERATION_MODEL)
@@ -49,11 +51,23 @@ class ChatRAG:
         usar_google_calendar = settings.USAR_GOOGLE_CALENDAR
         usar_excel_local = settings.USAR_EXCEL_LOCAL
 
+        # --- Detección tipo de evento:
+        if any(pal in pregunta_lower for pal in ["reunion", "reuniones", "meeting", "cita"]):
+            tipo_evento = "reuniones"
+        elif any(pal in pregunta_lower for pal in ["festivo", "festivos", "fiesta", "fiestas"]):
+            tipo_evento = "festivos"
+        else:
+            tipo_evento = "vacaciones"
+
+        # --- Si no hay nombre, pero se pregunta por reuniones/festivos, forzar nombre_detectado = "todos"
+        if not nombre_detectado and tipo_evento in ["reuniones", "festivos"]:
+            nombre_detectado = "todos"
+
         try:
-            # VACACIONES CON NOMBRE (Google Calendar, Excel o Google Sheets)
-            if nombre_detectado and any(pal in pregunta_lower for pal in ["vacacion", "vacaciones", "ausencia", "permiso"]):
+            if nombre_detectado:
                 print("Pregunta recibida:", question)
                 print("Nombre detectado:", nombre_detectado)
+                print("Tipo de evento:", tipo_evento)
                 print("Fuente activa: Google Sheets:", usar_google_sheets)
                 print("Fuente activa: Google Calendar:", usar_google_calendar)
                 print("Fuente activa: Excel Local:", usar_excel_local)
@@ -78,8 +92,22 @@ class ChatRAG:
                         f"En total hay {datos['total_marcados']} días marcados en el calendario."
                     )
                 elif usar_google_calendar:
-                    resumen_dias = obtener_periodos_vacaciones(nombre_detectado, anio=anio)
-                    respuesta = responder_con_gemini(nombre_detectado, resumen_dias, self.generator)
+                    resumen_dias = obtener_periodos_evento(
+                        nombre_detectado, tipo_evento=tipo_evento, anio=anio
+                    )
+                    match_mes = re.search(r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)", pregunta_lower)
+                    mes = None
+                    if match_mes:
+                        mes_nombre = match_mes.group(1)
+                        meses = {
+                            "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+                            "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
+                        }
+                        mes = meses[mes_nombre]
+                    
+                    respuesta = responder_con_gemini(
+                        nombre_detectado, resumen_dias, self.generator, tipo_evento=tipo_evento, anio=anio,mes=mes
+                    )
                     return respuesta
                 else:
                     return "No hay ninguna fuente de vacaciones activa."
@@ -111,7 +139,7 @@ INSTRUCCIONES GENERALES:
 - Si el contexto solo ofrece información parcial, acláralo e intenta ayudar al usuario.
 - Si no encuentras información suficiente, indícalo directamente y sugiere revisar el documento correspondiente o volver a subirlo.
 
-NSTRUCCIONES PARA EMAIL DE BIENVENIDA Y ONBOARDING:
+INSTRUCCIONES PARA EMAIL DE BIENVENIDA Y ONBOARDING:
 - Si la pregunta es para dar la bienvenida a una nueva persona (palabras clave: bienvenida, onboarding, incorporación, nuevo/a compañero/a, bienvenida a [nombre]), redacta un email claro y profesional dirigido a esa persona, SOLO con la información real encontrada en el contexto (manual de OnBoarding y fragmentos recuperados).
 - Organiza el email de bienvenida en estos bloques claros (omite los que falten en el contexto):
     • Quiénes somos y a qué nos dedicamos
