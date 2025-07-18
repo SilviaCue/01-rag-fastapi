@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 import calendar
 
+
 def contar_laborables(inicio: datetime.date, fin: datetime.date) -> int:
     dias_laborables = 0
     dia = inicio
@@ -10,6 +11,12 @@ def contar_laborables(inicio: datetime.date, fin: datetime.date) -> int:
         dia += timedelta(days=1)
     return dias_laborables
 
+
+# Aplicamos un filtro por mes únicamente en esta fase de presentación para limitar la información mostrada al usuario.
+# No filtramos antes (en chat.py) porque es importante que Gemini reciba el contexto completo del año,
+# pero al generar la respuesta, restringimos aquí el contenido al mes consultado
+# para que la respuesta sea precisa, clara y enfocada solo en lo que se ha preguntado.
+
 def filtrar_por_mes(resumen_dias, mes):
     resultado = []
     for evento in resumen_dias:
@@ -17,6 +24,8 @@ def filtrar_por_mes(resumen_dias, mes):
         if inicio.month == mes or fin.month == mes:
             resultado.append(evento)
     return resultado
+
+
 
 def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento="vacaciones", anio=2025, mes=None):
     """
@@ -37,8 +46,26 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
         resumen_dias = sorted(filtrar_por_mes(resumen_dias, mes), key=lambda x: x[0]) 
 
     if not resumen_dias:
-        mes_nombre = calendar.month_name[mes] if mes else f"el año {anio}"
-        return f"No hay {tipo_evento} registrados para {nombre.title()} en {mes_nombre}."
+        mensaje_sin_eventos = ""
+        if semana:
+            mensaje_sin_eventos = f"No hay {tipo_evento} programadas para la semana {semana} del año {anio}."
+        elif dia:
+            mensaje_sin_eventos = f"No hay {tipo_evento} programadas para el día {dia.strftime('%d/%m/%Y')}."
+        elif mes:
+            mensaje_sin_eventos = f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."
+        else:
+            mensaje_sin_eventos = f"No hay {tipo_evento} registrados para {nombre_detectado.capitalize()} en el año {anio}."
+
+    # Pasamos un resumen vacío a Gemini y le damos contexto
+        return responder_con_gemini(
+            nombre_detectado,
+            [],
+            self.generator,
+            tipo_evento=tipo_evento,
+            anio=anio,
+            mes=mes,
+            mensaje_extra=mensaje_sin_eventos
+        )
 
     detalles = []
     total_laborables = 0
@@ -50,8 +77,15 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
             titulo = extra[0] if len(extra) > 0 else "Sin título"
             hora_local = (inicio + timedelta(hours=2)).strftime('%H:%M')  # Ajuste de UTC a GMT+2
             detalles.append(f"- El {inicio.strftime('%d de %B de %Y')} a las {hora_local} ({titulo})")
-
             
+        elif tipo_evento == "entregas":
+            titulo = extra[0] if len(extra) > 0 else "Entrega"
+            fecha_entrega = inicio.strftime('%d de %B de %Y')
+            if len(resumen_dias) == 1:
+                detalles.append(f"La próxima entrega es el {fecha_entrega} ({titulo}).")
+            else:
+                detalles.append(f"- {fecha_entrega} ({titulo})")
+
             
         elif tipo_evento == "festivos":
             titulo = extra[0] if len(extra) > 0 else "Festivo"
@@ -77,7 +111,7 @@ Instrucciones para redactar la respuesta:
 - Si son vacaciones, indica el total de días laborables y resume los periodos.
 - Si se trata de reuniones, incluye la fecha, hora y título si está disponible.
 - Si se trata de festivos, incluye fechas y nombres si existen.
-- Utiliza un tono profesional, amable y natural.
+- Mantén un tono profesional, amable y claro, orientado a usuarios que buscan información precisa.
 - Limítate a la información del contexto.
 
 Ejemplos de respuesta según tipo de evento:
@@ -89,16 +123,28 @@ Ejemplo para vacaciones:
 Actualmente no tiene más vacaciones registradas para este año."
 
 Ejemplo para reuniones:
-"En el mes de julio de 2025 se han registrado 2 reuniones:
-- El 3 de julio a las 12:00 con IGEAR.
-- El 15 de julio a las 13:00 con Pepito.
-Estas reuniones suman un total de 2 reuniones este mes."
+"En julio de 2025 se han registrado las siguientes reuniones:
+- 3 de julio a las 12:00 con IGEAR.
+- 15 de julio a las 13:00 con Pepito.
+Reuniones pendientes:
+- Hoy a las 11:00 con el Gobierno de Aragón.
+- 20 de julio a las 10:00 con el Gobierno de Aragón.
+Importante: Si no hay reuniones, responde no hay ninguna reunión programada"
 
 Ejemplo para festivos:
-"En 2025, hay un total de 2 días festivos registrados:
-- El 1 de mayo (viernes, Día del Trabajo).
-- El 12 de octubre (lunes, Fiesta Nacional).
-No hay más festivos registrados para este año."
+"En 2025 hay registrados los siguientes festivos:
+- 1 de mayo (viernes, Día del Trabajo).
+- 12 de octubre (lunes, Fiesta Nacional).
+No se han identificado más festivos para este año."
+
+Ejemplo para entregas:
+"En 2025 hay registradas las siguientes entregas:
+- 25 de julio de 2025 (Sprint 3).
+- 8 de octubre de 2025 (Informe trimestral).
+Actualmente, no hay más entregas programadas para este año."
+
+Si solo hay una entrega futura:
+"La próxima entrega es el 25 de julio de 2025 (Sprint 3)."
 
 Pregunta:
 {pregunta}

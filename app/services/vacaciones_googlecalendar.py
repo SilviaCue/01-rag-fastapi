@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 from dateutil import parser
 
-CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbwOFvO1lubR6wmOFVurpU92smy_ht0GVLbqIz4_b492onCt2L325o7AOLZcWyVRa3TMvQ/exec"
+CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbza71lHM9G6wCIgXldjv6ILh89PqaoDSIcY1Y-r9XgilKXP4Q7GzBfXXSmhgY-g9L_b/exec"
 
 def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025):
     try:
@@ -74,11 +74,33 @@ def obtener_lista_nombres_desde_calendar():
         return []
 
 # --- Filtros adicionales ---
-def filtrar_por_mes(resumen_dias, mes):
-    return [evento for evento in resumen_dias if evento[0].month == mes or evento[1].month == mes]
 
 def filtrar_por_semana(resumen_dias, year, week):
-    return [evento for evento in resumen_dias if evento[0].isocalendar()[:2] == (year, week) or evento[1].isocalendar()[:2] == (year, week)]
+    resultado = []
+    for evento in resumen_dias:
+        inicio = evento[0]
+        fin = evento[1]
+
+        # Convertir a date si es datetime
+        if isinstance(inicio, datetime):
+            inicio = inicio.date()
+        if isinstance(fin, datetime):
+            fin = fin.date()
+
+        for dia in range((fin - inicio).days + 1):
+            fecha_actual = inicio + timedelta(days=dia)
+            anio_iso, semana_iso, _ = fecha_actual.isocalendar()
+            if anio_iso == year and semana_iso == week:
+                resultado.append(evento)
+                break  # Ya coincide al menos un día del evento con esa semana
+
+    return resultado
 
 def filtrar_por_dia(resumen_dias, fecha):
-    return [evento for evento in resumen_dias if evento[0].date() <= fecha <= evento[1].date()]
+    resultado = []
+    for evento in resumen_dias:
+        inicio = evento[0].date() if isinstance(evento[0], datetime) else evento[0]
+        fin = evento[1].date() if isinstance(evento[1], datetime) else evento[1]
+        if inicio <= fecha <= fin:
+            resultado.append(evento)
+    return resultado

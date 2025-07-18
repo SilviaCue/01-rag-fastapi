@@ -1,5 +1,6 @@
 import os
 import re
+from datetime import datetime, date, timedelta
 from app.services.retriever import Retriever  # Para RAG general, no calendar
 from app.config import settings
 from app.services.generation_selector import GenerationSelector
@@ -12,7 +13,6 @@ from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_dri
 from app.services.vacaciones_googlecalendar import (
     obtener_lista_nombres_desde_calendar,
     obtener_periodos_evento,
-    filtrar_por_mes,  
     filtrar_por_semana,  
     filtrar_por_dia 
 )
@@ -45,6 +45,26 @@ class ChatRAG:
         # --- Detecta año en la pregunta (por ejemplo, "2024", "2025", etc)
         match_anio = re.search(r"(20\d{2})", pregunta_lower)
         anio = int(match_anio.group(1)) if match_anio else 2025  # 2025 por defecto
+        semana_actual = date.today().isocalendar()[1]
+        anio_actual = date.today().year
+        pregunta_lower = question.lower()
+        semana = None
+        # --- Filtro lógico de eventos por semana/día (nivel de negocio)
+        # Estos filtros definen qué eventos deben incluirse en el análisis según la pregunta del usuario.
+        # Se aplican antes de generar la respuesta, para reducir el conjunto de eventos relevantes
+        
+        if "esta semana" in pregunta_lower:
+            semana = semana_actual
+            anio = anio_actual
+        elif "la semana que viene" in pregunta_lower or "semana que viene" in pregunta_lower:
+            semana = semana_actual + 1
+            anio = anio_actual
+        
+        dia = None
+        if "hoy" in pregunta_lower:
+            dia = datetime.today().date()
+        elif "mañana" in pregunta_lower:
+            dia = (datetime.today() + timedelta(days=1)).date()
 
         # Configuración de fuente activa
         usar_google_sheets = settings.USAR_GOOGLE_SHEETS
@@ -56,11 +76,13 @@ class ChatRAG:
             tipo_evento = "reuniones"
         elif any(pal in pregunta_lower for pal in ["festivo", "festivos", "fiesta", "fiestas"]):
             tipo_evento = "festivos"
+        elif any(pal in pregunta_lower for pal in ["entrega", "entregas", "deadline", "sprint"]):
+            tipo_evento = "entregas"
         else:
             tipo_evento = "vacaciones"
 
         # --- Si no hay nombre, pero se pregunta por reuniones/festivos, forzar nombre_detectado = "todos"
-        if not nombre_detectado and tipo_evento in ["reuniones", "festivos"]:
+        if not nombre_detectado and tipo_evento in ["reuniones", "festivos", "entregas"]:
             nombre_detectado = "todos"
 
         try:
@@ -95,6 +117,25 @@ class ChatRAG:
                     resumen_dias = obtener_periodos_evento(
                         nombre_detectado, tipo_evento=tipo_evento, anio=anio
                     )
+                    if tipo_evento == "entregas" and "siguiente" in pregunta_lower:
+                        resumen_dias =sorted(resumen_dias, key=lambda x: x[0])
+                        hoy= datetime.today().date()
+                        for evento in resumen_dias:
+                            fecha_evento =evento[0].date() if isinstance(evento[0],datetime) else evento[0]
+                            if fecha_evento > hoy:
+                                resumen_dias =[evento]
+                                break
+                            else:
+                                resumen_dias =[]
+                            
+                    if semana:
+                        resumen_dias = filtrar_por_semana(resumen_dias, anio, semana)
+                        print(f"Aplicando filtro por semana: {semana}, año: {anio}")
+                    if dia:
+                        resumen_dias = filtrar_por_dia(resumen_dias, dia)
+                        print(f"{len(resumen_dias)} eventos recuperados antes de filtrar")
+
+
                     match_mes = re.search(r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)", pregunta_lower)
                     mes = None
                     if match_mes:
@@ -104,6 +145,15 @@ class ChatRAG:
                             "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
                         }
                         mes = meses[mes_nombre]
+                    if not resumen_dias:
+                        if semana:
+                            return f"No hay {tipo_evento} programadas para la semana {semana} del año {anio}."
+                        elif dia:
+                            return f"No hay {tipo_evento} programadas para el día {dia.strftime('%d/%m/%Y')}."
+                        elif mes:
+                            return f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."
+                        else:
+                            return f"No hay {tipo_evento} registrados para {nombre_detectado.capitalize()} en el año {anio}."
                     
                     respuesta = responder_con_gemini(
                         nombre_detectado, resumen_dias, self.generator, tipo_evento=tipo_evento, anio=anio,mes=mes
