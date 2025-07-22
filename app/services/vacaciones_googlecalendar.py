@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 from dateutil import parser
 
-CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbza71lHM9G6wCIgXldjv6ILh89PqaoDSIcY1Y-r9XgilKXP4Q7GzBfXXSmhgY-g9L_b/exec"
+CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbxTAMwI_cmbkltrkM4-kGHl5y_Xe1vTAMfenAZvUT3OBYwsehnsVhtNZ1hXSzu4BE8b/exec"
 
 def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025):
     try:
@@ -13,9 +13,9 @@ def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025)
         nombre_buscado = nombre_buscado.strip().lower()
         resumen = []
 
-        if nombre_buscado == "todos" and tipo_evento == "reuniones":
+        if nombre_buscado == "todos" and tipo_evento in ["reuniones", "entregas", "sprints", "festivos"]:
             for categorias in datos.values():
-                for evento in categorias.get("reuniones", []):
+                for evento in categorias.get(tipo_evento, []):
                     fecha_inicio = parser.isoparse(evento["inicio"])
                     fecha_fin = parser.isoparse(evento["fin"])
                     duracion = (fecha_fin - fecha_inicio).days + 1
@@ -26,7 +26,9 @@ def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025)
 
         for nombre_key, categorias in datos.items():
             if nombre_key.strip().lower() == nombre_buscado:
-                for evento in categorias.get(tipo_evento, []):
+                eventos_revisar = categorias.get(tipo_evento, [])
+
+                for evento in eventos_revisar:
                     fecha_inicio_raw = parser.isoparse(evento["inicio"])
                     fecha_fin_raw = parser.isoparse(evento["fin"])
                     titulo = evento.get("titulo")
@@ -56,6 +58,7 @@ def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025)
                             fecha_fin = fecha_inicio
                         duracion = (fecha_fin - fecha_inicio).days + 1
                         resumen.append((fecha_inicio, fecha_fin, duracion, titulo, descripcion))
+
                 return resumen
 
         return []
@@ -81,7 +84,6 @@ def filtrar_por_semana(resumen_dias, year, week):
         inicio = evento[0]
         fin = evento[1]
 
-        # Convertir a date si es datetime
         if isinstance(inicio, datetime):
             inicio = inicio.date()
         if isinstance(fin, datetime):
@@ -92,7 +94,7 @@ def filtrar_por_semana(resumen_dias, year, week):
             anio_iso, semana_iso, _ = fecha_actual.isocalendar()
             if anio_iso == year and semana_iso == week:
                 resultado.append(evento)
-                break  # Ya coincide al menos un día del evento con esa semana
+                break
 
     return resultado
 

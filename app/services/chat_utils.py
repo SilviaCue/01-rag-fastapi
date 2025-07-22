@@ -26,8 +26,7 @@ def filtrar_por_mes(resumen_dias, mes):
     return resultado
 
 
-
-def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento="vacaciones", anio=2025, mes=None):
+def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento="vacaciones", anio=2025, mes=None, semana=None, dia=None):
     """
     Genera una respuesta clara y profesional usando IA (Gemini/OpenAI) para eventos.
 
@@ -43,29 +42,33 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
         Respuesta redactada por la IA.
     """
     if mes:
-        resumen_dias = sorted(filtrar_por_mes(resumen_dias, mes), key=lambda x: x[0]) 
+        resumen_dias = sorted(filtrar_por_mes(resumen_dias, mes), key=lambda x: x[0])
 
     if not resumen_dias:
-        mensaje_sin_eventos = ""
         if semana:
-            mensaje_sin_eventos = f"No hay {tipo_evento} programadas para la semana {semana} del año {anio}."
+            detalles = [f"No hay {tipo_evento} programadas para la semana {semana} del año {anio}."]
         elif dia:
-            mensaje_sin_eventos = f"No hay {tipo_evento} programadas para el día {dia.strftime('%d/%m/%Y')}."
+            detalles = [f"No hay {tipo_evento} programadas para el día {dia.strftime('%d/%m/%Y')}."]
         elif mes:
-            mensaje_sin_eventos = f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."
+            mes_nombre = calendar.month_name[mes] if isinstance(mes, int) and 1 <= mes <= 12 else f"mes {mes}"
+            detalles = [f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."]
         else:
-            mensaje_sin_eventos = f"No hay {tipo_evento} registrados para {nombre_detectado.capitalize()} en el año {anio}."
+            detalles = [f"No hay {tipo_evento} registrados para {nombre.capitalize()} en el año {anio}."]
 
-    # Pasamos un resumen vacío a Gemini y le damos contexto
-        return responder_con_gemini(
-            nombre_detectado,
-            [],
-            self.generator,
-            tipo_evento=tipo_evento,
-            anio=anio,
-            mes=mes,
-            mensaje_extra=mensaje_sin_eventos
-        )
+        contexto = "\n".join(detalles)
+        pregunta = f"¿Qué {tipo_evento} ha tenido {nombre.title()} en {anio} y en qué fechas?"
+        prompt = f"""
+Contexto:
+{contexto}
+
+Instrucciones para redactar la respuesta:
+- Responde claramente si no hay eventos.
+- Mantén un tono profesional y claro.
+
+Pregunta:
+{pregunta}
+"""
+        return generator.generate(prompt.strip())
 
     detalles = []
     total_laborables = 0
@@ -77,7 +80,7 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
             titulo = extra[0] if len(extra) > 0 else "Sin título"
             hora_local = (inicio + timedelta(hours=2)).strftime('%H:%M')  # Ajuste de UTC a GMT+2
             detalles.append(f"- El {inicio.strftime('%d de %B de %Y')} a las {hora_local} ({titulo})")
-            
+
         elif tipo_evento == "entregas":
             titulo = extra[0] if len(extra) > 0 else "Entrega"
             fecha_entrega = inicio.strftime('%d de %B de %Y')
@@ -85,8 +88,16 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
                 detalles.append(f"La próxima entrega es el {fecha_entrega} ({titulo}).")
             else:
                 detalles.append(f"- {fecha_entrega} ({titulo})")
+        
+        elif tipo_evento == "sprints":
+            titulo = extra[0] if len(extra) > 0 else "Sprint"
+            fecha_sprint = inicio.strftime('%d de %B de %Y')
+            if len(resumen_dias) == 1:
+                detalles.append(f"El próximo sprint es el {fecha_sprint} ({titulo}).")
+            else:
+                detalles.append(f"- {fecha_sprint} ({titulo})")
 
-            
+
         elif tipo_evento == "festivos":
             titulo = extra[0] if len(extra) > 0 else "Festivo"
             detalles.append(f"- {inicio.strftime('%d/%m/%Y')} ({titulo})")
@@ -139,9 +150,15 @@ No se han identificado más festivos para este año."
 
 Ejemplo para entregas:
 "En 2025 hay registradas las siguientes entregas:
-- 25 de julio de 2025 (Sprint 3).
+- 25 de julio de 2025 (Entrega proyecto).
 - 8 de octubre de 2025 (Informe trimestral).
 Actualmente, no hay más entregas programadas para este año."
+
+Ejemplo para sprints:
+"En 2025 se han registrado los siguientes sprints:
+- 12 de junio de 2025 (Sprint 2: Preparación Cartografía).
+- 15 de julio de 2025 (Sprint 3: Validación Datos).
+Actualmente no hay más sprints programados para este año."
 
 Si solo hay una entrega futura:
 "La próxima entrega es el 25 de julio de 2025 (Sprint 3)."
@@ -149,5 +166,4 @@ Si solo hay una entrega futura:
 Pregunta:
 {pregunta}
 """
-
     return generator.generate(prompt.strip())

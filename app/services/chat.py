@@ -76,13 +76,16 @@ class ChatRAG:
             tipo_evento = "reuniones"
         elif any(pal in pregunta_lower for pal in ["festivo", "festivos", "fiesta", "fiestas"]):
             tipo_evento = "festivos"
-        elif any(pal in pregunta_lower for pal in ["entrega", "entregas", "deadline", "sprint"]):
+        elif any(pal in pregunta_lower for pal in ["sprint", "sprints"]):
+            tipo_evento = "sprints"
+        elif any(pal in pregunta_lower for pal in ["entrega", "entregas", "deadline"]):
             tipo_evento = "entregas"
+
         else:
             tipo_evento = "vacaciones"
 
         # --- Si no hay nombre, pero se pregunta por reuniones/festivos, forzar nombre_detectado = "todos"
-        if not nombre_detectado and tipo_evento in ["reuniones", "festivos", "entregas"]:
+        if not nombre_detectado and tipo_evento in ["reuniones", "festivos", "entregas","sprints"]:
             nombre_detectado = "todos"
 
         try:
@@ -118,15 +121,11 @@ class ChatRAG:
                         nombre_detectado, tipo_evento=tipo_evento, anio=anio
                     )
                     if tipo_evento == "entregas" and "siguiente" in pregunta_lower:
-                        resumen_dias =sorted(resumen_dias, key=lambda x: x[0])
-                        hoy= datetime.today().date()
-                        for evento in resumen_dias:
-                            fecha_evento =evento[0].date() if isinstance(evento[0],datetime) else evento[0]
-                            if fecha_evento > hoy:
-                                resumen_dias =[evento]
-                                break
-                            else:
-                                resumen_dias =[]
+                        resumen_dias = sorted(resumen_dias, key=lambda x: x[0])
+                        hoy = datetime.today().date()
+                        proximas = [evento for evento in resumen_dias if (evento[0].date() if isinstance(evento[0], datetime) else evento[0]) > hoy]
+                        resumen_dias = [proximas[0]] if proximas else []
+
                             
                     if semana:
                         resumen_dias = filtrar_por_semana(resumen_dias, anio, semana)
@@ -156,7 +155,14 @@ class ChatRAG:
                             return f"No hay {tipo_evento} registrados para {nombre_detectado.capitalize()} en el año {anio}."
                     
                     respuesta = responder_con_gemini(
-                        nombre_detectado, resumen_dias, self.generator, tipo_evento=tipo_evento, anio=anio,mes=mes
+                        nombre_detectado,
+                        resumen_dias,
+                        self.generator,
+                        tipo_evento=tipo_evento,
+                        anio=anio,
+                        mes=mes,
+                        semana=semana,
+                        dia=dia
                     )
                     return respuesta
                 else:
