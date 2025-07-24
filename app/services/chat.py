@@ -1,28 +1,36 @@
+# Importaciones librerías necesarias del sistema, fechas y módulos propios del proyecto
 import os
 import re
 from datetime import datetime, date, timedelta
-from app.services.retriever import Retriever  # Para RAG general, no calendar
-from app.config import settings
-from app.services.generation_selector import GenerationSelector
+# Importaciones de los módulos del proyecto
+from app.services.retriever import Retriever  # Encargado de buscar fragmentos relevantes en los documentos
+from app.config import settings # Configuración general
+from app.services.generation_selector import GenerationSelector# Decide qué modelo usar para generar texto
+# Funciones para calcular vacaciones desde Excel o Google Sheet
 from app.routers.vacaciones import contar_dias_vacaciones
 from app.routers.vacaciones_drive import contar_dias_vacaciones_drive
 
-# Versiones locales y externas
-from app.services.vacaciones_service import obtener_nombres_vacaciones
+# Funciones para leer nombres y eventos del calendario
+from app.services.vacaciones_service import obtener_nombres_vacaciones # función para sacar los nombres
 from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_drive as obtener_nombres_vacaciones
 from app.services.vacaciones_googlecalendar import (
-    obtener_lista_nombres_desde_calendar,
-    obtener_periodos_evento,
-    filtrar_por_semana,  
-    filtrar_por_dia 
+    obtener_lista_nombres_desde_calendar, # función para sacar los nombres
+    obtener_periodos_evento, # función para sacar los eventos de calendario
+    filtrar_por_semana,  # función para quedarte solo con eventos de cierta semana
+    filtrar_por_dia  #función para quedarte solo con eventos de un día
 )
+# Función para generar respuestas usando IA (Gemini)
 from app.services.chat_utils import responder_con_gemini
 
+# Función que crea eventos en Google Calendar
+from app.services.calendar_create import crear_evento_en_calendar
+
+# Clase principal del sistema de chat
 class ChatRAG:
     def __init__(self):
-        self.retriever = Retriever()
-        self.generator = GenerationSelector(settings.GENERATION_MODEL)
-        self.upload_path = "storage/docs_raw"
+        self.retriever = Retriever() # Para buscar fragmentos de texto relevantes
+        self.generator = GenerationSelector(settings.GENERATION_MODEL)# Para generar respuestas con IA
+        self.upload_path = "storage/docs_raw" # Carpeta donde están los documentos subidos
 
     def chat(self, question: str):
         print("DEBUG fuentes activas:")
@@ -39,12 +47,13 @@ class ChatRAG:
         nombres_validos = [n.lower() for n in nombres_validos_original]
         print("Nombres detectados desde la fuente activa:", nombres_validos)
 
-        pregunta_lower = question.lower()
+        pregunta_lower = question.lower()# Pasamos la pregunta a minúsculas para evitar errores de comparación
         nombre_detectado = next((n for n in nombres_validos if re.search(rf'\b{re.escape(n)}\b', pregunta_lower)), None)
 
         # --- Detecta año en la pregunta (por ejemplo, "2024", "2025", etc)
         match_anio = re.search(r"(20\d{2})", pregunta_lower)
         anio = int(match_anio.group(1)) if match_anio else 2025  # 2025 por defecto
+        # Detectamos si se pregunta por esta semana o la que viene
         semana_actual = date.today().isocalendar()[1]
         anio_actual = date.today().year
         pregunta_lower = question.lower()
@@ -60,6 +69,8 @@ class ChatRAG:
             semana = semana_actual + 1
             anio = anio_actual
         
+        
+        # Detecta si se pregunta por hoy o mañana
         dia = None
         if "hoy" in pregunta_lower:
             dia = datetime.today().date()
@@ -84,18 +95,50 @@ class ChatRAG:
         else:
             tipo_evento = "vacaciones"
 
-        # --- Si no hay nombre, pero se pregunta por reuniones/festivos, forzar nombre_detectado = "todos"
+        # --- Si no hay nombre, pero se pregunta por reuniones/festivos, se asume que se refiere a = "todos"
         if not nombre_detectado and tipo_evento in ["reuniones", "festivos", "entregas","sprints"]:
             nombre_detectado = "todos"
 
         try:
-            if nombre_detectado:
+            # Si es una pregunta de calendario o de creación de evento
+            if nombre_detectado or "crear" in pregunta_lower or "añadir" in pregunta_lower:
                 print("Pregunta recibida:", question)
                 print("Nombre detectado:", nombre_detectado)
                 print("Tipo de evento:", tipo_evento)
                 print("Fuente activa: Google Sheets:", usar_google_sheets)
                 print("Fuente activa: Google Calendar:", usar_google_calendar)
                 print("Fuente activa: Excel Local:", usar_excel_local)
+                print("DEBUG: Entrando en bloque de creación de evento")
+                print("Pregunta recibida para crear:", question) 
+                
+                 # --- BLOQUE PARA CREAR EVENTO EN CALENDARIO ---
+                if "crear" in pregunta_lower or "añadir" in pregunta_lower:
+                    match_titulo = re.search(r"(?:crear|añadir)\s+(?:una\s+)?reunión\s+(?:de|con)?\s*(.*?)(?:\s+el\s|\s+a\s+las\s)", pregunta_lower)
+                    titulo_personalizado = match_titulo.group(1).strip().capitalize() if match_titulo else "Reunión programda desde el chat"
+                    print("DEBUG: Título extraído:", titulo_personalizado)
+                    
+                    # Buscamos la fecha y hora indicadas
+                    match_fecha=re.search(r"(?:el\s)?(\d{1,2})\s+de\s+([a-z]+)", pregunta_lower)
+                    match_hora = re.search(r"a\s+las\s+(\d{1,2})", pregunta_lower)
+                    
+                     # Mapeamos nombres de meses a números
+                    meses ={
+                        "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+                        "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
+                    }
+                    
+                    # Si tenemos fecha y hora, creamos el evento
+                    if match_fecha and match_hora:
+                        dia =int(match_fecha.group(1))
+                        mes = meses.get(match_fecha.group(2),None)
+                        hora=int(match_hora.group(1))
+                        
+                        if mes:
+                            fecha_inicio = datetime(anio, mes, dia,hora,0)
+                            fecha_fin = fecha_inicio + timedelta(hours=1)
+                            resultado= crear_evento_en_calendar(titulo_personalizado, fecha_inicio,fecha_fin) 
+                            return f"{resultado}"
+                    return f"Evento no creado no entendido bien la fecha o la hora para crear la reunión."              
 
                 if usar_google_sheets:
                     datos = contar_dias_vacaciones_drive(nombre_detectado)

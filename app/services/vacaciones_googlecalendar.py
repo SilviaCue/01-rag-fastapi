@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 from dateutil import parser
 
-CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbxTAMwI_cmbkltrkM4-kGHl5y_Xe1vTAMfenAZvUT3OBYwsehnsVhtNZ1hXSzu4BE8b/exec"
+CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbxTKuhVyHaWQAKtniDt8Tsq2IMCAjgqWgdwgveJTiePl1TS0kcaW08wupxOEnzQuz94/exec"
 
 def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025):
     try:

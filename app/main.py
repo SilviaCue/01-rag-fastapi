@@ -10,7 +10,7 @@ from app.routers import upload, chat, download, upload_one, upload_multiple, sta
 # Gemini config
 from app.config.genai_client import configure_genai
 
-
+from fastapi.middleware.cors import CORSMiddleware
 
 
 
