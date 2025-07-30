@@ -12,6 +12,7 @@ Este proyecto implementa un sistema completo RAG (Retrieval Augmented Generation
 - PyMuPDF, python-docx, pandas (lectura de PDF, Word, Excel)
 - pytesseract (OCR integrado para PDFs escaneados e imágenes)
 - Google Calendar (consulta y cálculo automático de vacaciones)
+- Creación automática de eventos/reuniones en Google Calendar
 - Swagger UI para documentación interactiva
 
 > Nota: El código tiene preparado soporte para OpenAI (embeddings/generación) y para futuros cambios de modelo, pero actualmente NO está en uso (ni requiere clave API de OpenAI).
@@ -55,12 +56,15 @@ idearium_rag_fastapi/
 #### Consultas
 - El endpoint `/chat/` permite preguntas en lenguaje natural (onboarding, emails, resúmenes, vacaciones…)
 - Recupera los fragmentos más relevantes y genera una respuesta contextualizada (por defecto Gemini 1.5 Pro)
+- Permite también crear reuniones y otros eventos directamente en Google Calendar con preguntas como:
+"Pon una reunión chatRAG mañana a las 12" o "Agenda sprint el 2 de agosto a las 11"
 
 #### Gestión especial de preguntas sobre vacaciones, reuniones, entregas y sprints (vía Google Calendar)
 - Integración directa con Google Calendar
 - Cálculo automático de periodos y días disfrutados por persona y año
 - Soporta filtros por día, semana, mes y evento próximo
 - Categorías de eventos compatibles: vacaciones, reuniones, festivos, entregas, sprints
+- Creación automática de eventos/reuniones (título generado por IA) directamente desde la pregunta
 
 #### Onboarding
 - Generación de emails personalizados usando fragmentos del manual interno
@@ -106,6 +110,8 @@ uvicorn app.main:app --reload
   - Soporte para diferentes fuentes: Google Sheets, Excel, Calendar
   - Respuestas naturales y claras (“Silvia ha disfrutado de 12 días…”)  
 - Soporte para nuevos eventos del calendario: reuniones, entregas, sprints, festivos
+- Creación de reuniones y eventos directamente en Google Calendar:
+- Solo pregunta "pon una reunión...", "crea entrega..." y el sistema la agenda automáticamente generando el título de forma inteligente gracias a IA.
 - Consultas con filtro por día, semana, mes o evento futuro (por ejemplo: “próxima entrega”, “reuniones esta semana”)
 - Generación de resúmenes, emails y respuestas corporativas solo usando contexto REAL.
 - Embeddings configurables: Gemini o HuggingFace.
@@ -123,4 +129,5 @@ python -m app.admin.reset_vector_store
 - El sistema NO usa OpenAI por defecto: el código está preparado, pero Gemini es el modelo de generación activo.
 - Las respuestas dependen de la calidad y amplitud de los documentos cargados.
 - El sistema prioriza seguridad y no inventar datos: todo lo que responde está en el contexto/documento.
+- Para la creación automática de eventos/reuniones necesitas tener configurado Google Calendar y la API Key correspondiente en secret_keys.json
 - Para Windows: requiere instalación de Tesseract OCR → [Descargar aquí](https://github.com/tesseract-ocr/tesseract)

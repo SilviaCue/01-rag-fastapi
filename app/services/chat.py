@@ -55,12 +55,19 @@ class ChatRAG:
         if es_intencion_crear:
             try:
                 prompt_reformulacion = f"""
-                Reformula esta solicitud en una frase clara, directa y sin ambigüedad, ideal para que un sistema automático pueda interpretarla sin errores.
-                IMPORTANTE: La frase generada se usará directamente como título y para extraer fecha y hora mediante expresiones regulares. Evita usar palabras genéricas como 'llamada' o 'eventos', y no incluyas paréntesis innecesarios.
-                Mantén los datos como título, persona, tipo de evento (reunión, entrega, etc), fecha y hora.
+                Reformula esta solicitud en una frase clara y sin ambigüedad, ideal para que un sistema automático la entienda y extraiga datos (título, tipo de evento, fecha y hora) mediante expresiones regulares.
+
+                IMPORTANTE:
+                - La frase debe contener todos los datos: título, tipo de evento, fecha y hora, en ese orden.
+                - No uses palabras genéricas como 'llamada', 'evento' ni añadas paréntesis innecesarios.
+                - Al final de la frase, añade en una línea separada: 
+                TÍTULO_CALENDARIO: [título limpio del evento, solo el nombre, sin la palabra 'reunión', fecha ni hora, ni comillas]
+
                 Ejemplos:
-                Entrada: "Oye, ¿puedes poner una reunión chatRAG el jueves 23 de julio a las 10?"
-                Salida: "Reunión chatRAG el jueves 23 de julio a las 10:00"
+                Entrada: "Oye, ¿puedes poner una reunión chatRAG el jueves 23 de julio a las 10?
+                Reunión chatRAG el jueves 23 de julio a las 10:00
+                TÍTULO_CALENDARIO: chatRAG"
+                
                 Entrada: "{question}"
                 Salida:"""
 
