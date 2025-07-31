@@ -61,12 +61,12 @@ class ChatRAG:
                 - La frase debe contener todos los datos: título, tipo de evento, fecha y hora, en ese orden.
                 - No uses palabras genéricas como 'llamada', 'evento', ni añadas paréntesis innecesarios.
                 - Al final de la frase, añade en una línea separada: 
-                IMPORTANTE ACERCA DE TITULO_CALENDARIO: [solo el nombre del evento, SIN la palabra reunión, SIN fecha ni hora, SIN comillas, solo el nombre puro, ej: chatRAG]
+                IMPORTANTE ACERCA DE TITULO_CALENDARIO:  [QUE EL TITULO CONTENGA UNICAMENTE UNA PALABRA]
                 Ejemplo:
                 Entrada: Pon una reunión que se llame chatRAG para el jueves 23 de julio a las 10
                 Salida:
                 Reunión chatRAG el jueves 23 de julio a las 10:00
-                TITULO_CALENDARIO: chatRAG
+                TITULO_CALENDARIO: chatRAG (Importante que el titulo sea una palabra sola , sin fecha, ni hora, ni nada más, unicamente una palabra)
                 
                 Entrada: "{question}"
                 Salida:"""
