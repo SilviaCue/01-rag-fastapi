@@ -55,18 +55,18 @@ class ChatRAG:
         if es_intencion_crear:
             try:
                 prompt_reformulacion = f"""
-                Reformula esta solicitud en una frase clara y sin ambigüedad, ideal para que un sistema automático la entienda y extraiga datos (título, tipo de evento, fecha y hora) mediante expresiones regulares.
-
+                Reformula la siguiente solicitud para crear un evento de calendario. Es MUY importante que respondas exactamente en este formato (no inventes nada, respeta el formato, nunca incluyas fecha ni hora en el título):
+                Reformula esta solicitud en una frase clara, directa y sin ambigüedad, ideal para que un sistema automático la entienda y extraiga los datos (título, tipo de evento, fecha y hora) mediante expresiones regulares.
                 IMPORTANTE:
                 - La frase debe contener todos los datos: título, tipo de evento, fecha y hora, en ese orden.
-                - No uses palabras genéricas como 'llamada', 'evento' ni añadas paréntesis innecesarios.
+                - No uses palabras genéricas como 'llamada', 'evento', ni añadas paréntesis innecesarios.
                 - Al final de la frase, añade en una línea separada: 
-                TÍTULO_CALENDARIO: [título limpio del evento, solo el nombre, sin la palabra 'reunión', fecha ni hora, ni comillas]
-
-                Ejemplos:
-                Entrada: "Oye, ¿puedes poner una reunión chatRAG el jueves 23 de julio a las 10?
+                IMPORTANTE ACERCA DE TITULO_CALENDARIO: [solo el nombre del evento, SIN la palabra reunión, SIN fecha ni hora, SIN comillas, solo el nombre puro, ej: chatRAG]
+                Ejemplo:
+                Entrada: Pon una reunión que se llame chatRAG para el jueves 23 de julio a las 10
+                Salida:
                 Reunión chatRAG el jueves 23 de julio a las 10:00
-                TÍTULO_CALENDARIO: chatRAG"
+                TITULO_CALENDARIO: chatRAG
                 
                 Entrada: "{question}"
                 Salida:"""
