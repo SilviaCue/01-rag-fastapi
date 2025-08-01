@@ -44,14 +44,17 @@ class ChatRAG:
         pregunta_lower = question.lower()
         pregunta_lower_reformulada = pregunta_lower  # Se usará luego
 
-        # --- Reformulación automática de la pregunta con Gemini SOLO si es de crear evento ---
+        # # --- Detección de intención de creación de evento (antes de reformular con Gemini)
         es_intencion_crear = any(
             pal in pregunta_lower for pal in [
                 "crear", "añadir", "añade", "crea", "quiero", "me gustaria", "pon", "poner", "agenda", "agendar", "programa", "programar"
             ]
         )
-        pregunta_reformulada = question  # Valor por defecto
-
+        
+        # Guarda la pregunta original tal cual, por si no hay que reformular para seguir con el flujo normal
+        pregunta_reformulada = question  #pregunta del usuario original
+        
+        # --- Reformulación automática de la pregunta con Gemini SOLO si hay intención de crear evento ---
         if es_intencion_crear:
             try:
                 prompt_reformulacion = f"""
@@ -66,17 +69,23 @@ class ChatRAG:
                 Entrada: Pon una reunión que se llame chatRAG para el jueves 23 de julio a las 10
                 Salida:
                 Reunión chatRAG el jueves 23 de julio a las 10:00
-                TITULO_CALENDARIO: chatRAG (Importante que el titulo sea una palabra sola , sin fecha, ni hora, ni nada más, unicamente una palabra)
+                TITULO_CALENDARIO: chatRAG (Importante que el titulo sea una palabra sola y no añadas nada más) 
                 
                 Entrada: "{question}"
                 Salida:"""
 
+                # Llama a Gemini para generar la frase reformulada (ya limpia y en formato fácil de extraer)
                 pregunta_reformulada = self.generator.generate(prompt_reformulacion).strip()
                 print("DEBUG: Pregunta original:", question)
                 print("DEBUG: Pregunta reformulada:", pregunta_reformulada)
-                pregunta_lower_reformulada = pregunta_reformulada.lower()
-                question = pregunta_reformulada  # Para el RAG
-                pregunta_lower = pregunta_lower_reformulada  # Para la lógica siguiente
+                
+                pregunta_lower_reformulada = pregunta_reformulada.lower() # Convertimos la frase reformulada a minúsculas para analizar fácilmente palabras clave
+                
+                # Actualiza la variable 'question' con la frase reformulada para que todo el código siguiente trabaje sobre esta nueva frase
+                question = pregunta_reformulada  # pregunta_reformulada → Frase generada por Gemini, ya preparada para procesar
+                
+                # También actualiza 'pregunta_lower' para que las comprobaciones sean sobre la reformulación en minúsculas
+                pregunta_lower = pregunta_lower_reformulada  
             except Exception as e:
                 print(f"Error al reformular pregunta: {e}")
 
@@ -134,12 +143,11 @@ class ChatRAG:
             nombre_detectado = "todos"
 
         try:
-            # --- BLOQUE para CREAR EVENTO EN CALENDARIO SI hay intención de crear ---
+            #  --- Si el usuario quiere crear un evento y Google Calendar está activo, pasamos a crear el evento ---
             if es_intencion_crear and usar_google_calendar:
                 print("DEBUG: Entrando en bloque de creación de evento")
-                # Usamos la frase reformulada como fuente para extraer el título:
-                # Lo más seguro es coger TODO menos la hora
-                # Ejemplo: "Reunión chatRAG el 29 de julio a las 13:00"
+                
+                # # Buscamos la fecha y la hora en la frase reformulada
                 match_titulo = re.split(r"\s+a\s+las\s+", pregunta_lower_reformulada)
                 titulo_limpio = match_titulo[0].strip().capitalize() if match_titulo else pregunta_reformulada
                 print("DEBUG: Título limpio generado por Gemini:", titulo_limpio)
@@ -147,11 +155,13 @@ class ChatRAG:
                 # Buscamos la fecha y la hora en la reformulación, para asegurar máxima robustez
                 match_fecha = re.search(r"(?:el\s)?(\d{1,2})\s+de\s+([a-záéíóú]+)", pregunta_lower_reformulada)
                 match_hora = re.search(r"a\s+las\s+(\d{1,2})(?::(\d{2}))?", pregunta_lower_reformulada)
+                
+                 # Diccionario para pasar de nombre de mes a número 
                 meses = {
                     "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
                     "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
                 }
-
+                # Solo seguimos si encontramos una fecha y una hora (o si es "hoy"/"mañana")
                 if (match_fecha or "hoy" in pregunta_lower_reformulada or "mañana" in pregunta_lower_reformulada) and match_hora:
                     hora = int(match_hora.group(1))
                     minuto = int(match_hora.group(2)) if match_hora.group(2) else 0
@@ -165,13 +175,19 @@ class ChatRAG:
                         fecha_inicio = datetime.today().replace(hour=hora, minute=minuto, second=0, microsecond=0)
                     elif "mañana" in pregunta_lower_reformulada:
                         fecha_inicio = (datetime.today() + timedelta(days=1)).replace(hour=hora, minute=minuto, second=0, microsecond=0)
+                        
+                    
+                    # La reunión dura 1 hora por defecto    
                     fecha_fin = fecha_inicio + timedelta(hours=1)
+                    
+                    # Llamamos a la función que realmente crea el evento en Google Calendar
                     resultado = crear_evento_en_calendar(titulo_limpio, fecha_inicio, fecha_fin)
-                    return f"{resultado}"
-
+                    
+                    return f"{resultado}"  # Ejemplo: "Evento creado correctamente"
+                 # Si falta algún dato clave, avisamos al usuario
                 return "Evento no creado: no he entendido bien la fecha o la hora para crear la reunión."
 
-            # --- El resto de tu flujo NO SE TOCA (vacaciones, entregas, sprints, festivos...) ---
+            # --- El resto de tu flujo NO SE TOCA (vacaciones, entregas, sprints, festivos...)  PENDIENTE QUITAR NO SE UTILIZARA ---
             if usar_google_sheets and nombre_detectado:
                 datos = contar_dias_vacaciones_drive(nombre_detectado)
                 return (
