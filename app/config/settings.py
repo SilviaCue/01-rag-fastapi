@@ -19,9 +19,9 @@ GENERATION_MODEL = os.getenv("GENERATION_MODEL", "gemini")
 
 
 # CONFIGURACIÓN DE FUENTES DE VACACIONES
-USAR_GOOGLE_SHEETS = bool(secrets.usar_google_sheets)
+#USAR_GOOGLE_SHEETS = bool(secrets.usar_google_sheets)
 USAR_GOOGLE_CALENDAR = bool(secrets.usar_google_calendar)
-USAR_EXCEL_LOCAL = bool(secrets.usar_excel_local)
+#USAR_EXCEL_LOCAL = bool(secrets.usar_excel_local)
 
 # settings.py
 # Configuración global del proyecto.

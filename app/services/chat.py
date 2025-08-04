@@ -2,18 +2,11 @@
 import os
 import re
 from datetime import datetime, date, timedelta
-
 # Importaciones de los módulos del proyecto
 from app.services.retriever import Retriever  # Encargado de buscar fragmentos relevantes en los documentos
 from app.config import settings # Configuración general
 from app.services.generation_selector import GenerationSelector # Decide qué modelo usar para generar texto
-# Funciones para calcular vacaciones desde Excel o Google Sheet
-from app.routers.vacaciones import contar_dias_vacaciones
-from app.routers.vacaciones_drive import contar_dias_vacaciones_drive
-
-# Funciones para leer nombres y eventos del calendario
-from app.services.vacaciones_service import obtener_nombres_vacaciones # función para sacar los nombres
-from app.services.vacaciones_service_drive import obtener_nombres_vacaciones_drive as obtener_nombres_vacaciones
+# Funciones para leer nombres y eventos del calendarios
 from app.services.vacaciones_googlecalendar import (
     obtener_lista_nombres_desde_calendar, # función para sacar los nombres
     obtener_periodos_evento, # función para sacar los eventos de calendario
@@ -34,13 +27,6 @@ class ChatRAG:
         self.upload_path = "storage/docs_raw" # Carpeta donde están los documentos subidos
 
     def chat(self, question: str):
-        print("DEBUG fuentes activas:")
-        print("Google Sheets:", settings.USAR_GOOGLE_SHEETS)
-        print("Google Calendar:", settings.USAR_GOOGLE_CALENDAR)
-        print("Excel Local:", settings.USAR_EXCEL_LOCAL)
-        print("Google Calendar:", settings.USAR_GOOGLE_CALENDAR)
-
-        pregunta_original = question
         pregunta_lower = question.lower()
         pregunta_lower_reformulada = pregunta_lower  # Se usará luego
 
@@ -50,10 +36,8 @@ class ChatRAG:
                 "crear", "añadir", "añade", "crea", "quiero", "me gustaria", "pon", "poner", "agenda", "agendar", "programa", "programar"
             ]
         )
-        
         # Guarda la pregunta original tal cual, por si no hay que reformular para seguir con el flujo normal
-        pregunta_reformulada = question  #pregunta del usuario original
-        
+        pregunta_reformulada = question  #pregunta del usuario original 
         # --- Reformulación automática de la pregunta con Gemini SOLO si hay intención de crear evento ---
         if es_intencion_crear:
             try:
@@ -76,28 +60,18 @@ class ChatRAG:
 
                 # Llama a Gemini para generar la frase reformulada (ya limpia y en formato fácil de extraer)
                 pregunta_reformulada = self.generator.generate(prompt_reformulacion).strip()
-                print("DEBUG: Pregunta original:", question)
-                print("DEBUG: Pregunta reformulada:", pregunta_reformulada)
-                
-                pregunta_lower_reformulada = pregunta_reformulada.lower() # Convertimos la frase reformulada a minúsculas para analizar fácilmente palabras clave
-                
+                pregunta_lower_reformulada = pregunta_reformulada.lower() # Convertimos la frase reformulada a minúsculas para analizar fácilmente palabras clavves
                 # Actualiza la variable 'question' con la frase reformulada para que todo el código siguiente trabaje sobre esta nueva frase
                 question = pregunta_reformulada  # pregunta_reformulada → Frase generada por Gemini, ya preparada para procesar
-                
                 # También actualiza 'pregunta_lower' para que las comprobaciones sean sobre la reformulación en minúsculas
                 pregunta_lower = pregunta_lower_reformulada  
             except Exception as e:
                 print(f"Error al reformular pregunta: {e}")
 
         # Detectar nombres válidos desde la fuente activa
-        if settings.USAR_GOOGLE_CALENDAR:
-            nombres_validos_original = obtener_lista_nombres_desde_calendar()
-        else:
-            nombres_validos_original = obtener_nombres_vacaciones()
-
+        
+        nombres_validos_original = obtener_lista_nombres_desde_calendar()
         nombres_validos = [n.lower() for n in nombres_validos_original]
-        print("Nombres detectados desde la fuente activa:", nombres_validos)
-
         nombre_detectado = next((n for n in nombres_validos if re.search(rf'\b{re.escape(n)}\b', pregunta_lower)), None)
 
         # --- Detecta año en la pregunta (por ejemplo, "2024", "2025", etc)
@@ -120,12 +94,7 @@ class ChatRAG:
             dia = datetime.today().date()
         elif "mañana" in pregunta_lower:
             dia = (datetime.today() + timedelta(days=1)).date()
-
-        # Configuración de fuente activa
-        usar_google_sheets = settings.USAR_GOOGLE_SHEETS
-        usar_google_calendar = settings.USAR_GOOGLE_CALENDAR
-        usar_excel_local = settings.USAR_EXCEL_LOCAL
-
+       
         # --- Detección tipo de evento:
         if any(pal in pregunta_lower for pal in ["reunion", "reuniones", "meeting", "cita"]):
             tipo_evento = "reuniones"
@@ -144,14 +113,10 @@ class ChatRAG:
 
         try:
             #  --- Si el usuario quiere crear un evento y Google Calendar está activo, pasamos a crear el evento ---
-            if es_intencion_crear and usar_google_calendar:
-                print("DEBUG: Entrando en bloque de creación de evento")
-                
+            if es_intencion_crear:    
                 # # Buscamos la fecha y la hora en la frase reformulada
                 match_titulo = re.split(r"\s+a\s+las\s+", pregunta_lower_reformulada)
                 titulo_limpio = match_titulo[0].strip().capitalize() if match_titulo else pregunta_reformulada
-                print("DEBUG: Título limpio generado por Gemini:", titulo_limpio)
-
                 # Buscamos la fecha y la hora en la reformulación, para asegurar máxima robustez
                 match_fecha = re.search(r"(?:el\s)?(\d{1,2})\s+de\s+([a-záéíóú]+)", pregunta_lower_reformulada)
                 match_hora = re.search(r"a\s+las\s+(\d{1,2})(?::(\d{2}))?", pregunta_lower_reformulada)
@@ -179,7 +144,6 @@ class ChatRAG:
                     
                     # La reunión dura 1 hora por defecto    
                     fecha_fin = fecha_inicio + timedelta(hours=1)
-                    
                     # Llamamos a la función que realmente crea el evento en Google Calendar
                     resultado = crear_evento_en_calendar(titulo_limpio, fecha_inicio, fecha_fin)
                     
@@ -187,27 +151,8 @@ class ChatRAG:
                  # Si falta algún dato clave, avisamos al usuario
                 return "Evento no creado: no he entendido bien la fecha o la hora para crear la reunión."
 
-            # --- El resto de tu flujo NO SE TOCA (vacaciones, entregas, sprints, festivos...)  PENDIENTE QUITAR NO SE UTILIZARA ---
-            if usar_google_sheets and nombre_detectado:
-                datos = contar_dias_vacaciones_drive(nombre_detectado)
-                return (
-                    f"{datos['persona']} tiene {datos['vacaciones_disfrutadas']} días de vacaciones disfrutadas, "
-                    f"{datos['vacaciones_reservadas']} días de vacaciones reservadas, "
-                    f"{datos['festivos_disfrutados']} festivos disfrutados, {datos['festivos_futuros']} festivos futuros, "
-                    f"{datos['otros_permisos_disfrutados']} días por otros permisos disfrutados y "
-                    f"{datos['otros_permisos_reservados']} días por otros permisos reservados. "
-                    f"Además, tiene {datos['vacaciones_anteriores']} días de vacaciones del año anterior. "
-                    f"Días restantes según calendario: {datos['restantes']}. "
-                    f"En total hay {datos['total_marcados']} días marcados en el calendario."
-                )
-            elif usar_excel_local and nombre_detectado:
-                datos = contar_dias_vacaciones(nombre_detectado)
-                return (
-                    f"{datos['persona']} tiene {datos['dias_vacaciones']} días de vacaciones, "
-                    f"{datos['festivos']} festivos y {datos['otros_permisos']} otros permisos. "
-                    f"En total hay {datos['total_marcados']} días marcados en el calendario."
-                )
-            elif usar_google_calendar and nombre_detectado:
+           
+            elif nombre_detectado:
                 resumen_dias = obtener_periodos_evento(
                     nombre_detectado, tipo_evento=tipo_evento, anio=anio
                 )
