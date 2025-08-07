@@ -144,7 +144,7 @@ class ChatRAG:
                     
                     # La reunión dura 1 hora por defecto    
                     fecha_fin = fecha_inicio + timedelta(hours=1)
-                    # Llamamos a la función que realmente crea el evento en Google Calendar
+                    # Llamamos a la función que esta en servoces/calendar_create.py crea el evento en Google Calendar
                     resultado = crear_evento_en_calendar(titulo_limpio, fecha_inicio, fecha_fin)
                     
                     return f"{resultado}"  # Ejemplo: "Evento creado correctamente"
