@@ -2,6 +2,53 @@
 import os
 import re
 from datetime import datetime, date, timedelta
+
+
+# Función para unificar las fechas 
+
+MESES = {
+    "enero" :1,  "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
+    
+}
+def extraer_filtros_fecha(texto: str, anio_defecto:int =2025):
+    texto_minusculas = texto.lower()
+    fecha_hoy =date.today()
+    filtros ={"anio":anio_defecto, "semana": None, "dia": None, "mes": None}
+    
+    # Año explicito ( en este caso 2025)
+    coincidencia_anio = re.search(r"(20\d{2})", texto_minusculas)
+    if coincidencia_anio:
+        filtros["anio"] = int(coincidencia_anio.group(1))
+        
+    #Semana
+    if"esta semana" in texto_minusculas:
+        filtros["semana"] = fecha_hoy.isocalendar()[1]
+        filtros["anio"] = fecha_hoy.isocalendar()[0]
+    elif"la semana que viene" in texto_minusculas or "semana que viene" in texto_minusculas:
+        filtros["semana"] = fecha_hoy.isocalendar()[1] + 1
+        filtros["anio"] = fecha_hoy.isocalendar()[0]
+        
+    #Día
+    if "hoy" in texto_minusculas:
+        filtros["dia"] = fecha_hoy
+    elif "mañana" in texto_minusculas:
+        filtros ["dia"] = fecha_hoy + timedelta(days=1)
+    
+    #Mes por nombre
+    coincidencia_mes =re.search(
+         r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)",
+        texto_minusculas
+    )
+    if coincidencia_mes:
+        filtros["mes"] = MESES[coincidencia_mes.group(1)]
+        
+    return filtros
+        
+        
+        
+
+
 # Importaciones de los módulos del proyecto
 from app.services.retriever import Retriever  # Encargado de buscar fragmentos relevantes en los documentos
 from app.config import settings # Configuración general
@@ -18,6 +65,8 @@ from app.services.chat_utils import responder_con_gemini
 
 # Función que crea eventos en Google Calendar
 from app.services.calendar_create import crear_evento_en_calendar
+
+
 
 # Clase principal del sistema de chat
 class ChatRAG:
@@ -73,27 +122,14 @@ class ChatRAG:
         nombres_validos_original = obtener_lista_nombres_desde_calendar()
         nombres_validos = [n.lower() for n in nombres_validos_original]
         nombre_detectado = next((n for n in nombres_validos if re.search(rf'\b{re.escape(n)}\b', pregunta_lower)), None)
+    
 
-        # --- Detecta año en la pregunta (por ejemplo, "2024", "2025", etc)
-        match_anio = re.search(r"(20\d{2})", pregunta_lower)
-        anio = int(match_anio.group(1)) if match_anio else 2025  # 2025 por defecto
-        semana_actual = date.today().isocalendar()[1]
-        anio_actual = date.today().year
-        semana = None
-
-        if "esta semana" in pregunta_lower:
-            semana = semana_actual
-            anio = anio_actual
-        elif "la semana que viene" in pregunta_lower or "semana que viene" in pregunta_lower:
-            semana = semana_actual + 1
-            anio = anio_actual
-
-        # Detecta si se pregunta por hoy o mañana
-        dia = None
-        if "hoy" in pregunta_lower:
-            dia = datetime.today().date()
-        elif "mañana" in pregunta_lower:
-            dia = (datetime.today() + timedelta(days=1)).date()
+      # llamada centralizadapara las fechas
+        filtros = extraer_filtros_fecha(pregunta_lower)
+        anio = filtros["anio"]
+        semana = filtros["semana"]
+        dia = filtros["dia"]
+        mes = filtros ["mes"]
        
         # --- Detección tipo de evento:
         if any(pal in pregunta_lower for pal in ["reunion", "reuniones", "meeting", "cita"]):
@@ -122,17 +158,14 @@ class ChatRAG:
                 match_hora = re.search(r"a\s+las\s+(\d{1,2})(?::(\d{2}))?", pregunta_lower_reformulada)
                 
                  # Diccionario para pasar de nombre de mes a número 
-                meses = {
-                    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
-                    "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
-                }
+                meses_para_creacion = MESES
                 # Solo seguimos si encontramos una fecha y una hora (o si es "hoy"/"mañana")
                 if (match_fecha or "hoy" in pregunta_lower_reformulada or "mañana" in pregunta_lower_reformulada) and match_hora:
                     hora = int(match_hora.group(1))
                     minuto = int(match_hora.group(2)) if match_hora.group(2) else 0
                     if match_fecha:
                         dia_ = int(match_fecha.group(1))
-                        mes_ = meses.get(match_fecha.group(2), None)
+                        mes_ = meses_para_creacion.get(match_fecha.group(2), None) 
                         if not mes_:
                             return "Mes no reconocido para crear la reunión."
                         fecha_inicio = datetime(anio, mes_, dia_, hora, minuto)
@@ -169,23 +202,17 @@ class ChatRAG:
                     resumen_dias = filtrar_por_dia(resumen_dias, dia)
                     print(f"{len(resumen_dias)} eventos recuperados antes de filtrar")
 
-                match_mes = re.search(
-                    r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)", pregunta_lower
-                )
-                mes = None
-                if match_mes:
-                    mes_nombre = match_mes.group(1)
-                    meses = {
-                        "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
-                        "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
-                    }
-                    mes = meses[mes_nombre]
                 if not resumen_dias:
                     if semana:
                         return f"No hay {tipo_evento} programadas para la semana {semana} del año {anio}."
                     elif dia:
                         return f"No hay {tipo_evento} programadas para el día {dia.strftime('%d/%m/%Y')}."
                     elif mes:
+                        mes_nombre = None
+                        for nombre_mes in MESES.items():
+                            if numero_mes ==mes:
+                                mes_nombre = nombre_mes
+                                break
                         return f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."
                     else:
                         return f"No hay {tipo_evento} registrados para {nombre_detectado.capitalize()} en el año {anio}."
@@ -201,7 +228,7 @@ class ChatRAG:
                     dia=dia
                 )
                 return respuesta
-            elif es_intencion_crear and not usar_google_calendar:
+            elif es_intencion_crear and not settings.USAR_GOOGLE_CALENDAR:
                 return "La función de crear eventos solo está disponible si Google Calendar está activo."
             else:
                 # Si no es pregunta de vacaciones, usa RAG normal
