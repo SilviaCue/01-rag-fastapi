@@ -185,8 +185,10 @@ class ChatRAG:
                     
                     # La reunión dura 1 hora por defecto    
                     fecha_fin = fecha_inicio + timedelta(hours=1)
+                    
+                    print("DEBUG EVENTO:", titulo_limpio, fecha_inicio, fecha_fin, settings.ALERT_EMAILS)
                     # Llamamos a la función que esta en servoces/calendar_create.py crea el evento en Google Calendar
-                    resultado = crear_evento_en_calendar(titulo_limpio, fecha_inicio, fecha_fin)
+                    resultado = crear_evento_en_calendar(titulo_limpio, fecha_inicio,fecha_fin, guests=settings.ALERT_EMAILS )
                     
                     return f"{resultado}"  # Ejemplo: "Evento creado correctamente"
                  # Si falta algún dato clave, avisamos al usuario
@@ -298,11 +300,14 @@ Te damos la bienvenida a Idearium. Aquí tienes la información clave para tu in
 - Vacaciones y festivos: ...
 - Accesos importantes: ...
 - Otros recursos: ...
+- Si tienes alguna duda, no dudes en contactar con RRHH.
+
 
 Si necesitas más información, consulta el Manual de Bienvenida o contacta con RRHH.
 
 Un saludo cordial,
 El equipo de Idearium
+
 """
                 try:
                      # Le pedimos a la IA que genere la respuesta usando el prompt y el contexto

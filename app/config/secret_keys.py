@@ -17,6 +17,10 @@ class SecretKeys:
         self.usar_google_calendar = keys.get("usar_google_calendar", True)
         self.usar_excel_local = keys.get("usar_excel_local", False)
         
+        # Correos electrónicos para alertas
+        self.alert_emails = keys.get("ALERT_EMAILS", [])
+
+        
 # secret_keys.py
 # Gestiona la carga de claves y parámetros sensibles (API keys) desde secret_keys.json.
 # Define la clase SecretKeys para acceder de forma segura a las credenciales 
