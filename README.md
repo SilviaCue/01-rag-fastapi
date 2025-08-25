@@ -11,8 +11,10 @@ Este proyecto implementa un sistema completo RAG (Retrieval Augmented Generation
 - Gemini API 1.5 Pro (generación de texto)
 - PyMuPDF, python-docx, pandas (lectura de PDF, Word, Excel)
 - pytesseract (OCR integrado para PDFs escaneados e imágenes)
-- Google Calendar (consulta y cálculo automático de vacaciones)
-- Creación automática de eventos/reuniones en Google Calendar
+- Google Calendar (consulta y cálculo automático de vacaciones, creación de eventos)
+- Sistema de notificaciones en Calendar:
+- Email inmediato al crear un evento (forzado con MailApp.sendEmail)
+- Recordatorio automático 24 h antes del evento
 - Swagger UI para documentación interactiva
 
 > Nota: El código tiene preparado soporte para OpenAI (embeddings/generación) y para futuros cambios de modelo, pero actualmente NO está en uso (ni requiere clave API de OpenAI).
@@ -59,12 +61,14 @@ idearium_rag_fastapi/
 - Permite también crear reuniones y otros eventos directamente en Google Calendar con preguntas como:
 "Pon una reunión chatRAG mañana a las 12" o "Agenda sprint el 2 de agosto a las 11"
 
-#### Gestión especial de preguntas sobre vacaciones, reuniones, entregas y sprints (vía Google Calendar)
-- Integración directa con Google Calendar
-- Cálculo automático de periodos y días disfrutados por persona y año
-- Soporta filtros por día, semana, mes y evento próximo
-- Categorías de eventos compatibles: vacaciones, reuniones, festivos, entregas, sprints
-- Creación automática de eventos/reuniones (título generado por IA) directamente desde la pregunta
+#### Integración directa con Google Calendar
+- Consulta de eventos existentes: vacaciones, reuniones, festivos, entregas, sprints
+- Filtros dinámicos: día, semana, mes, próximo evento
+- Creación automática de eventos:
+  - Título generado por IA
+  - Invitados añadidos automáticamente desde secret_keys.json
+  - Email inmediato al crear
+  - Recordatorio 24 h antes (automático en Calendar)
 
 #### Onboarding
 - Generación de emails personalizados usando fragmentos del manual interno
@@ -86,10 +90,12 @@ Crear el archivo `secret_keys.json`:
   "HUGGINGFACE_API_KEY": "tu_clave_huggingface",
   "usar_google_sheets": false,
   "usar_google_calendar": true,
-  "usar_excel_local": false
+  "usar_excel_local": false,
+  "ALERT_EMAILS": ["tu_email@empresa.com"]
 }
 ```
 No es necesario poner la clave OpenAI salvo que quieras probar la integración en el futuro.
+ALERT_EMAILS: lista de correos que recibirán siempre la invitación inmediata al crear un evento.
 
 **Arrancar FastAPI:**
 ```
@@ -102,21 +108,23 @@ uvicorn app.main:app --reload
 ---
 
 ### Funcionalidades destacadas (2025)
-- Soporte multiformato: PDF, Word, Excel, Markdown, imágenes (con OCR).
-- Carga masiva: `/upload-all/` soporta carpetas y subcarpetas.
-- Onboarding inteligente: Redacción automática de emails de bienvenida basados SOLO en manual interno.
-- Gestión de vacaciones avanzada:
-  - Integración en tiempo real con Google Calendar para consulta por persona y año
-  - Soporte para diferentes fuentes: Google Sheets, Excel, Calendar
-  - Respuestas naturales y claras (“Silvia ha disfrutado de 12 días…”)  
-- Soporte para nuevos eventos del calendario: reuniones, entregas, sprints, festivos
-- Creación de reuniones y eventos directamente en Google Calendar:
-- Solo pregunta "pon una reunión...", "crea entrega..." y el sistema la agenda automáticamente generando el título de forma inteligente gracias a IA.
-- Consultas con filtro por día, semana, mes o evento futuro (por ejemplo: “próxima entrega”, “reuniones esta semana”)
-- Generación de resúmenes, emails y respuestas corporativas solo usando contexto REAL.
-- Embeddings configurables: Gemini o HuggingFace.
-- Selector dinámico de modelo generador: fácil cambiar a futuro.
-- OCR automático: sin configuración extra, solo requiere Tesseract instalado.
+- **Soporte multiformato**: PDF, Word, Excel, Markdown, imágenes (con OCR).
+- **Carga masiva**: `/upload-all/` soporta carpetas y subcarpetas.
+- **Onboarding inteligente**: emails de bienvenida generados solo con el manual interno.
+- **Gestión de vacaciones avanzada**:
+  - Integración en tiempo real con Google Calendar
+  - Consulta por persona y año
+  - Filtros por día, semana, mes
+- **Gestión de calendario extendida**:
+  - Categorías: vacaciones, reuniones, festivos, entregas, sprints
+  - Creación de reuniones/eventos directamente desde preguntas en lenguaje natural
+  - Notificación inmediata por email + recordatorio 24 h antes
+- **Consultas RAG seguras**:
+  - Respuestas naturales, contextuales y basadas únicamente en documentos internos
+  - Cero invención de datos
+- **Embeddings configurables**: Gemini o HuggingFace
+- **Selector dinámico de modelo generador** (fácil cambio futuro)
+- **OCR automático** (requiere Tesseract instalado en Windows/Linux)
 
 #### Gestión y limpieza de índice vectorial:
 ```
@@ -126,8 +134,11 @@ python -m app.admin.reset_vector_store
 ---
 
 ### Consideraciones actuales
-- El sistema NO usa OpenAI por defecto: el código está preparado, pero Gemini es el modelo de generación activo.
-- Las respuestas dependen de la calidad y amplitud de los documentos cargados.
-- El sistema prioriza seguridad y no inventar datos: todo lo que responde está en el contexto/documento.
-- Para la creación automática de eventos/reuniones necesitas tener configurado Google Calendar y la API Key correspondiente en secret_keys.json
-- Para Windows: requiere instalación de Tesseract OCR → [Descargar aquí](https://github.com/tesseract-ocr/tesseract)
+- **El sistema NO usa OpenAI por defecto** → Gemini es el modelo activo.
+- **Para la creación de eventos necesitas**:
+  - Calendar compartido o propio donde el script tenga permisos de edición
+  - Configurar `ALERT_EMAILS` en `secret_keys.json`
+  - El correo inmediato lo envía **MailApp** desde Google Apps Script
+  - El recordatorio 24h lo gestiona **Google Calendar**
+- **Requiere instalación de Tesseract OCR** en Windows/Linux  
+  - [Descargar aquí](https://github.com/tesseract-ocr/tesseract)
