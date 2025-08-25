@@ -2,14 +2,14 @@ import os
 from app.services.file_parser import FileParser
 from app.services.text_splitter import TextSplitter
 from app.services.vector_store import VectorStore
-
+# Servicio para indexar documentos
 class Indexer:
 
     def __init__(self, embedding_model: str = "huggingface"):
         self.splitter = TextSplitter(chunk_size=500, overlap=50)
         self.vector_store = VectorStore(embedding_model=embedding_model)
         self.file_parser = FileParser(docs_raw_path="storage/docs_raw")
-
+# Indexar un documento
     def index_document(self, filename: str):
         print(f" Indexando documento: {filename}")
 

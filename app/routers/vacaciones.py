@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 router = APIRouter()
-
+# Ruta al archivo de vacaciones
 VACACIONES_PATH = os.path.join(
     "storage", "docs_raw", "idearium", "rrhh", "vacaciones_personal", "vacacionesIdearium.xlsx"
 )
@@ -14,7 +14,7 @@ try:
 except Exception as e:
     excel_data = {}
     print(f"Error cargando Excel al inicio: {e}")
-
+# Endpoint para contar días de vacaciones por persona
 @router.get("/dias-vacaciones/{nombre}")
 def contar_dias_vacaciones(nombre: str):
     if not excel_data:

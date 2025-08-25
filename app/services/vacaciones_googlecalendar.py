@@ -1,18 +1,19 @@
 import requests
 from datetime import datetime, timedelta
 from dateutil import parser
-
-CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbxTKuhVyHaWQAKtniDt8Tsq2IMCAjgqWgdwgveJTiePl1TS0kcaW08wupxOEnzQuz94/exec"
-
+#vacaciones_googlecalendar.py → se encarga de leer/consultar eventos
+# URL del script de Google Apps para obtener eventos en formato JSON
+CALENDAR_JSON_URL = "https://script.google.com/macros/s/AKfycbzwM8osD7jWBqr3Dfsx_il59rEie4BE-oQ5usPDG0iNugiDEAbs50JKFsUKrqNiH8dQmg/exec"
+# Función para obtener periodos de eventos desde Google Calendar
 def obtener_periodos_evento(nombre_buscado, tipo_evento="vacaciones", anio=2025):
     try:
         response = requests.get(CALENDAR_JSON_URL, params={'anio': anio})
         response.raise_for_status()
         datos = response.json()
-
+# Buscar eventos para el nombre especificado
         nombre_buscado = nombre_buscado.strip().lower()
         resumen = []
-
+# Manejo especial para "todos" en ciertos tipos de eventos
         if nombre_buscado == "todos" and tipo_evento in ["reuniones", "entregas", "sprints", "festivos"]:
             for categorias in datos.values():
                 for evento in categorias.get(tipo_evento, []):

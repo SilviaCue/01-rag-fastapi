@@ -10,7 +10,7 @@ class ChatRequest(BaseModel):
 
 # Instancia única de ChatRAG
 chat_service = ChatRAG()
-
+# Endpoint para el chat
 @router.post("/chat/")
 async def chat_endpoint(request: ChatRequest):
     response = chat_service.chat(request.question)

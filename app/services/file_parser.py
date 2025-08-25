@@ -9,19 +9,19 @@ from docx import Document
 # Configuración OCR
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 os.environ["TESSDATA_PREFIX"] = r"C:\Program Files\Tesseract-OCR\tessdata"
-
+# Clase para parsear diferentes tipos de archivos
 class FileParser:
 
     def __init__(self, docs_raw_path: str):
         self.docs_raw_path = docs_raw_path
-
+# Función principal para parsear un documento según su extensión
     def parse_document(self, filename: str) -> Optional[str]:
         file_path = os.path.join(self.docs_raw_path, filename)
 
         if not os.path.isfile(file_path):
             print(f"Archivo no encontrado: {file_path}")
             return None
-
+# Extraer la extensión del archivo
         ext = filename.lower().split(".")[-1]
 
         if ext == "pdf":
@@ -37,7 +37,7 @@ class FileParser:
         else:
             print(f"Formato no soportado aún: {filename}")
             return None
-
+# Funciones específicas para cada tipo de archivo
     def _extract_text_from_pdf(self, file_path: str) -> str:
         texto_total = ""
         with fitz.open(file_path) as doc:
@@ -51,7 +51,7 @@ class FileParser:
                     ocr_text = pytesseract.image_to_string(img, lang='spa')
                     texto_total += ocr_text
         return texto_total
-
+# Función para extraer texto de archivos Word
     def _extract_text_from_docx(self, file_path: str) -> str:
         try:
             doc = Document(file_path)
@@ -59,7 +59,7 @@ class FileParser:
         except Exception as e:
             print(f"Error leyendo Word: {e}")
             return ""
-
+# Función para extraer texto de archivos Excel
     def _extract_text_from_excel(self, file_path: str) -> str:
         try:
             dfs = pd.read_excel(file_path, sheet_name=None)
@@ -71,7 +71,7 @@ class FileParser:
         except Exception as e:
             print(f"Error leyendo Excel: {e}")
             return ""
-
+# Función para extraer texto de imágenes usando OCR
     def _extract_text_from_image(self, file_path: str) -> str:
         try:
             img = Image.open(file_path)
@@ -79,7 +79,7 @@ class FileParser:
         except Exception as e:
             print(f"Error OCR imagen: {e}")
             return ""
-        
+# Función para extraer texto de archivos Markdown        
     def _extract_text_from_md(self, file_path:str)-> str:
         try:
             with open(file_path,"r", encoding="utf-8") as f:

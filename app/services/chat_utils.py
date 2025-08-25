@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 import calendar
 
-
+# Contar días laborables entre dos fechas, excluyendo fines de semana
 def contar_laborables(inicio: datetime.date, fin: datetime.date) -> int:
     dias_laborables = 0
     dia = inicio
@@ -11,12 +11,7 @@ def contar_laborables(inicio: datetime.date, fin: datetime.date) -> int:
         dia += timedelta(days=1)
     return dias_laborables
 
-
-# Aplicamos un filtro por mes únicamente en esta fase de presentación para limitar la información mostrada al usuario.
-# No filtramos antes (en chat.py) porque es importante que Gemini reciba el contexto completo del año,
-# pero al generar la respuesta, restringimos aquí el contenido al mes consultado
-# para que la respuesta sea precisa, clara y enfocada solo en lo que se ha preguntado.
-
+# Filtrar eventos que ocurren en un mes específico
 def filtrar_por_mes(resumen_dias, mes):
     resultado = []
     for evento in resumen_dias:
@@ -25,7 +20,7 @@ def filtrar_por_mes(resumen_dias, mes):
             resultado.append(evento)
     return resultado
 
-
+# Función principal para generar respuestas usando IA (Gemini/OpenAI)
 def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento="vacaciones", anio=2025, mes=None, semana=None, dia=None):
     """
     Genera una respuesta clara y profesional usando IA (Gemini/OpenAI) para eventos.
@@ -41,9 +36,10 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
     Returns:
         Respuesta redactada por la IA.
     """
+    # Filtrar por mes si se especifica
     if mes:
         resumen_dias = sorted(filtrar_por_mes(resumen_dias, mes), key=lambda x: x[0])
-
+    # Filtrar por semana o día si se especifica
     if not resumen_dias:
         if semana:
             detalles = [f"No hay {tipo_evento} programadas para la semana {semana} del año {anio}."]
@@ -54,8 +50,9 @@ def responder_con_gemini(nombre: str, resumen_dias: list, generator, tipo_evento
             detalles = [f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."]
         else:
             detalles = [f"No hay {tipo_evento} registrados para {nombre.capitalize()} en el año {anio}."]
-
+        # Generar prompt para respuesta negativa
         contexto = "\n".join(detalles)
+        # Crear la pregunta
         pregunta = f"¿Qué {tipo_evento} ha tenido {nombre.title()} en {anio} y en qué fechas?"
         prompt = f"""
 Contexto:
@@ -69,13 +66,14 @@ Pregunta:
 {pregunta}
 """
         return generator.generate(prompt.strip())
-
+    #detallar eventos
     detalles = []
+    # Contador de días laborables para vacaciones
     total_laborables = 0
-
+        # Procesar cada evento
     for evento in resumen_dias:
         inicio, fin, duracion, *extra = evento
-
+        #tipo de evento específico
         if tipo_evento == "reuniones":
             titulo = extra[0] if len(extra) > 0 else "Sin título"
             hora_local = (inicio + timedelta(hours=2)).strftime('%H:%M')  # Ajuste de UTC a GMT+2
@@ -105,9 +103,9 @@ Pregunta:
             laborables = contar_laborables(inicio, fin)
             total_laborables += laborables
             detalles.append(f"- Del {inicio.strftime('%d/%m/%Y')} al {fin.strftime('%d/%m/%Y')} ({laborables} días laborables)")
-
+        # Resumen total para vacaciones
     contexto = f"{nombre.title()} ha tenido {tipo_evento} en los siguientes periodos de {anio}:\n" + "\n".join(detalles)
-
+        # Añadir total de días laborables si es vacaciones
     if mes:
         mes_nombre = calendar.month_name[mes]
         pregunta = f"¿Qué {tipo_evento} ha tenido {nombre.title()} en {mes_nombre} de {anio} y en qué fechas?"
@@ -166,4 +164,5 @@ Si solo hay una entrega futura:
 Pregunta:
 {pregunta}
 """
+# Generar la respuesta usando el generador de IA
     return generator.generate(prompt.strip())
