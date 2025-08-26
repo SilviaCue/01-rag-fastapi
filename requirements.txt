@@ -12,4 +12,5 @@ pillow
 python-docx
 pandas
 openpyxl
-dateutil
+python-dateutil
+odfpy
