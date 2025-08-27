@@ -17,7 +17,7 @@ os.environ["TESSDATA_PREFIX"] = r"C:\Program Files\Tesseract-OCR\tessdata"
 class FileParser:
     def __init__(self, docs_raw_path: str):
         self.docs_raw_path = docs_raw_path
-        self.gemini_extractor = GeminiMultimodalExtractor()  # ✅ crear una sola vez
+        self.gemini_extractor = GeminiMultimodalExtractor()  
 
     def parse_document(self, filename: str) -> Optional[str]:
         file_path = os.path.join(self.docs_raw_path, filename)
@@ -44,20 +44,26 @@ class FileParser:
             print(f"Formato no soportado aún: {filename}")
             return None
 
-    # PDF: texto directo; si no hay, Gemini → fallback Tesseract
+     # PDF: si tiene texto digital, se lee directamente.
+    # Si alguna página es imagen, primero se prueba con Gemini y,
+    # si no devuelve nada, se usa OCR local.
     def _extract_text_from_pdf(self, file_path: str) -> str:
         texto_total = ""
         with fitz.open(file_path) as doc:
             for i, page in enumerate(doc):
                 text = page.get_text()
                 if text.strip():
+                    # texto digital directo
                     texto_total += text
                 else:
+                    # página escaneada (imagen)
                     pix = page.get_pixmap(dpi=200)
                     img_path = f"temp_page_{i}.png"
                     pix.save(img_path)
                     try:
+                        # Primero intentamos con Gemini multimodal
                         ocr_text = self.gemini_extractor.extract_text(img_path)
+                          # Si Gemini no devuelve nada → OCR local
                         if not ocr_text or not ocr_text.strip():
                             ocr_text = pytesseract.image_to_string(Image.open(img_path), lang='spa')
                         texto_total += ocr_text
@@ -115,7 +121,6 @@ class FileParser:
             print(f"Error leyendo Markdown: {e}")
             return ""
 
-    # ODT: usar odfpy sin acceder a .data
     def _extract_text_from_odt(self, file_path: str) -> str:
         try:
             doc = odf_load(file_path)
