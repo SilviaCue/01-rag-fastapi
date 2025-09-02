@@ -1,0 +1,72 @@
+OnBoarding	MANUAL DE BIENVENIDA AL CLIENTE: INSTITUTO GEOGRÁFICO DE ARAGÓN (IGEAR)ÍNDICE1. Bienvenida	32. ¿Qué es IGEAR?	31. Definición	32. Personal funcionario	43. Trabajo en IGEAR	41. Lugar de trabajo y contacto	42. Correo electrónico	53. Carpetas compartidas	54. Contacto Idearium – IGEAR	55. Teletrabajo	64. ICEARAGON	61. Definición	62. Portal	72.1. Aplicaciones	82.2. Servicios Web	83. Dentro de ICEARAGON	83.1. Datos	93.2. Servidores web	93.3. PSA	101. BienvenidaNos complace darte la bienvenida al Instituto Geográfico de Aragón (IGEAR), uno de los clientes de Idearium Consultores SRL. Idearium trabaja como asistencia técnica de acuerdo a los pliegos que ha ganado.Este manual ha sido creado para proporcionar pautas generales sobre el funcionamiento y la organización del IGEAR, y la Infraestructura de Conocimiento Espacial de Aragón (ICEARAGON).2. ¿Qué es IGEAR?Definición“El Instituto Geográfico de Aragón es un órgano integrado en el Departamento competente en materia de ordenación del territorio. Corresponde al Instituto obtener, organizar y difundir la documentación e información sobre el territorio de la Comunidad Autónoma, a través de la gestión y coordinación de los instrumentos de información territorial regulados en esta Ley” (Art. 10, Decreto Legislativo 2/2015, de 17 de noviembre) 	El Instituto Geográfico de Aragón, con naturaleza de servicio integrado en el Departamento competente en materia de ordenación del territorio, es un servicio de apoyo a todas las unidades administrativas del Gobierno de Aragón, al resto de administraciones públicas y a la ciudadanía, en todo lo relacionado con la información y documentación geográfica sobre ordenación del territorio aragonés.	El Instituto Geográfico de Aragón (IGEAR) tiene su origen en el Centro de Información Territorial de Aragón (CINTA) que nace a partir de las Directrices Generales de Ordenación Territorial, aprobadas por la Ley 7/1998.	Posteriormente, la Ley 4/2009, de Ordenación del Territorio de Aragón (LOTA), redefine la finalidad de este centro y sus características indicando que le corresponde la obtención, organización y difusión de la documentación e información sobre el territorio de la Comunidad Autónoma, a través de la gestión y coordinación de los instrumentos de información territorial regulados en esta norma.La Ley 8/2014, modifica la ley anterior cambiando la denominación del Centro de Información Territorial de Aragón por la denominación actual de Instituto Geográfico de Aragón, ampliando sus competencias para dar paso hacia la gestión de la información geográfica en el sentido más amplio del concepto: elaboración, catalogación, mantenimiento, registro y difusión.	La naturaleza, funciones y actividades del IGEAR vienen definidas en su Reglamento aprobado por Decreto 81/2015.Personal funcionarioEl IGEAR cuenta con una plantilla de funcionarios compuesta por:Director del IGEAR → Fernando LópezÁREA ADMINISTRATIVAJefe de Negociado Gestión Económica, Cont. e Inf. Territorial → Santiago BarriendoAdministrativo → José Ángel MartínAux. Administrativo → Amelia IritiaÁREA TÉCNICAJefa de Sección Inteligencia Geográfica → Raquel LópezJefa de Sección Producción e Innovación Cartográfica → vacanteJefa de Sección de Sistemas de Información Territorial → María Luisa PellicerTécnico de Documentación → Consuelo SusínFac. Sup. Especialista Geógrafo → Jóse Juan GonzálezFac. Sup. Especialista Geógrafo → Sandra GarcíaTécnico de Cartografía → Javier SádabaTécnico de Cartografía → Luis Ignacio GomollónTopógrafo → Romualdo Abad3. Trabajo en IGEARLugar de trabajo y contactoEl lugar en el que está actualmente el IGEAR es el Edificio Pignatelli (Paseo de María Agustín, 36 50071 Zaragoza). Como habrás visto hay una puerta con torno, por lo que para acceder necesitarás una tarjeta / ticket de acceso.El teléfono de contacto del IGEAR es 976 715 605.Y el correo electrónico: igear@aragon.esCorreo electrónicoCada trabajador externo a la DGA (nuestro caso como asesoría técnica) tendrá un correo electrónico xxxxx@ext.aragon.es siendo el acceso desde Microsoft Outlook. La contraseña de este hay que cambiarla cada 3 meses por seguridad. Para gestionar la contraseña, lo puedes hacer desde https://micuenta.aragon.es/mem/web/login;lang=es .Este correo y su respectiva contraseña son necesarios para poder hacer prácticamente cualquier cosa relacionada con ICEARAGON (uso de herramientas como PSA, sincro ...etc).Actualmente es necesaria una doble autenticación. Para ello, deberás instalar en tu dispositivo móvil la aplicación Microsoft Authenticator, y seguir los pasos que se indican.Carpetas compartidasIGEAR tiene 2 carpetas compartidas localizadas en un servidor, a las que como personal externo tenemos acceso. Son V y W.Por un lado está W://, en la que cada uno de nosotros tiene una carpeta propia para su trabajo diario.Por otro lado está V://, en la que está todo el trabajo finalizado (documentos, manuales...), instaladores de programas de interés, rásters (ej:PNOA, vuelos antiguos, LiDAR) … Además en esta se localiza el documento “Servidores_IGEAR”, que almacena información de como conectarse a diferentes bases de datos, servidores, programas… y diferentes manuales de uso de aplicaciones.Para poder conectarte a estas carpetas por primera vez pide ayuda a un compañero o al personal de IGEAR.Contacto Idearium – IGEARLa presencialidad en el edificio es de 3-4 días por semana (dependiendo del calendario de teletrabajo), lo que facilita la comunicación.La mayor parte de la relación, en cuanto a comunicación empresa-cliente se refiere, se mantiene con los funcionarios que llevan los proyectos. Actualmente son los dos  Téc. Sup. Especialistas (José Juan y Sandra).Igualmente, la información general del Instituto llega al correo electrónico @ext.aragon.es.En algún caso excepcional, con los funcionarios que hacen de enlace, hay comunicación también por Chat de Google. Para tema de incidencias y nuevas tareas, se emplea la vía Jira.TeletrabajoPara teletrabajar y poder conectarte al ordenador que esta en el Edificio, tendrás que pedirle al Director del IGEAR que solicite al 4100, los permisos necesarios para que con tu correo @ext.aragon.es puedas hacerlo.Existe un manual de AST en el que se explica el procedimiento para, una vez tienes los permisos, poder conectarte de manera remota al equipo.4. ICEARAGONDefiniciónICEARAGON, es el paso al frente del Gobierno de Aragón para conseguir los objetivos marcados desde la Directiva Europea 2007/2/CE INSPIRE (Infrastructure for Spatial Information in Europe), la Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE), y la Ley 3/2022, de 6 de octubre, de información geográfica de Aragón (LIGA) que tienen por objeto hacer disponible información geográfica relevante, concertada y de calidad de forma que se permita la formulación, implementación, monitorización y evaluación de las políticas de impacto o de dimensión territorial.
+
+	ICEARAGON se define como la organización de los conjuntos de datos georreferenciados del territorio de Aragón distribuidos en diferentes sistemas de información geográfica, accesible por la red de Internet. Implica la suma de políticas, estándares, recursos humanos y tecnologías necesarias para descubrir, informar, distribuir, usar y mantener información geográfica.
+
+	En suma, es un sistema informático integrado por un conjunto de recursos (servidores, catálogos, datos, metadatos, servicios, aplicaciones y geoportales) con que se gestiona y trabaja la información geográfica (ya sea cartografía, planos, mapas, ortofotos, imágenes de satélite) para que sean públicos en Internet cumpliendo unas condiciones de interoperabilidad (normas, especificaciones, protocolos) que permiten que cualquier usuario ya sea público o privado, pueda utilizar la geoinformación a través de un navegador web.PortalLa dirección del portal web de ICEARAGON de acceso público es: https://icearagon.aragon.es/portal/ . Desde aquí hay vínculos a multitud de páginas web relacionadas con la Infraestructura o el IGEAR. También hay acceso directo a las aplicaciones que muestran los datos espaciales, y los ponen a disposición de los usuarios (visualización, descarga o servicios web).Te recomiendo que inviertas el tiempo suficiente en investigar todos los rincones de este portal, que va a ser tu “nueva casa” mientras sigas ligado al IGEAR.Figura 1: aspecto del portal web de ICEARAGONAplicacionesLa sección de la web que engloba el conjunto de aplicaciones geográficas desarrolladas en virtud del componente político (marco legal e instrumentos del Sistema Cartográfico de Aragón), geográfico (geodatos, metadatos y servicios), tecnológico (estándares, hardware y software) y social (Necesidades y demandas internas y externas de los actores) de ICEAragon.Las aplicaciones geográficas explotan la geoinformación a través de los servicios habilitados con el fin de facilitar el descubrimiento (catálogo y buscador), el registro (registro), la visualización (visores -2D, 3D, SIOSE, RJT, etc.-), el análisis (visores, cartoteca, aplicaciones temáticas, servicios) y la descarga (descargas, GNSS, etc.) de la IG.Estas aplicaciones permiten la visualización, consulta o descarga de datos de los cuáles es propietario el IGEAR u otro Departamento del Gobierno de Aragón que ha concedido los permisos.Algunos ejemplos: Visor 2D, Atlas, SITA, Cartoteca, Descargas… (https://icearagon.aragon.es/portal/aplicaciones.jsp)Servicios WebEn dicho portal hay una sección dedicada a la difusión de la información geográfica de Aragón mediante Servicios Web OGC (Open Geospatial Consortium), siguiendo las recomendaciones de la Directiva 2007/2/CE INSPIRE. Está compuesta por páginas informativas detallando el listado de direcciones de acceso a los servicios web disponibles, así como páginas específicas de cada uno de los servicios web desarrollados, formas de acceso y uso de los mismos a través de navegadores web (clientes ligeros) o clientes pesados ya sean de software libre o propietario (ej: SIG).	El directorio de servicios web desplegados en ICEARAGON agrupados por los diferentes tipos, es el siguiente: https://icearagon.aragon.es/directorio_ws.jsp.Dentro de ICEARAGONHasta aquí es lo que ve el público general. Ahora vamos a pasar a la parte de gestión y mantenimiento de la Infraestructura.DatosLos datos que muestran las aplicaciones que ve el público, están almacenados en bases de datos (BD), que se dividen en esquemas. IGEAR es propietario de un esquema (carto) y a la vez mantiene otros 4 generales (geopub, geoext, georca, geores) donde se vuelca información del resto de Departamentos. Cada Departamento también cuenta con un esquema propio (EJ: saludp, oma, dagma...).	Para visualizar estas BD, puedes hacerlo desde un SIG o desde programas gestores de BD, como Postgres u Oracle.	Dentro de estas BD, hay:TablasCon componente espacial, si tiene campo de geometría (se puede cargar en un SIG y tiene representación espacial) → esta puede ser de tipo punto, línea o polígonoSin componente espacial, si no tienen dicho campo.Vistas → provienen de tablas o de otras vistas, permitiendo seleccionar solo una parte, añadiendo campos de otra…Procedimientos (solo en Oracle) → bloque de código PL/SQL almacenado en la base de datos que ejecuta una secuencia de instrucciones de forma estructurada y reutilizableFunciones → bloque de código almacenado que devuelve un valor y puede ejecutarse dentro de consultas SQL para realizar cálculos, transformaciones o lógica de negocio.En relación a los datos ráster, estos están almacenados en V://.Servidores webToda la información almacenada en las BD que quiera ponerse a disposición del público (aplicaciones o servicios web) hay que publicarla en la web desde unos servidores.Para publicar en la web esta información tenemos varias formas:Si la BD es de Oracle, la publicación se hace desde ArcGIS Server / Enterprise.Si es desde Postgres (lo más habitual) se publica desde Geoserver.PSAPara mantener las aplicaciones frontales (las que ve el público) de la Infraestructura, contamos con la Plataforma de Servicios y Aplicaciones de IGEAR (PSA, https://icearagon.aragon.es/psa/). Esta permite el acceso a diferentes aplicaciones de gestión de ICEARAGON. Para acceder necesitarás tu correo @ext.aragon.es y que te den los permisos necesarios para poder acceder a ellas.
+
+Paso 1: Título del paso 1
+No hay texto visible en la captura de pantalla proporcionada.
+Descripción del paso 1
+
+Paso 2: Título del paso 2
+No hay texto visible en la captura de pantalla proporcionada.
+Descripción del paso 2
+
+Paso 3: Título del paso 3
+No hay texto visible en la captura de pantalla proporcionada.
+Descripción del paso 3
+
+Paso 1: Sin título
+idearium
+
+
+Paso 1: Título del paso 1
+Idearium Consultores
+Descripción del paso 1
+
+Paso 1: Título del procedimiento
+Idearium
+Consultores
+Descripción del procedimiento
+
+Paso 1: Visor 2D
+VISOR 2D
+Acceder al visor 2D
+
+Paso 2: Mapas de paisaje
+MAPAS DE PAISAJE
+Explorar los mapas de paisaje
+
+Paso 3: Cartoteca
+CARTOTECA
+Acceder a la cartoteca
+
+Paso 4: Descargas
+DESCARGAS
+Descargar información
+
+Paso 5: SITA
+SITA
+SISTEMA DE INDICADORES
+TÉRITORIALES DE ARAGÓN
+Acceder al Sistema de Indicadores Territoriales de Aragón
+
+Paso 6: Visor 3D
+VISOR 3D
+Acceder al visor 3D
+
+Paso 7: IDE Didáctica
+IDE DIDÁCTICA
+Acceder a la IDE Didáctica
+
+Paso 8: Dónde vivo
+DONDE VIVO
+Acceder a la sección Dónde vivo
+
+Paso 9: Atlas
+ATLAS
+Acceder al Atlas
+
+Paso 10: Buscador
+BUSCADOR
+Acceder al buscador

@@ -73,10 +73,37 @@ class ChatRAG:
         self.retriever = Retriever() # Para buscar fragmentos de texto relevantes
         self.generator = GenerationSelector(settings.GENERATION_MODEL)# Para generar respuestas con IA
         self.upload_path = "storage/docs_raw" # Carpeta donde están los documentos subidos
+        self.pending_event = None  # para confirmación de eventos con invitadosdict con {titulo, fecha_inicio, fecha_fin, invitados_validos, invitados_invalidos}
+
 
     def chat(self, question: str):
+        # AJUSTE 1/2: conservar el texto original antes de reformular (lo usaremos para extraer emails)
+        question_original = question
+
         pregunta_lower = question.lower()
         pregunta_lower_reformulada = pregunta_lower  # Se usará luego
+        confirma = any(x in pregunta_lower for x in ["confirmo", "confirmar", "sí", "si, confirma", "ok, confirma", "vale", "confirma", "vale confirma","si", "ok"])
+        cancela = any(x in pregunta_lower for x in ["cancelar", "cancela", "no confirmo", "no cancela", "no cancelar", "no cancela", "no", "no quiero", "no gracias"])
+
+        if self.pending_event:
+            if confirma:
+                # Crear evento con la propuesta guardada
+                pe = self.pending_event
+                self.pending_event = None  # limpiar estado
+                # Invitados finales = ALERT_EMAILS + válidos detectados
+                invitados_finales = list(dict.fromkeys(list(settings.ALERT_EMAILS) + pe["invitados_validos"]))
+                resultado = crear_evento_en_calendar(pe["titulo"], pe["fecha_inicio"], pe["fecha_fin"], guests=invitados_finales)
+                aviso_invalidos = ""
+                if pe["invitados_invalidos"]:
+                    aviso_invalidos = f"\nAviso: ignoré por formato inválido: {', '.join(pe['invitados_invalidos'])}."
+                return f"{resultado}\nInvitaciones enviadas a: {', '.join(invitados_finales)}.{aviso_invalidos}"
+
+            if cancela:
+                self.pending_event = None
+                return "He cancelado la propuesta de creación del evento."
+
+            # Si hay propuesta pendiente y el usuario no confirma ni cancela, recuérdalo brevemente
+            return "Tengo una propuesta de evento pendiente de confirmación. Responde con 'confirmo' para crearlo o 'cancelar' para descartarlo."
 
         # # --- Detección de intención de creación de evento (antes de reformular con Gemini)
         es_intencion_crear = any(
@@ -186,6 +213,63 @@ class ChatRAG:
                     # La reunión dura 1 hora por defecto    
                     fecha_fin = fecha_inicio + timedelta(hours=1)
                     
+                     # === NUEVO: detección de invitados y confirmación previa ===
+                    # Buscamos emails tanto en la entrada original como en la reformulación
+                    # AJUSTE 2/2: usar el texto ORIGINAL (question_original) + reformulación para no perder correos
+                    texto_busqueda_emails = (question_original or "") + " " + (pregunta_lower_reformulada or "")
+                    
+                    # Normalización: si alguien escribe " y " lo convertimos en coma
+                    texto_busqueda_emails = texto_busqueda_emails.replace(" y ", ",")
+                    texto_busqueda_emails = texto_busqueda_emails.replace(";", ",")
+
+                    # Regex sencilla de emails
+                    posibles_emails = re.findall(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}", texto_busqueda_emails)
+
+                    # Normalizamos: minúsculas, trim y deduplicamos manteniendo orden
+                    normalizados = []
+                    vistos = set()
+                    for e in posibles_emails:
+                        e2 = e.strip().lower()
+                        if e2 and e2 not in vistos:
+                            normalizados.append(e2)
+                            vistos.add(e2)
+
+                    # Validación simple de dominio (al menos un punto tras la @)
+                    invitados_validos = []
+                    invitados_invalidos = []
+                    for e in normalizados:
+                        try:
+                            dominio = e.split("@", 1)[1]
+                            if "." in dominio:
+                                invitados_validos.append(e)
+                            else:
+                                invitados_invalidos.append(e)
+                        except Exception:
+                            invitados_invalidos.append(e)
+
+                    # Si hay invitados válidos, pedimos confirmación ANTES de crear
+                    if invitados_validos:
+                        self.pending_event = {
+                            "titulo": titulo_limpio,
+                            "fecha_inicio": fecha_inicio,
+                            "fecha_fin": fecha_fin,
+                            "invitados_validos": invitados_validos,
+                            "invitados_invalidos": invitados_invalidos,
+                        }
+
+                        # Mensaje de resumen para confirmar (crearás con ALERT_EMAILS + válidos)
+                        resumen = [
+                            "Propuesta de evento:",
+                            f"• Título: {titulo_limpio}",
+                            f"• Inicio: {fecha_inicio}",
+                            f"• Fin: {fecha_fin}",
+                            f"• Invitados: {', '.join(invitados_validos)}"
+                        ]
+                        if invitados_invalidos:
+                            resumen.append(f"• Ignoraré por formato inválido: {', '.join(invitados_invalidos)}")
+                        resumen.append("¿Confirmo? (responde 'confirmo' para crear o 'cancelar' para descartarlo)")
+                        return "\n".join(resumen)
+                    
                     print("DEBUG EVENTO:", titulo_limpio, fecha_inicio, fecha_fin, settings.ALERT_EMAILS)
                     # Llamamos a la función que esta en servoces/calendar_create.py crea el evento en Google Calendar
                     resultado = crear_evento_en_calendar(titulo_limpio, fecha_inicio,fecha_fin, guests=settings.ALERT_EMAILS )
@@ -221,12 +305,8 @@ class ChatRAG:
                     elif dia:
                         return f"No hay {tipo_evento} programadas para el día {dia.strftime('%d/%m/%Y')}."
                     elif mes:
-                        mes_nombre = None
-                         # Buscamos el nombre del mes por el número
-                        for nombre_mes in MESES.items():
-                            if numero_mes ==mes:
-                                mes_nombre = nombre_mes
-                                break
+                        # AJUSTE 2/2 (parte meses): obtener el nombre del mes desde el número
+                        mes_nombre = next((nombre for nombre, numero in MESES.items() if numero == mes), None)
                         return f"No hay {tipo_evento} programadas para el mes de {mes_nombre} del año {anio}."
                     else:
                         return f"No hay {tipo_evento} registrados para {nombre_detectado.capitalize()} en el año {anio}."
@@ -264,6 +344,7 @@ Tu tarea es:
 
 CONTEXT (fragmentos relevantes extraídos de la documentación):
 \"\"\"{contexto}\"\"\"
+
 
 PREGUNTA DEL USUARIO:
 \"{question}\"

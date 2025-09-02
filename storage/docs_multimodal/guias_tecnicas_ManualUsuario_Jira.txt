@@ -1,0 +1,219 @@
+Manual Jira	IndiceIndiceIntroducción	2Crear proyecto	2Crear una tarea	5SPRINT	5Crear una subtarea	6Blacklog	7IntroducciónJira es una herramienta de software desarrollada por Atlassian, diseñada para la gestión de proyectos y seguimiento de incidencias. Es ampliamente utilizada por equipos de desarrollo ágil para planificar, rastrear y gestionar el progreso de sus proyectos. Ofrece funcionalidades como la creación de tareas, asignación de responsabilidades y monitoreo del rendimiento en tiempo real.Crear proyectoCrear proyectoSeleccionar cualquier plantilla Marcar gestionado por empresa Marcar comparte configuración con otro proyecto (seleccionar la configuración template project. (idea.)(mp) 	Crear una tareaDentro de los proyectos se crean diferentes tareasSPRINTUno de los aspectos más importantes a la hora de crear la tarea es el concepto sprint, la organización del proyecto, como se vera posteriormente esto determinara estar la tarea visualizable o no (Blacklog).Por lo general estarán activos una serie de sprint para dar versatibilidad a la hora de planificar la finalización de la tarea.En relación a los sprint clasificados dentro de “futuro” señalar que “Sprint Ideas” como su nombre indica son ideas que surgen y que en un futuro se harán pero no corren urgencia y sprint99991231 son tareas que se han quedado un poco bloqueadas en el tiempo y seguramente se acaben cerrando.Ademas comentar que hay sprint orientados a la comunicación interna como puede ser Sprint20240801 y otros orientados a la comunicación oficial con el cliente como IGEAR Sprint 2024.Crear una subtareaCuando tenemos un proyecto que se divide en pequeñas fases, es crucial contar con una herramienta eficiente para gestionar cada etapa del proceso. Crear una subtarea es una posible solución que permite heredar características de la principal así como ver el grado de consecución.BlacklogEl Backlog en Jira es una característica esencial para la gestión ágil de proyectos. Este espacio funciona como una lista priorizada de tareas, historias de usuario, mejoras y errores que el equipo debe abordar en futuras iteraciones o sprints.
+
+Paso 1: Sin información
+idearium
+No hay pasos a seguir en la imagen proporcionada, ya que solo muestra el logo de Idearium.
+
+Paso 1: Título del paso 1
+Idearium
+Consultores
+Descripción del paso 1
+
+Paso 1: Crear un proyecto
+Idearium
+Tu trabajo▾ Proyectos▾ Filtros▾ Paneles▾ Equipos▾ Planes▾ Aplicaciones▾ Crear
+Q Buscar
+Proyectos
+Crear proyecto  Plantillas
+Buscar proyectos Q
+Filtrar por producto
+Todas las categorías
+Nombre▾ Clave Tipo Responsable Categoría URL del Más acciones
+proyecto
+Haz clic en "Crear proyecto".
+
+Paso 1: Título de la empresa
+Idearium Consultores
+Nombre de la empresa
+
+Paso 1: Paso 1: Acceder al formulario de solicitud.
+No hay texto en la captura
+Dirígete a la página web o plataforma donde se encuentra el formulario de solicitud que necesitas.
+
+Paso 2: Paso 2: Completar el formulario con información precisa.
+No hay texto en la captura
+Ingresa cuidadosamente todos los datos solicitados, asegurándote de que sean correctos y completos. Presta atención a las instrucciones específicas para cada campo.
+
+Paso 3: Paso 3: Revisar detenidamente.
+No hay texto en la captura
+Antes de enviar, verifica toda la información que has ingresado en el formulario. Asegúrate de que no haya errores o información faltante.
+
+Paso 4: Paso 4: Adjuntar documentos.
+No hay texto en la captura
+Si se requieren documentos adicionales, adjúntalos al formulario. Asegúrate de que los archivos estén en el formato correcto y sean legibles. Revisa las instrucciones del formulario para conocer los requisitos específicos de los documentos.
+
+Paso 5: Paso 5: Confirmar y enviar.
+No hay texto en la captura
+Una vez que hayas revisado todo, confirma el envío del formulario. Es posible que recibas una notificación de envío exitoso.
+
+Paso 6: Paso 6: Verificación del estado de solicitud.
+No hay texto en la captura
+Si la plataforma lo permite, verifica el estado de tu solicitud en línea. De lo contrario, espera las notificaciones por correo electrónico o cualquier otro canal que te hayan indicado.
+
+Paso 1: Compartir configuración
+Comparte la configuración con un proyecto ya existente
+Template Project (Idea.) (MP)
+Marca la casilla "Comparte la configuración con un proyecto ya existente".
+Selecciona el proyecto con el que deseas compartir la configuración en el menú desplegable.
+
+Paso 1: Kanban
+Kanban
+Jira
+Visualiza tu proyecto y hazlo avanzar utilizando incidencias en un tablero lleno de
+posibilidades.
+Visualiza tu proyecto y hazlo avanzar utilizando incidencias en un tablero lleno de posibilidades.
+
+Paso 2: Scrum
+Scrum
+Jira
+Realiza un sprint hacia los objetivos de tu proyecto con un tablero, un backlog y un
+cronograma.
+Realiza un sprint hacia los objetivos de tu proyecto con un tablero, un backlog y un cronograma.
+
+Paso 3: Planificación de primer nivel
+Planificación de primer nivel
+Jira PREMIUM
+Supervisa el trabajo de varios proyectos y crea un plan fácil de compartir para las
+partes interesadas.
+Supervisa el trabajo de varios proyectos y crea un plan fácil de compartir para las partes interesadas.
+
+Paso 1: Nombre del Proyecto
+Añadir detalles del proyecto
+Explora las posibilidades a la hora de colaborar con tu equipo. Edita los
+detalles de los proyectos en cualquier momento en su configuración.
+Los campos obligatorios están marcados con un asterisco *
+Nombre *
+Prueba Manual
+Introduce el nombre del proyecto: "Prueba Manual".
+
+Paso 2: Clave del Proyecto
+Clave i
+PM
+Introduce la clave del proyecto: "PM".
+
+Paso 3: Compartir Configuración (Opcional)
+☐ Comparte la configuración con un proyecto ya existente
+Marca la casilla si deseas compartir la configuración con un proyecto ya existente.
+
+Paso 4: Seleccionar Plantilla
+Plantilla
+Kanban
+Jira
+Visualiza tu proyecto y hazlo avanzar utilizando
+incidencias en un tablero lleno de posibilidades.
+Elige la plantilla "Kanban Jira" para visualizar y gestionar el proyecto con incidencias en un tablero.
+
+Paso 5: Seleccionar Tipo
+Tipo
+Gestionados por la empresa
+Trabaja con otros equipos en muchos proyectos
+de forma estándar.
+Selecciona el tipo "Gestionados por la empresa" para trabajar con otros equipos de forma estándar.
+
+Paso 6: Confirmar
+Cancelar
+Siguiente
+Haz clic en "Siguiente" para confirmar los detalles del proyecto.
+
+Paso 1: Configuración simplificada
+Ponte en marcha rápidamente con una configuración simplificada.
+Cualquiera de tu equipo puede configurarlo y mantenerlo
+La configuración no afecta al resto de los proyectos
+Configuración sencilla de tipos de incidencia y campos personalizados
+Configuración sencilla para varios flujos de trabajo
+Permisos de niveles de acceso
+Selecciona un proyecto gestionado por el equipo
+
+Paso 2: Configuración de los partners
+Sácale partido a un control total con la configuración, personalización y flexibilidad de los partners.
+Configuración y mantenimiento a cargo de tus administradores de Jira
+Configuración estandarizada compartida para todos los proyectos
+Control total sobre los tipos de incidencia y los campos personalizados
+Flujos de trabajo, estados y transiciones de incidencias personalizables
+Esquemas de permisos detallados
+Selecciona un proyecto gestionado por la empresa
+
+Paso 1: Clic en Crear
+Idearium
+Tu trabajo▾ Proyectos ▾ Filtros Paneles
+Equipos▾ Planes▾ Aplicaciones ▾
+Crejar
+Deep Learning
+Proyecto de software
+Proyectos / Deep Learning
+Incidencias
+Compartir
+Volver al proyecto
+Buscar incidencias
+Q
+Proyecto
+Deep Learning Tipo
+Estado
+Persona asignada
+Más +
+Guardar filtro
+FILTROS PREDETERMINADOS
+Creado
+Todas las incidencias
+Mis incidencias abiertas
+Informadas por mí
+Incidencias abiertas
+Incidencias finalizadas
+Haz clic en el botón "Crear".
+
+Paso 1: Seleccionar Sprint
+Sprint
+Sprint 20240901
+Mostrar solo sprints de este
+proyecto (MIS)
+SPRINTS RECIENTES
+Sprint 20240801
+Idearium - By Assignee
+IGEAR Sprint 2024
+Idearium - By Assignee
+ACTIVO
+GeoDeep Entr6 20250218
+Idearium - By Assignee
+IGEAR Sprint 2024
+Idearium - By Assignee
+Haz clic en el sprint deseado de la lista de sprints recientes.
+
+Paso 1: Investigar CDE
+Investigar CDE de los socios del proyecto ALERT-PYR
+TAREAS POR HACER
+
+Paso 2: Proponer modelo de datos
+Proponer y determinar modelo de datos común a cada CDE
+TAREAS POR HACER
+
+Paso 3: Implementar infraestructura tecnológica
+Asesoramiento y resolución implementación de la infraestructura tecnológica para publicar en WMS
+TAREAS POR HACER
+
+Paso 4: Elaborar topográfico
+Elaborar topográfico visualización en el visor2D Riesgos. Cargar información en BD, y aplicaciones asociadas
+TAREAS POR HACER
+
+Paso 1: Seleccionar Backlog
+IGEAR
+Proyecto de software
+PLANIFICACIÓN
+IG board
+Tablero
+Backlog
+Sprints activos
+Calendario NOVEDAD
+Informes
+Lista
+Objetivos
+Incidencias
+Componentes
+DESARROLLO
+Publicaciones
+Páginas de proyect...
+Añadir acceso rápido
+Configuración del proy...
+Estás en un proyecto gestionado por la
+empresa
+Más información
+Navegar a la sección de Backlog en la barra lateral izquierda.
