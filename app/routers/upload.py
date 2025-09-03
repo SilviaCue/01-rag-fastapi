@@ -15,11 +15,9 @@ DOCS_CHUNK = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "storage", "docs
 os.makedirs(DOCS_RAW, exist_ok=True)
 os.makedirs(DOCS_CHUNK, exist_ok=True)
 
-# Extensiones soportadas (en minúsculas con punto)
+# === CAMBIO 1: solo soportamos PDF y DOCX ===
 SUPPORTED_EXTS = {
-    ".pdf", ".docx", ".xlsx", ".xls",
-    ".png", ".jpg", ".jpeg", ".tif", ".tiff",
-    ".md", ".odt"
+    ".pdf", ".docx"
 }
 
 @router.post("/upload-all/")
@@ -62,9 +60,13 @@ async def upload_all_documents():
             with open(txt_path, "w", encoding="utf-8") as f:
                 f.write(text)
 
-            # Crea chunks e indexa
-            chunks = splitter.split_text(text)
-            vector_store.index_chunks(chunks, document_id=document_id)
+            # === CAMBIO 2: solo indexamos DOCX, PDFs no entran en embeddings ===
+            ext = os.path.splitext(document_id)[1].lower()
+            if ext == ".docx":
+                chunks = splitter.split_text(text)
+                vector_store.index_chunks(chunks, document_id=document_id)
+            else:
+                print(f"Documento PDF detectado: {document_id} → no se indexa en embeddings")
 
             processed.append(document_id)
 

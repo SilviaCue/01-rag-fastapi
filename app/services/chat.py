@@ -1,6 +1,7 @@
 # Importaciones librerías necesarias del sistema, fechas y módulos propios del proyecto
 import os
 import re
+import glob  # AJUSTE MINIMO: para localizar los .txt generados de PDFs
 from datetime import datetime, date, timedelta
 
 
@@ -327,10 +328,37 @@ class ChatRAG:
             elif es_intencion_crear and not settings.USAR_GOOGLE_CALENDAR:
                 return "La función de crear eventos solo está disponible si Google Calendar está activo."
             else:
+                # === AJUSTE MINIMO: si hay texto de PDFs (de Gemini) en storage/docs_chunks, responder directo con Gemini ===
+                pdf_txts = [p for p in glob.glob(os.path.join("storage", "docs_chunks", "*.txt")) if os.path.isfile(p)]
+                if pdf_txts:
+                    try:
+                        textos_pdf = []
+                        for p in pdf_txts:
+                            with open(p, "r", encoding="utf-8") as f:
+                                textos_pdf.append(f.read())
+                        contexto_pdf = "\n".join(textos_pdf)[:24000]  # límite de seguridad
+                        prompt_pdf = f"""
+Eres un asistente experto en interpretar instrucciones de documentos de la empresa Idearium extraídas de PDFs (capturas y pasos).
+Responde de forma clara, ordenada y profesional. NO inventes información que no aparezca en el texto.
+
+CONTEXT (de PDFs):
+\"\"\"{contexto_pdf}\"\"\"
+
+
+PREGUNTA DEL USUARIO:
+\"{question}\"
+"""
+                        respuesta_pdf = self.generator.generate(prompt_pdf)
+                        if respuesta_pdf and respuesta_pdf.strip():
+                            return respuesta_pdf
+                    except Exception as e:
+                        # Si falla, seguimos al flujo normal sin interrumpir
+                        print(f"AVISO: fallo en respuesta desde PDFs: {e}")
+
                 # Si la pregunta no es sobre vacaciones, reuniones, etc., se usa el sistema RAG normal para buscar en la documentación
                 resultados = self.retriever.retrieve(question, top_k=12)
                 # Se junta el texto de los resultados en un solo string para usar como contexto. Se limita a 4000 caracteres por seguridad.
-                contexto = "\n".join([res["text"] for res in resultados])[:4000]
+                contexto = "\n".join([res["text"] for res in resultados])[:14000]
                 
                 # Este es el prompt (instrucciones) que se le da a la IA para que genere una respuesta amable y profesional, usando solo la información del contexto
                 prompt = f"""
