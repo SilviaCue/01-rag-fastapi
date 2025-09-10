@@ -9,9 +9,13 @@ class GeminiMultimodalExtractor:
         self.model = genai.GenerativeModel("gemini-1.5-pro-002")
 
     def extract_text(self, file_path: str) -> str:
-        """
-        Extrae texto de una imagen o página escaneada usando Gemini multimodal.
-        """
+        """Extrae TODO el texto visible en esta imagen escaneada de un documento técnico.
+        - El texto está en español.
+        - Extrae cuidadosamente cualquier dirección URL, incluso si está resaltada o en color.
+        - Respeta la estructura: títulos, párrafos, saltos de línea y sangrías.
+        - No inventes contenido. No completes frases ni rellenes huecos.
+        - Si hay tablas o listas, representa su contenido como texto plano.
+        - Devuelve solo texto, sin explicaciones ni resúmenes."""
         try:
             # Abrir imagen (PIL garantiza formato compatible)
             image = Image.open(file_path)

@@ -47,24 +47,30 @@ class FileParser:
             for i, page in enumerate(doc):
                 img_path = f"temp_page_{i}.png"
                 try:
-                    pix = page.get_pixmap(dpi=200)
+                    pix = page.get_pixmap(dpi=300)
                     pix.save(img_path)
+                    
+                    #mejora visual escala de grises y binario
+                    image = Image.open(img_path).convert("L")  # Convertir a escala de grises
+                    image = image.point(lambda x: 0 if x < 180 else 255, '1')  # Binarización
+                    image.save(img_path)
 
                     # Gemini multimodal primero
+                    print(f"[Gemini] Procesando página {i} de {file_path}...")
                     ocr_text = self.gemini_extractor.extract_text(img_path)
 
                     # Fallback Tesseract
                     if not ocr_text or not ocr_text.strip():
                         ocr_text = pytesseract.image_to_string(Image.open(img_path), lang="spa")
 
-                    texto_total += ocr_text
+                    texto_total += ocr_text + "\n\n"
 
                 finally:
                     try:
                         os.remove(img_path)
                     except Exception:
                         pass
-        return texto_total
+        return texto_total.strip()
 
     def _extract_text_from_docx(self, file_path: str) -> str:
         """
