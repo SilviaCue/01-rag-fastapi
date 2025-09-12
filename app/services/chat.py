@@ -4,23 +4,21 @@ import re
 import glob  # AJUSTE MINIMO: para localizar los .txt generados de PDFs
 from datetime import datetime, date, timedelta
 
-
-# Función para unificar las fechas 
-
+# Función para unificar las fechas
 MESES = {
-    "enero" :1,  "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
     "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
 }
-def extraer_filtros_fecha(texto: str, anio_defecto:int =2025):
+def extraer_filtros_fecha(texto: str, anio_defecto: int = 2025):
     texto_minusculas = texto.lower()
-    fecha_hoy =date.today()
-    filtros ={"anio":anio_defecto, "semana": None, "dia": None, "mes": None}
-    
-    # Año explicito ( en este caso 2025)
+    fecha_hoy = date.today()
+    filtros = {"anio": anio_defecto, "semana": None, "dia": None, "mes": None}
+
+    # Año explícito (en este caso 2025)
     coincidencia_anio = re.search(r"(20\d{2})", texto_minusculas)
     if coincidencia_anio:
         filtros["anio"] = int(coincidencia_anio.group(1))
-        
+
     # Semana
     if "esta semana" in texto_minusculas:
         filtros["semana"] = fecha_hoy.isocalendar()[1]
@@ -28,13 +26,13 @@ def extraer_filtros_fecha(texto: str, anio_defecto:int =2025):
     elif "la semana que viene" in texto_minusculas or "semana que viene" in texto_minusculas:
         filtros["semana"] = fecha_hoy.isocalendar()[1] + 1
         filtros["anio"] = fecha_hoy.isocalendar()[0]
-        
+
     # Día
     if "hoy" in texto_minusculas:
         filtros["dia"] = fecha_hoy
     elif "mañana" in texto_minusculas:
         filtros["dia"] = fecha_hoy + timedelta(days=1)
-    
+
     # Mes por nombre
     coincidencia_mes = re.search(
         r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)",
@@ -42,20 +40,20 @@ def extraer_filtros_fecha(texto: str, anio_defecto:int =2025):
     )
     if coincidencia_mes:
         filtros["mes"] = MESES[coincidencia_mes.group(1)]
-        
+
     return filtros
-        
+
 
 # Importaciones de los módulos del proyecto
 from app.services.retriever import Retriever  # Encargado de buscar fragmentos relevantes en los documentos
-from app.config import settings # Configuración general
-from app.services.generation_selector import GenerationSelector # Decide qué modelo usar para generar texto
+from app.config import settings  # Configuración general
+from app.services.generation_selector import GenerationSelector  # Decide qué modelo usar para generar texto
 # Funciones para leer nombres y eventos del calendarios
 from app.services.vacaciones_googlecalendar import (
-    obtener_lista_nombres_desde_calendar, # función para sacar los nombres
-    obtener_periodos_evento, # función para sacar los eventos de calendario
+    obtener_lista_nombres_desde_calendar,  # función para sacar los nombres
+    obtener_periodos_evento,  # función para sacar los eventos de calendario
     filtrar_por_semana,  # función para quedarte solo con eventos de cierta semana
-    filtrar_por_dia  #función para quedarte solo con eventos de un día
+    filtrar_por_dia  # función para quedarte solo con eventos de un día
 )
 # Función para generar respuestas usando IA (Gemini)
 from app.services.chat_utils import responder_con_gemini
@@ -63,13 +61,16 @@ from app.services.chat_utils import responder_con_gemini
 # Función que crea eventos en Google Calendar
 from app.services.calendar_create import crear_evento_en_calendar
 
+# >>> IMPORTACIÓN NUEVA (único cambio en imports) <<<
+from app.services.file_parser import FileParser
+
 
 # Clase principal del sistema de chat
 class ChatRAG:
     def __init__(self):
-        self.retriever = Retriever() # Para buscar fragmentos de texto relevantes
-        self.generator = GenerationSelector(settings.GENERATION_MODEL)# Para generar respuestas con IA
-        self.upload_path = "storage/docs_raw" # Carpeta donde están los documentos subidos
+        self.retriever = Retriever()  # Para buscar fragmentos de texto relevantes
+        self.generator = GenerationSelector(settings.GENERATION_MODEL)  # Para generar respuestas con IA
+        self.upload_path = "storage/docs_raw"  # Carpeta donde están los documentos subidos
         self.pending_event = None  # dict {titulo, titulo_sugerido, fecha_inicio, fecha_fin, invitados_validos, invitados_invalidos}
 
     def chat(self, question: str):
@@ -106,7 +107,7 @@ class ChatRAG:
                                 f"Responde: ok / vale / sí / confirmo / te confirmo / crear / crea")
                     # si no hay invitados → confirmar creación directa
                     return (f"¿Lo creo ya?\n"
-                            f"Responde: ok / vale / sí / confirmo / te confirmo / crear / crea")
+                            f"Responde: ok / vale / sí / confirmo / te confirmo / crear / creA")
                 else:
                     return "El título no puede estar vacío. Escribe: título: Nombre exacto"
 
@@ -218,7 +219,7 @@ class ChatRAG:
                 pregunta_reformulada = self.generator.generate(prompt_reformulacion).strip()
                 pregunta_lower_reformulada = pregunta_reformulada.lower()
                 question = pregunta_reformulada
-                pregunta_lower = pregunta_lower_reformulada  
+                pregunta_lower = pregunta_lower_reformulada
             except Exception as e:
                 print(f"Error al reformular pregunta: {e}")
 
@@ -226,14 +227,14 @@ class ChatRAG:
         nombres_validos_original = obtener_lista_nombres_desde_calendar()
         nombres_validos = [n.lower() for n in nombres_validos_original]
         nombre_detectado = next((n for n in nombres_validos if re.search(rf'\b{re.escape(n)}\b', pregunta_lower)), None)
-    
+
         # Fechas
         filtros = extraer_filtros_fecha(pregunta_lower)
         anio = filtros["anio"]
         semana = filtros["semana"]
         dia = filtros["dia"]
         mes = filtros["mes"]
-       
+
         # Tipo de evento
         if any(pal in pregunta_lower for pal in ["reunion", "reuniones", "meeting", "cita"]):
             tipo_evento = "reuniones"
@@ -273,7 +274,7 @@ class ChatRAG:
                     minuto = int(match_hora.group(2)) if match_hora.group(2) else 0
                     if match_fecha:
                         dia_ = int(match_fecha.group(1))
-                        mes_ = meses_para_creacion.get(match_fecha.group(2), None) 
+                        mes_ = meses_para_creacion.get(match_fecha.group(2), None)
                         if not mes_:
                             return "Mes no reconocido para crear la reunión."
                         fecha_inicio = datetime(anio, mes_, dia_, hora, minuto)
@@ -282,7 +283,7 @@ class ChatRAG:
                     elif "mañana" in pregunta_lower:
                         fecha_inicio = (datetime.today() + timedelta(days=1)).replace(hour=hora, minute=minuto, second=0, microsecond=0)
                     fecha_fin = fecha_inicio + timedelta(hours=1)
-                    
+
                     # Emails
                     texto_busqueda_emails = (question_original or "") + " " + (pregunta_lower or "")
                     texto_busqueda_emails = texto_busqueda_emails.replace(" y ", ",").replace(";", ",")
@@ -291,7 +292,8 @@ class ChatRAG:
                     for e in posibles_emails:
                         e2 = e.strip().lower()
                         if e2 and e2 not in vistos:
-                            normalizados.append(e2); vistos.add(e2)
+                            normalizados.append(e2)
+                            vistos.add(e2)
                     invitados_validos, invitados_invalidos = [], []
                     for e in normalizados:
                         try:
@@ -353,12 +355,24 @@ class ChatRAG:
                     tipo_evento=tipo_evento, anio=anio, mes=mes, semana=semana, dia=dia
                 )
                 return respuesta
-            
-            elif es_intencion_crear and not settings.USAR_GOOGLE_CALENDAR:
-                return "La función de crear eventos solo está disponible si Google Calendar está activo."
+
             else:
                 # === AJUSTE MINIMO: respuesta desde PDFs si hay ===
                 pdf_txts = [p for p in glob.glob(os.path.join("storage", "docs_chunks", "*.txt")) if os.path.isfile(p)]
+
+                # >>> BLOQUE NUEVO: AUTOPROCESAR PDFs -> TXT si no hay ninguno <<<
+                if not pdf_txts:
+                    try:
+                        parser = FileParser(self.upload_path)
+                        for file in os.listdir(self.upload_path):
+                            if file.lower().endswith(".pdf"):
+                                print(f"[AutoProcesar] Generando TXT con Gemini: {file}")
+                                parser.parse_document(file)
+                        # recargar lista de txts tras procesar
+                        pdf_txts = [p for p in glob.glob(os.path.join("storage", "docs_chunks", "*.txt")) if os.path.isfile(p)]
+                    except Exception as e:
+                        print(f"[AutoProcesar] Error al procesar PDFs: {e}")
+
                 if pdf_txts:
                     try:
                         textos_pdf = []
@@ -383,6 +397,7 @@ PREGUNTA DEL USUARIO:
                     except Exception as e:
                         print(f"AVISO: fallo en respuesta desde PDFs: {e}")
 
+                # (Resto del flujo original con retriever)
                 resultados = self.retriever.retrieve(question, top_k=12)
                 contexto = "\n".join([res["text"] for res in resultados])[:14000]
                 prompt = f"""
