@@ -1,0 +1,157 @@
+OnBoarding
+
+Manual de bienvenida a idearium consultores srl
+
+ÍNDICE
+
+Nos complace darte la bienvenida a Idearium Consultores SRL, esperamos que compartas nuestros objetivos en pro del éxito y que tengas una carrera larga y exitosa con nosotros. Idearium Consultores SRL está comprometida con la más alta calidad de servicio en todos los aspectos de nuestro negocio.
+
+Este manual del empleado ha sido creado para proporcionar pautas generales sobre el funcionamiento de la empresa y que sea más fácil tu integración y puesta al día en ella.
+
+# 2. ¿Quienes somos?
+
+Idearium Consultores SRL es una empresa fundada en 2009 y se dedicada a la consultoría en el ámbito de las tecnologías de la información, el desarrollo de SIG, SIT e IDES.
+
+Poco a poco hemos ido creciendo tanto en clientes como en trabajadores. Aunque el nombre oficial es Idearium Consultores, habitualmente nos referimos a la empresa simplemente como Idearium.
+
+# 3. Valores
+
+Los empleados de la empresa tienen:
+
+- Compromiso con la integridad
+
+- Compromiso con la calidad
+
+- Compromiso con la innovación y la excelencia
+
+- Y sobre todo un compromiso en el trabajo en equipo
+
+Tener buena disposición en el trabajo hace que un equipo funcione mejor y así poder ser más competentes en el mercado.
+
+Idearium cree que cada trabajador/a es igualmente importante y queremos que participes. Habla, ofrece tu punto de vista, haz sugerencias. No esperes a que alguien pida tu opinión. Sé proactivo. Contribuye.
+
+4. Trabajo en Idearium
+
+Lugar de trabajo y horario
+
+En Idearium se ofrece la posibilidad de trabajar desde casa o trabajar en un puesto en oficina y el horario es flexible siempre y cuando se informe al supervisor/a o al jefe de la empresa y en función del cliente asignado.
+
+La oficina está ubicada en la C/ Valle de Zuriza 19, portal 2, oficina 7 y 8, 50.015 Zaragoza.
+
+También se permite la opción mixta de teletrabajo-oficina. En general lo previsto es que haya puestos libres en la oficina, por lo que no hay que preocuparse de hacer reservas.
+
+Link de reuniones online
+
+Las reuniones internas y muchas con clientes las hacemos siempre en este link Te recomiendo añadirlo a marcadores:  Si ya hay alguien, generar otro alternativo.
+
+Calendario compartido y mensajería instantánea
+
+Tenemos un calendario compartido y canales de mensajería instantánea utilizando Gmail. Te recomiendo que envíes una cuenta de gmail para que te añada tu responsable a los mismos.
+
+Festivos y vacaciones
+
+Los días festivos los marca el calendario oficial de tu lugar de residencia, aunque es posible variarlo. Confirma con tu responsable cuál deseas seguir ya que influye en los festivos locales y autonómicos.
+
+Cada trabajador/a tiene 23 días laborables de vacaciones al año (por año completo trabajado). Estos se deben consultar con la persona encargada. Una vez acordados, hay que indicarlos en la excel compartida en la que aparecen las vacaciones de todo el equipo de la empresa. Si no tienes permisos para editar esta hoja, solicítalo a dportoles. ().
+
+En la  excel están los diferentes meses del año en los que cada trabajador/a tiene una fila que le corresponde. Las instrucciones de uso son las siguientes (aparecen estas mismas en la celda A1 de la propia excel): marcar H para días de vacaciones, marcar F para festivo, marcar A para vacaciones año anterior, y marcar P para otros asuntos (baja médica, etc.). Al marcarlo la casilla se pone de colo rojo.
+
+Al final de la excel está el recuento de días de vacaciones disponibles. Este se hace de manera automática conforme vas rellenando en el calendario.
+
+Ademas de anotar las ausencias en la Excel hay que anotarlas también en el calendario compartido (ver apartado 3).
+
+Reconocimiento médico
+
+El reconocimiento médico se hará al incorporarte a la empresa y se renovará todos los años. Si no se desea realizar el reconocimiento médico habrá que escribir una carta renunciando a este reconocimiento.
+
+Para solicitar cita hay que enviar un correo electrónico a medicina@balmarprevencion.com indicando tu nombre, el de la empresa (Idearium Consultores) y si se trata de un reconocimiento INICIAL, PERIÓDICO o por REINCORPORACIÓN.
+
+Fichaje horario
+
+Para llevar a cabo el control horario diario existe una excel de horas subida a GitHub desde donde se puede descargar (). Una vez la descargues, genera una copia en local para que sea la tuya personal.
+
+En el fichero excel hay varias hojas correspondientes a los meses. En estos están marcados en rojo los fines de semana, y en rosa los festivos correspondientes a la ciudad de Zaragoza (se pueden  según tus festivos). También hay en cada hoja un encabezado que es necesario rellenar: el ID empleado se corresponde con el DNI; el trabajador, con el nombre completo; Departamento, con el que corresponda.
+
+En cada uno de los días hay diferentes columnas a rellenar con el formato hh:mm: hora de entrada, hora de salida, horas extras y descanso (en el caso de hacerlo para comer). La columna de horas totales se calcula automáticamente una vez se han rellenado las anteriores. Al final de la hoja hay una celda verde, que también se calcula de manera automática, que hacer referencia al total de horas trabajadas dicho mes.
+
+Como se indica en la leyenda de las hojas, hay que marcar aquellos días que se corresponde con: ausencias, marcar con una A; L, día libre; V, vacaciones; y P, día de permiso. Además, es buena práctica copiar el formato de esa celda de la leyenda para traspasar el color.
+
+Cuando el mes finaliza y están rellenadas tanto las celdas de horas como el encabezado, hay que exportarlo. En primer lugar, desde Archivo>Imprimir, se cambiará a formato A3 para que todo el contenido entre en un mismo folio. Posteriormente, desde la opción Archivo>Guardar como, se exportará como PDF.  Este mismo PDF es necesario firmarlo y remitirlo a controlhorario@idearium.eu
+
+5. Directorios y accesos
+
+Cuentas corporativas y servicios
+
+Correo electrónico
+
+Cada trabajador tendrá un correo electrónico corporativo  siendo el  acceso webmail al proveedor actual el siguiente: . Te debería haber llegado, sino solicítalo a tu responsable.
+
+FTP
+
+Disponemos de un servicio FTP para compartición de archivos grandes. Se puede utilizar filezilla / winscp (u otra aplicación) o mediante la web
+
+Cuentas VPN de cliente
+
+Según el cliente final al que vayas a trabajar, es posible que necesites cuenta VPN o acceso a la intranet. Consulta con tu responsable si es el caso para proceder a solicitarlo.
+
+En el caso de IGEAR se solicita a través de Marisa.
+
+Gestión de tareas- Jira
+
+Para la gestión de tareas se utiliza Atlassian-JIRA, da conexión entre equipos y trabajadores. También como seguimiento de las tareas a realizar por cada uno de los trabajadores/as de Idearium.
+
+Periódicamente hay reuniones de sprint en los que revisamos las tareas. Típicamente se hace en torno al día 1 y 15 de cada mes. El responsable del equipo te informará de cuándo se irán convocando.
+
+Es importante mantener al día el estado y persona asignada de cada tarea. Los estados de las tareas son:
+
+Tareas por hacer: la tarea no se ha iniciado.
+
+En curso: la tarea se ha iniciado.
+
+Blocked: no se puede avanzar en la tarea por algún motivo. Si el motivo es que hay que hacer otra tarea antes, hay que vincularla con la relación is blocked by. Cualquier otro motivo se indicará como comentario (e.g.: pendiente de recibir datos necesarios, duda trasladada al cliente a la espera de respuesta, etc.).
+
+Test: la tarea se ha finalizado y está pendiente de validación. Si la validación la tiene que hacer algún otro miembro del equipo hay que asignarle la tarea.
+
+PendientePro: se ha validado la tarea en el entorno de desarrollo y hay que pasarla a producción.
+
+Finalizada: la tarea no requiere ninguna acción adicional y se da por terminada.
+
+Repositorio (GitHub)
+
+Disponemos de un repositorio GIT de código en GitHub:  . Lo utilizamos también para subir documentos en algún caso. Según tu perfil, lo utilizarás más o menos, por lo que dispondrás de usuario propio. (Esto va a dejar de ser así en GitHub cada uno tendrá su propio usuario) Los geógrafos de la empresa por ejemplo usan un usuario compartido, solicita credenciales a tu responsable.
+
+Los proyectos están organizados por temáticas y la estructura habitual de los proyectos es la siguiente:
+
+data: datos, en el caso que se considere de interés guardarlo.
+
+distrib: distribución del software, en el caso de que no se pueda generar de forma automática a partir de los fuentes.
+
+doc: documentación
+
+src: código fuente
+
+Solo se deben subir al repositorio archivos que no se puedan generar de forma automática. Por ejemplo si se dispone de un documento Word y se ha generado un pdf para enviarlo al cliente, el pdf no hay que subirlo. Igualmente con los archivos de salida de procesos o la distribución.
+
+RRSS y Web
+
+La dirección de la página web es  donde se puede consultar proyectos en los que se ha ido trabajando y clientes para los que se trabaja. Si se te ocurre cómo mejorarla, sería fantástico escuchar tus propuestas.
+
+Las RRSS que utilizamos en Idearium es X @Idearium_eu. Puedes seguirnos y ¡así ganamos un follower!
+
+Cuenta compartida gmail
+
+Tenemos una cuenta compartida  para disponer de espacio drive al que subimos presentaciones, documentos, etc. en los que trabajar de forma compartida. También para entregas con cliente solemos utilizarlo aunque el FTP es otra solución. Esta cuenta sirve también para el acceso a los servicios de Google Cloud.
+
+Solicita la contraseña a tu responsable.
+
+Procedimientos de despliegue
+
+Explicar Gob Aragon (vía 4100)
+
+Gestión de tareas
+
+Explicar
+
+Organización del repositorio
+
+Explicar

@@ -1,0 +1,155 @@
+# Manual de Bienvenida a Idearium Consultores SRL
+
+---
+
+## Índice
+
+1. [Bienvenida](#1-bienvenida)  
+2. [¿Quiénes somos?](#2-quiénes-somos)  
+3. [Valores](#3-valores)  
+4. [Trabajo en Idearium](#4-trabajo-en-idearium)  
+   1. [Lugar de trabajo y horario](#4.1-lugar-de-trabajo-y-horario)  
+   2. [Link de reuniones online](#4.2-link-de-reuniones-online)  
+   3. [Calendario compartido y mensajería instantánea](#4.3-calendario-compartido-y-mensajería-instantánea)  
+   4. [Festivos y vacaciones](#4.4-festivos-y-vacaciones)  
+   5. [Reconocimiento médico](#4.5-reconocimiento-médico)  
+   6. [Fichaje horario](#4.6-fichaje-horario)  
+5. [Directorios y accesos](#5-directorios-y-accesos)  
+   1. [Cuentas corporativas y servicios](#5.1-cuentas-corporativas-y-servicios)  
+      - [Correo electrónico](#correo-electrónico)  
+      - [FTP](#ftp)  
+      - [Cuentas VPN de cliente](#cuentas-vpn-de-cliente)  
+      - [Gestión de tareas - Jira](#gestión-de-tareas--jira)  
+      - [Repositorio (GitHub)](#repositorio-github)  
+      - [RRSS y Web](#rrss-y-web)  
+      - [Cuenta compartida Gmail](#cuenta-compartida-gmail)  
+   2. [Procedimientos de despliegue](#5.2-procedimientos-de-despliegue)  
+   3. [Gestión de tareas](#5.3-gestión-de-tareas)  
+   4. [Organización del repositorio](#5.4-organización-del-repositorio)  
+
+---
+
+## 1. Bienvenida
+
+Nos complace darte la bienvenida a **Idearium Consultores SRL**. Esperamos que compartas nuestros objetivos y tengas una carrera larga y exitosa con nosotros.  
+Este manual ha sido creado para facilitar tu integración, proporcionando pautas generales sobre el funcionamiento de la empresa.
+
+---
+
+## 2. ¿Quiénes somos?
+
+Idearium Consultores SRL, fundada en 2009, se dedica a la consultoría en tecnologías de la información, desarrollo de SIG, SIT e IDES.  
+Aunque el nombre oficial es **Idearium Consultores**, internamente nos referimos simplemente como **Idearium**.
+
+---
+
+## 3. Valores
+
+- Compromiso con la integridad  
+- Compromiso con la calidad  
+- Compromiso con la innovación y la excelencia  
+- Compromiso con el trabajo en equipo  
+
+La participación activa de cada trabajador/a es clave. Sé proactivo/a y contribuye con ideas y sugerencias.
+
+---
+
+## 4. Trabajo en Idearium
+
+### 4.1 Lugar de trabajo y horario
+
+Se permite trabajo presencial, teletrabajo o modalidad mixta.  
+Dirección de oficina:  
+*C/ Valle de Zuriza 19, portal 2, oficina 7 y 8, 50015 Zaragoza*
+
+### 4.2 Link de reuniones online
+
+Reuniones internas y con clientes:  
+[https://meet.google.com/hkp-rnth-ygg](https://meet.google.com/hkp-rnth-ygg)
+
+### 4.3 Calendario compartido y mensajería instantánea
+
+Se utiliza Google Calendar y Gmail para mensajería.  
+Solicita acceso a tu responsable.
+
+### 4.4 Festivos y vacaciones
+
+- 23 días laborables/año  
+- Registrar vacaciones en la [hoja Excel compartida](https://docs.google.com/spreadsheets/d/1WyDRufoOpSxSLbzKmcoUgZKKILg4p9L2TrkJ5wcUcu0/edit?usp=sharing)  
+- Anotar también en el calendario compartido  
+
+Códigos en la Excel:  
+- `H`: vacaciones  
+- `F`: festivo  
+- `A`: vacaciones año anterior  
+- `P`: otros asuntos (bajas, etc.)
+
+### 4.5 Reconocimiento médico
+
+Correo para cita: **medicina@balmarprevencion.com**  
+Incluir nombre, empresa y tipo de reconocimiento: inicial, periódico o reincorporación.
+
+### 4.6 Fichaje horario
+
+- Usar la [Excel de fichaje](https://github.com/Idearium-eu/Idearium/blob/master/plantillaFichajeHorario/Horario_2025.xlsx)
+- Instrucciones:
+  - Rellenar ID (DNI), nombre, departamento
+  - Marcar horas de entrada, salida, descanso
+  - Automatiza el total de horas trabajadas
+  - Exportar a PDF (A3), firmar y enviar a: **controlhorario@idearium.eu**
+
+---
+
+## 5. Directorios y accesos
+
+### 5.1 Cuentas corporativas y servicios
+
+#### Correo electrónico  
+Cuenta tipo: `usuario@idearium.eu`  
+Acceso webmail: [https://login.one.com/mail](https://login.one.com/mail)
+
+#### FTP  
+Uso: envío de archivos grandes  
+Web: [https://filemanager.one.com/](https://filemanager.one.com/)
+
+#### Cuentas VPN de cliente  
+Consultar con responsable. Para IGEAR, contactar con Marisa.
+
+#### Gestión de tareas - Jira  
+Estados de tarea:  
+- Por hacer  
+- En curso  
+- Blocked  
+- Test  
+- PendientePro  
+- Finalizada  
+
+Reuniones de sprint: típicamente día 1 y 15 de cada mes.
+
+#### Repositorio (GitHub)  
+Repositorio: [https://github.com/Idearium-eu](https://github.com/Idearium-eu)  
+Estructura común:
+- `data/`: datos  
+- `distrib/`: distribución  
+- `doc/`: documentación  
+- `src/`: código fuente  
+
+#### RRSS y Web  
+Web: [https://www.idearium.eu](https://www.idearium.eu)  
+X (Twitter): [@Idearium_eu](https://twitter.com/Idearium_eu)
+
+#### Cuenta compartida Gmail  
+Cuenta: `idearium.eu@gmail.com`  
+Uso: Drive, entregas, Google Cloud.  
+Solicita contraseña a tu responsable.
+
+---
+
+### 5.2 Procedimientos de despliegue  
+**[Pendiente de desarrollar: Explicar Gob Aragón (vía 4100)]**
+
+### 5.3 Gestión de tareas  
+**[Pendiente de desarrollar: Explicación detallada]**
+
+### 5.4 Organización del repositorio  
+**[Pendiente de desarrollar: Explicación detallada]**

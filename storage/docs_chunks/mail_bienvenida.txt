@@ -1,0 +1,21 @@
+Enviar al nuevo miembro de idearium este mail desde rrhh@idearium.eu Asunto: Creación de
+cuenta corporativa + onboarding Hola, he creado una nueva cuenta de correo corporativa para
+ti. Según la política de cuentas de la empresa tu usuario es XXX. Si deseas otro nombre,
+coméntamelo para cambiarlo. Por tanto, la cuenta de tu uusario de correo es:
+XXXX@idearium.eu El password es https://onetimesecret.com/private/XXXX Cambia el
+password por el que prefieras Puedes entrar en modo web con https://mail.one.com/ o
+configurar SMTP en tu cliente de correo preferido. Te recomiendo que la utilices cuando haya
+que hacer un envío de mail "institucional" A los clientes con los que ya tengas contacto con una
+cuenta tuya personal, puedes seguir manteniendo la tuya. Como prefieras. No soy estricto en
+esto. Quizá te sea de interés crear una regla de reenvío a tu cuenta personal, y así no tienes
+que mirar 2 cuentas. Es lo que hacemos habitualmente par así mirar solo nuestro email.
+Pídeme ayuda si tienes dudas con la configuración. Aprovecho también para enviarte una guía
+de onboarding que te explicará algunos detalles de procedimientos internos de idearium. Es
+una guía en constante evolución, por favor ayúdame a mantenerla actualizada para los
+siguientes que puedan venir en el futuro. David ================= El día previo a la
+incorporación enviar a todo el equipo en CC: Asunto: Bienvenida XXX a Idearium Hola a todos,
+quería informaros que desde mañana se incorpora a Idearium XXX YY. XX es Desarrolladora
+Python especialista en IA y va a entrar a trabajar en algunos temas con ZZZ. Si podéis, entrad
+mañana martes a las 9:15h en el meet de siempre y así hacemos ronda rápida de
+presentaciones del resto de componentes del equipo: https://meet.google.com/hkp-rnth-ygg Un
+saludo y bienvenida! David

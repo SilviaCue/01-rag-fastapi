@@ -1,0 +1,29 @@
+.1.1.1
+
+idearium
+
+GENERACIÓN TOKEN PARA OBTENCIÓN DE LOG EN
+SERVICIOS IGEAR – EJEMPLO GCG
+
+.1.1.2
+
+En este documento se explicará cómo generar un token de acceso mediante la autenticación en el sistema, y cómo utilizar dicho token para extraer los logs del servicio GCG de manera segura y eficiente.
+
+A esta URL https://idearagondes.aragon.es/gcg/logs? token= se le debe añadir un token como mecanismo de autentificación.
+
+Para ello debemos logearnos en cualquier servicio o aplicación del IGEAR, en este caso se va a entrar en el visor2d
+
+
+Pulsar la tecla F12, y ir a la pestaña Network, haz clic con el botón derecho del ratón sobre la url, ir a payload y copiar directamente el valor de token.
+
+Una vez que tenemos esto ya podemos completar nuestra petición y solo faltaría escribirla en un explorador.
+
+https://idearagondes.aragon.es/gcg/logs?
+token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjI0MDk5NzUsImlzcyI6Imh0dHBzOi8vaWRIYXJhZ29uZGVzLmFyYWdvbi5lcy92aXNvci8iLCJhY3Rpdm8iOnRydWUsInN1Yi:
+
+Es importante señalar que el token debe generarse en un **entorno** correspondiente al uso previsto: un token de desarrollo debe generarse en un servicio de desarrollo, y un token de producción en uno de producción. Si hay alguna discrepancia entre los entornos, el token no será válido. Además, es necesario renovar este token **diariamente**.
+
+Inscrita en el Registro Mercantil de Zaragoza, Tomo T 3715, F 109, S 8, H Z 48704, I/A 1- CIF: B-99.247.553
+03/09/2025
+GenerarToken.odt
+Página 1 de 3

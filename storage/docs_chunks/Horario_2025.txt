@@ -1,0 +1,583 @@
+
+--- Hoja: Enero ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6       Unnamed: 7 Unnamed: 8 Unnamed: 9 Unnamed: 10 Unnamed: 11 Unnamed: 12 Unnamed: 13 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18 Unnamed: 19 Unnamed: 20 Unnamed: 21 Unnamed: 22 Unnamed: 23 Unnamed: 24 Unnamed: 25
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan          A         Ausencia        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L        Día libre        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V       Vacaciones        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                Trabajador/a:           Silvia Cue            Mes:               Enero                nan          P      Día permiso        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                Departamento:                   IT             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                     Periodo:  2025-01-01 00:00:00              al 2025-01-31 00:00:00                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso    Horas totales        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-01 00:00:00            miércoles             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-02 00:00:00               jueves             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-03 00:00:00              viernes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-04 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-05 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-06 00:00:00                lunes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-07 00:00:00               martes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-08 00:00:00            miércoles             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-09 00:00:00               jueves             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-10 00:00:00              viernes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-11 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-12 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-13 00:00:00                lunes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-14 00:00:00               martes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-15 00:00:00            miércoles             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-16 00:00:00               jueves             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-17 00:00:00              viernes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-18 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-19 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-20 00:00:00                lunes             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-21 00:00:00               martes        08:50:00            17:20:00                nan   00:30:00         08:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-22 00:00:00            miércoles        08:04:00            17:15:00                nan   00:43:00         08:28:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan           :         nan
+       nan          2025-01-23 00:00:00               jueves        08:20:00            17:22:00                nan   00:30:00         08:32:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-24 00:00:00              viernes        08:00:00            15:05:00                nan        nan         07:05:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-25 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-26 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan                     nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-27 00:00:00                lunes        08:10:00            17:15:00                nan   00:35:00         08:30:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-28 00:00:00               martes        07:55:00            17:15:00                nan   00:30:00         08:50:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan    17:00:00
+       nan          2025-01-29 00:00:00            miércoles        07:49:00            17:17:00                nan   00:30:00         08:58:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-30 00:00:00               jueves        07:48:00            17:20:00                nan   00:30:00         09:02:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-01-31 00:00:00              viernes        07:50:00            12:40:00                nan        nan         04:50:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan  H totales 2 days, 19:25:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+--- Hoja: Febrero ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6       Unnamed: 7 Unnamed: 8 Unnamed: 9 Unnamed: 10 Unnamed: 11 Unnamed: 12 Unnamed: 13 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18 Unnamed: 19 Unnamed: 20 Unnamed: 21 Unnamed: 22 Unnamed: 23 Unnamed: 24 Unnamed: 25
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan          A         Ausencia        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L        Día libre        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V       Vacaciones        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                Trabajador/a:                  nan            Mes:             Febrero                nan          P      Día permiso        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                Departamento:            Geografía             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                     Periodo:  2025-02-01 00:00:00              al 2025-02-28 00:00:00                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso    Horas totales        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-01 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-02 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-03 00:00:00                lunes        07:50:00            17:00:00                nan   00:40:00         08:30:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-04 00:00:00               martes        07:58:00            17:07:00                nan   00:40:00         08:29:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-05 00:00:00            miércoles        07:56:00            17:03:00                nan   00:40:00         08:27:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-06 00:00:00               jueves        08:09:00            17:00:00                nan   00:40:00         08:11:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-07 00:00:00              viernes        08:04:00            14:30:00                nan        nan         06:26:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-08 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-09 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-10 00:00:00                lunes        07:53:00            17:15:00                nan   00:40:00         08:42:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-11 00:00:00               martes        07:58:00            17:09:00                nan   00:40:00         08:31:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-12 00:00:00            miércoles        08:02:00            17:00:00                nan   00:40:00         08:18:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-13 00:00:00               jueves        07:58:00            17:00:00                nan   00:40:00         08:22:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-14 00:00:00              viernes        08:01:00            14:10:00                nan        nan         06:09:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-15 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-16 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-17 00:00:00                lunes        08:02:00            17:05:00                nan   00:40:00         08:23:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-18 00:00:00               martes        07:56:00            17:10:00                nan   00:40:00         08:34:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-19 00:00:00            miércoles        07:58:00            17:00:00                nan   00:40:00         08:22:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-20 00:00:00               jueves        08:02:00            17:10:00                nan   00:40:00         08:28:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-21 00:00:00              viernes        08:00:00            14:10:00                nan        nan         06:10:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan    14:10:00
+       nan          2025-02-22 00:00:00               sábado             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-23 00:00:00              domingo             nan                 nan                nan        nan         00:00:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-24 00:00:00                lunes        08:05:00            17:10:00                nan   00:40:00         08:25:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-25 00:00:00               martes        07:58:00            17:05:00                nan   00:40:00         08:27:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-26 00:00:00            miércoles        07:58:00            17:10:00                nan   00:40:00         08:32:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+         :          2025-02-27 00:00:00               jueves        08:02:00            17:00:00                nan   00:40:00         08:18:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan          2025-02-28 00:00:00              viernes        07:52:00            15:43:00                nan        nan         07:51:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan  H totales 6 days, 17:35:00        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan              nan        nan        nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan         nan
+--- Hoja: Marzo ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6       Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda              nan
+       nan                          nan                  nan             nan                 nan                nan          A         Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L        Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V       Vacaciones
+       nan                Trabajador/a:                  nan            Mes:               Marzo                nan          P      Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan              nan
+       nan                     Periodo:  2025-03-01 00:00:00              al 2025-03-31 00:00:00                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso    Horas totales
+       nan          2025-03-01 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-02 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-03 00:00:00                lunes        07:40:00            17:00:00                nan   00:40:00         08:40:00
+       nan          2025-03-04 00:00:00               martes        08:02:00            17:10:00                nan   00:40:00         08:28:00
+       nan          2025-03-05 00:00:00            miércoles        08:05:00            17:05:00                nan   00:40:00         08:20:00
+       nan          2025-03-06 00:00:00               jueves        08:12:00            17:05:00                nan   00:40:00         08:13:00
+       nan          2025-03-07 00:00:00              viernes        08:00:00            14:20:00                nan        nan         06:20:00
+       nan          2025-03-08 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-09 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-10 00:00:00                lunes        08:02:00            17:20:00                nan   00:40:00         08:38:00
+       nan          2025-03-11 00:00:00               martes        08:05:00            17:12:00                nan   00:40:00         08:27:00
+       nan          2025-03-12 00:00:00            miércoles        08:04:00            17:10:00                nan   00:40:00         08:26:00
+       nan          2025-03-13 00:00:00               jueves        08:04:00            17:00:00                nan   00:40:00         08:16:00
+       nan          2025-03-14 00:00:00              viernes        08:00:00            14:15:00                nan        nan         06:15:00
+       nan          2025-03-15 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-16 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-17 00:00:00                lunes        08:02:00            17:10:00                nan   00:40:00         08:28:00
+       nan          2025-03-18 00:00:00               martes        08:00:00            17:10:00                nan   00:40:00         08:30:00
+       nan          2025-03-19 00:00:00            miércoles        08:08:00            17:15:00                nan   00:40:00         08:27:00
+       nan          2025-03-20 00:00:00               jueves        08:00:00            17:15:00                nan   00:20:00         08:55:00
+       nan          2025-03-21 00:00:00              viernes        08:00:00            13:45:00                nan        nan         05:45:00
+       nan          2025-03-22 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-23 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-24 00:00:00                lunes        08:00:00            17:10:00                nan   00:40:00         08:30:00
+       nan          2025-03-25 00:00:00               martes        08:02:00            17:17:00                nan   00:40:00         08:35:00
+       nan          2025-03-26 00:00:00            miércoles        08:12:00            17:10:00                nan   00:40:00         08:18:00
+       nan          2025-03-27 00:00:00               jueves        08:03:00            17:00:00                nan   00:40:00         08:17:00
+       nan          2025-03-28 00:00:00              viernes        08:00:00            14:15:00                nan        nan         06:15:00
+       nan          2025-03-29 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-30 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-03-31 00:00:00                lunes        07:00:00            15:00:00                nan        nan         08:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan  H totales 6 days, 16:03:00
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan              nan
+--- Hoja: Abril ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6       Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda              nan
+       nan                          nan                  nan             nan                 nan                nan          A         Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L        Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V       Vacaciones
+       nan                Trabajador/a:                  nan            Mes:               Abril                nan          P      Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan              nan
+       nan                     Periodo:  2025-04-01 00:00:00              al 2025-04-30 00:00:00                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso    Horas totales
+       nan          2025-04-01 00:00:00               martes        07:00:00            15:00:00                nan        nan         08:00:00
+       nan          2025-04-02 00:00:00            miércoles        07:00:00            15:00:00                nan        nan         08:00:00
+       nan          2025-04-03 00:00:00               jueves        07:00:00            15:00:00                nan        nan         08:00:00
+       nan          2025-04-04 00:00:00              viernes        07:00:00            15:00:00                nan        nan         08:00:00
+       nan          2025-04-05 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-06 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-07 00:00:00                lunes        08:02:00            17:10:00                nan   00:40:00         08:28:00
+       nan          2025-04-08 00:00:00               martes        08:05:00            17:10:00                nan   00:40:00         08:25:00
+       nan          2025-04-09 00:00:00            miércoles        08:03:00            17:05:00                nan   00:40:00         08:22:00
+       nan          2025-04-10 00:00:00               jueves        08:08:00            17:05:00                nan   00:40:00         08:17:00
+       nan          2025-04-11 00:00:00              viernes        08:00:00            14:34:00                nan        nan         06:34:00
+       nan          2025-04-12 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-13 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-14 00:00:00                lunes        08:05:00            17:10:00                nan   00:40:00         08:25:00
+       nan          2025-04-15 00:00:00               martes        08:08:00            17:00:00                nan   00:40:00         08:12:00
+       nan          2025-04-16 00:00:00            miércoles        08:11:00            17:00:00                nan   01:00:00         07:49:00
+       nan          2025-04-17 00:00:00               jueves             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-18 00:00:00              viernes             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-19 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-20 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-21 00:00:00                lunes        08:00:00            17:10:00                nan   01:20:00         07:50:00
+       nan          2025-04-22 00:00:00               martes        08:02:00            17:15:00                nan   00:40:00         08:33:00
+       nan          2025-04-23 00:00:00            miércoles        08:00:00            17:10:00                nan   00:40:00         08:30:00
+       nan          2025-04-24 00:00:00               jueves        08:03:00            09:30:00               Baja        nan         01:27:00
+       nan          2025-04-25 00:00:00              viernes        08:00:00            15:00:00                nan        nan         07:00:00
+       nan          2025-04-26 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-27 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-04-28 00:00:00                lunes        08:03:00            12:00:00             Apagón        nan         03:57:00
+       nan          2025-04-29 00:00:00               martes        08:00:00            17:00:00                nan   00:40:00         08:20:00
+       nan          2025-04-30 00:00:00            miércoles        08:15:00            17:00:00                nan   01:00:00         07:45:00
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan  H totales 5 days, 13:49:00
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan              nan
+--- Hoja: Mayo ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6      Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan             nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda             nan
+       nan                          nan                  nan             nan                 nan                nan          A        Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L       Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V      Vacaciones
+       nan                Trabajador/a:                  nan            Mes:                Mayo                nan          P     Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan             nan
+       nan                     Periodo:  2025-05-01 00:00:00              al 2025-05-31 00:00:00                nan        nan             nan
+       nan                          nan                  nan             nan                 nan                nan        nan             nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso   Horas totales
+       nan          2025-05-01 00:00:00               jueves             nan                 nan                  F        nan        00:00:00
+       nan          2025-05-02 00:00:00              viernes             nan                 nan                  F        nan        00:00:00
+       nan          2025-05-03 00:00:00               sábado             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-04 00:00:00              domingo             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-05 00:00:00                lunes        08:02:00            17:05:00                nan   00:40:00        08:23:00
+       nan          2025-05-06 00:00:00               martes        08:05:00            17:10:00                nan   00:40:00        08:25:00
+       nan          2025-05-07 00:00:00            miércoles        08:00:00            17:10:00                nan   00:40:00        08:30:00
+       nan          2025-05-08 00:00:00               jueves             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-09 00:00:00              viernes             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-10 00:00:00               sábado             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-11 00:00:00              domingo             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-12 00:00:00                lunes             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-13 00:00:00               martes             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-14 00:00:00            miércoles             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-15 00:00:00               jueves             nan                 nan                  F        nan        00:00:00
+       nan          2025-05-16 00:00:00              viernes             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-17 00:00:00               sábado             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-18 00:00:00              domingo             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-19 00:00:00                lunes             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-20 00:00:00               martes             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-21 00:00:00            miércoles             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-22 00:00:00               jueves             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-23 00:00:00              viernes             nan                 nan                  V        nan        00:00:00
+       nan          2025-05-24 00:00:00               sábado             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-25 00:00:00              domingo             nan                 nan                nan        nan        00:00:00
+       nan          2025-05-26 00:00:00                lunes        07:58:00            17:10:00                nan   00:40:00        08:32:00
+       nan          2025-05-27 00:00:00               martes        08:02:00            17:10:00                nan   00:40:00        08:28:00
+       nan          2025-05-28 00:00:00            miércoles        08:00:00            17:05:00                nan   00:40:00        08:25:00
+       nan          2025-05-29 00:00:00               jueves        08:05:00            17:10:00                nan   00:40:00        08:25:00
+       nan          2025-05-30 00:00:00              viernes        08:00:00            14:28:00                nan        nan        06:28:00
+       nan          2025-05-31 00:00:00               sábado             nan                 nan                nan        nan        00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan             nan
+       nan                          nan                  nan             nan                 nan                nan  H totales 2 days, 2:43:00
+       nan                          nan                  nan             nan                 nan                nan        nan             nan
+       nan                          nan                  nan             nan                 nan                nan        nan             nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan             nan
+--- Hoja: Junio ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6       Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda              nan
+       nan                          nan                  nan             nan                 nan                nan          A         Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L        Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V       Vacaciones
+       nan                Trabajador/a:                  nan            Mes:               Junio                nan          P      Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan              nan
+       nan                     Periodo:  2025-06-01 00:00:00              al 2025-06-30 00:00:00                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso    Horas totales
+       nan          2025-06-01 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-02 00:00:00                lunes        07:22:00            16:35:00                nan   00:40:00         08:33:00
+       nan          2025-06-03 00:00:00               martes        07:28:00            16:20:00                nan   00:20:00         08:32:00
+       nan          2025-06-04 00:00:00            miércoles        07:15:00            16:15:00                nan   00:30:00         08:30:00
+       nan          2025-06-05 00:00:00               jueves        07:16:00            16:19:00                nan   00:40:00         08:23:00
+       nan          2025-06-06 00:00:00              viernes        08:00:00            14:05:00                nan        nan         06:05:00
+       nan          2025-06-07 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-08 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-09 00:00:00                lunes        07:12:00            18:44:00                nan   02:00:00         09:32:00
+       nan          2025-06-10 00:00:00               martes        07:03:00            16:45:00                nan   01:30:00         08:12:00
+       nan          2025-06-11 00:00:00            miércoles        07:02:00            16:30:00                nan   02:00:00         07:28:00
+       nan          2025-06-12 00:00:00               jueves        07:40:00            16:20:00                nan   00:40:00         08:00:00
+       nan          2025-06-13 00:00:00              viernes               V                   V                nan        nan                V
+       nan          2025-06-14 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-15 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-16 00:00:00                lunes        07:12:00            16:18:00                nan   00:40:00         08:26:00
+       nan          2025-06-17 00:00:00               martes        07:08:00            16:25:00                nan   00:40:00         08:37:00
+       nan          2025-06-18 00:00:00            miércoles        07:12:00            16:20:00                nan   00:40:00         08:28:00
+       nan          2025-06-19 00:00:00               jueves        07:30:00            16:15:00                nan   00:40:00         08:05:00
+       nan          2025-06-20 00:00:00              viernes        07:10:00            14:00:00                nan        nan         06:50:00
+       nan          2025-06-21 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-22 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-23 00:00:00                lunes             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-24 00:00:00               martes             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-25 00:00:00            miércoles             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-26 00:00:00               jueves             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-27 00:00:00              viernes             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-28 00:00:00               sábado             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-29 00:00:00              domingo             nan                 nan                nan        nan         00:00:00
+       nan          2025-06-30 00:00:00                lunes             nan                 nan                nan        nan         00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan  H totales 4 days, 17:41:00
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan                  nan             nan                 nan                nan        nan              nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan              nan
+--- Hoja: Julio ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6    Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda           nan
+       nan                          nan                  nan             nan                 nan                nan          A      Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L     Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V    Vacaciones
+       nan                Trabajador/a:                  nan            Mes:               Julio                nan          P   Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan           nan
+       nan                     Periodo:  2025-07-01 00:00:00              al 2025-07-31 00:00:00                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso Horas totales
+       nan          2025-07-01 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-02 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-03 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-04 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-05 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-06 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-07 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-08 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-09 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-10 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-11 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-12 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-13 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-14 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-15 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-16 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-17 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-18 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-19 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-20 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-21 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-22 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-23 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-24 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-25 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-26 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-27 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-28 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-29 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-30 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-07-31 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan  H totales       0:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan           nan
+--- Hoja: Agosto ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6    Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda           nan
+       nan                          nan                  nan             nan                 nan                nan          A      Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L     Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V    Vacaciones
+       nan                Trabajador/a:                  nan            Mes:              Agosto                nan          P   Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan           nan
+       nan                     Periodo:  2025-08-01 00:00:00              al 2025-08-31 00:00:00                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso Horas totales
+       nan          2025-08-01 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-02 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-03 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-04 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-05 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-06 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-07 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-08 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-09 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-10 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-11 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-12 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-13 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-14 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-15 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-16 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-17 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-18 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-19 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-20 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-21 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-22 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-23 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-24 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-25 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-26 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-27 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-28 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-29 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-30 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-08-31 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan  H totales       0:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan           nan
+--- Hoja: Septiembre ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6    Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda           nan
+       nan                          nan                  nan             nan                 nan                nan          A      Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L     Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V    Vacaciones
+       nan                Trabajador/a:                  nan            Mes:          Septiembre                nan          P   Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan           nan
+       nan                     Periodo:  2025-09-01 00:00:00              al 2025-09-30 00:00:00                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso Horas totales
+       nan          2025-09-01 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-02 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-03 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-04 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-05 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-06 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-07 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-08 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-09 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-10 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-11 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-12 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-13 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-14 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-15 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-16 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-17 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-18 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-19 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-20 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-21 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-22 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-23 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-24 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-25 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-26 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-27 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-28 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-29 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-09-30 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan  H totales       0:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan           nan
+--- Hoja: Octubre ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6    Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda           nan
+       nan                          nan                  nan             nan                 nan                nan          A      Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L     Día libre
+       nan               DNI Empleado:                   nan             nan                 nan                nan          V    Vacaciones
+       nan                Trabajador/a:                  nan            Mes:             Octubre                nan          P   Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan           nan
+       nan                     Periodo:  2025-10-01 00:00:00              al 2025-10-31 00:00:00                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso Horas totales
+       nan          2025-10-01 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-02 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-03 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-04 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-05 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-06 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-07 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-08 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-09 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-10 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-11 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-12 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-13 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-14 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-15 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-16 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-17 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-18 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-19 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-20 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-21 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-22 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-23 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-24 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-25 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-26 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-27 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-28 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-29 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-30 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-10-31 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan  H totales       0:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan           nan
+--- Hoja: Noviembre ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6    Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda           nan
+       nan                          nan                  nan             nan                 nan                nan          A      Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L     Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V    Vacaciones
+       nan                Trabajador/a:                  nan            Mes:           Noviembre                nan          P   Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan           nan
+       nan                     Periodo:  2025-11-01 00:00:00              al 2025-11-30 00:00:00                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso Horas totales
+       nan          2025-11-01 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-02 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-03 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-04 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-05 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-06 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-07 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-08 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-09 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-10 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-11 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-12 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-13 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-14 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-15 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-16 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-17 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-18 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-19 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-20 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-21 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-22 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-23 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-24 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-25 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-26 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-27 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-28 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-29 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-11-30 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan  H totales       0:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan           nan
+--- Hoja: Diciembre ---
+Unnamed: 0                   Unnamed: 1           Unnamed: 2      Unnamed: 3          Unnamed: 4         Unnamed: 5 Unnamed: 6    Unnamed: 7
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan Registro de horas trabajadas                  nan             nan                 nan                nan    Leyenda           nan
+       nan                          nan                  nan             nan                 nan                nan          A      Ausencia
+       nan                     Empresa: Idearium Consultores            Año:                2025                nan          L     Día libre
+       nan                 ID Empleado:                  nan             nan                 nan                nan          V    Vacaciones
+       nan                Trabajador/a:                  nan            Mes:           Diciembre                nan          P   Día permiso
+       nan                Departamento:            Geografía             nan                 nan                nan        nan           nan
+       nan                     Periodo:  2025-12-01 00:00:00              al 2025-12-31 00:00:00                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                        Fecha     Día de la semana Hora de entrada      Hora de salida       Horas Extras   Descanso Horas totales
+       nan          2025-12-01 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-02 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-03 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-04 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-05 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-06 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-07 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-08 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-09 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-10 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-11 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-12 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-13 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-14 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-15 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-16 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-17 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-18 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-19 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-20 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-21 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-22 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-23 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-24 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-25 00:00:00               jueves             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-26 00:00:00              viernes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-27 00:00:00               sábado             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-28 00:00:00              domingo             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-29 00:00:00                lunes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-30 00:00:00               martes             nan                 nan                nan        nan      00:00:00
+       nan          2025-12-31 00:00:00            miércoles             nan                 nan                nan        nan      00:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan  H totales       0:00:00
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan                  nan             nan                 nan                nan        nan           nan
+       nan                          nan        FIRMA EMPRESA             nan                 nan FIRMA TRABAJADOR/A        nan           nan
+--- Hoja: Meses ---
+     Enero
+   Febrero
+     Marzo
+     Abril
+      Mayo
+     Junio
+     Julio
+    Agosto
+Septiembre
+   Octubre
+ Noviembre
+ Diciembre

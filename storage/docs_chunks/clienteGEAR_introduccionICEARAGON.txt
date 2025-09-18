@@ -1,0 +1,136 @@
+
+
+
+
+
+
+Material formativo
+	
+MANUAL DE INTRODUCCIÓN A la INFRAESTRUCTURA DE CONOCIMIENTO ESPACIAL de aragón (ICEARAGON) 
+
+ÍNDICE
+
+Nos complace darte la bienvenida al Instituto Geográfico de Aragón.
+Este manual ha sido creado para proporcionar pautas generales sobre el funcionamiento y la organización de ICEARAGÓN, la Infraestructura de Conocimiento Espacial de Aragón. 
+2. Introducción a ICEARAGÓN
+Definición
+ICEARAGON, es el paso al frente del Gobierno de Aragón para conseguir los objetivos marcados desde la Directiva Europea 2007/2/CE INSPIRE (Infrastructure for Spatial Information in Europe), la Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE), y la Ley 3/2022, de 6 de octubre, de información geográfica de Aragón (LIGA) que tienen por objeto hacer disponible información geográfica relevante, concertada y de calidad de forma que se permita la formulación, implementación, monitorización y evaluación de las políticas de impacto o de dimensión territorial.
+
+	ICEARAGON se define como la organización de los conjuntos de datos georreferenciados del territorio de Aragón distribuidos en diferentes sistemas de información geográfica, accesible por la red de Internet. Implica la suma de políticas, estándares, recursos humanos y tecnologías necesarias para descubrir, informar, distribuir, usar y mantener información geográfica.
+
+	En suma, es un sistema informático integrado por un conjunto de recursos (servidores, catálogos, datos, metadatos, servicios, aplicaciones y geoportales) con que se gestiona y trabaja la información geográfica (ya sea cartografía, planos, mapas, ortofotos, imágenes de satélite) para que sean públicos en Internet cumpliendo unas condiciones de interoperabilidad (normas, especificaciones, protocolos) que permiten que cualquier usuario ya sea público o privado, pueda utilizar la geoinformación a través de un navegador web. 
+Portal
+La dirección del portal web de ICEARAGON de acceso público es: https://icearagon.aragon.es/portal/ . Desde aquí hay acceso a múltitud de páginas web relacionadas con la Infraestructura o IGEAR. También hay acceso directo a las aplicaciones que muestran los datos espaciales, y los ponen a disposición de los usuarios (visualización, descarga o servicios web).
+Te recomiendo que inviertas el tiempo suficiente en investigar todos los rincones de este portal, que va a ser tu “nueva casa” mientras sigas ligado al IGEAR.
+3. ARQUITECTURA DE DATOS
+Los datos se almacenan en bases de datos estructuradas en esquemas. Para poder publicar en la web estos mismos es necesario emplear un servidor. Posteriormente, las aplicaciones muestran lo que el servidor ha publicado.
+Entornos
+El proceso brevemente explicado arriba hay que multiplicarlo por 3. Es decir, ICEARAGON tiene 3 entornos en los que tanto las BD (con toda su información), servidores y aplicaciones están replicadas completamente (o deberían). Estos 3 entornos son:
+Desarrollo → es el sitio en el que puedes hacer pruebas
+Producción/Gestión → paso intermedio entre las pruebas y los resultados definitivos
+Publicación → lo que ya es definitivo y está correcto. Se muestra al usuario final/público
+ Durante la lectura de los siguientes aparatados en relación a la arquitectura -BD, servidores y aplicaciones-, tienes que tener en mente que todos ellos están replicados en esos 3 entornos. Se va a hacer referencia en los mismos a diferentes denominaciones, enlaces… que tienen cada uno de ellos.
+Es necesario mencionar que cada uno de estos entornos tiene su propio flujo cerrado y no se pueden ni deben mezclar. Para mostrar algo en una aplicación en el entorno de Publicación, tiene que estar publicado en el servidor de Publicación y que estar almacenado en la BD de Publicación. Un ejemplo incorrecto sería intentar mostrar algo en una aplicación de Publicación, que esta publicado o almacenado en Desarrollo/Gestión. De todos modos, si por alguna confusión lo intentases no sería posible porque, como se ha mencionado, son flujos cerrados que no se ven unos a otros.
+El flujo de trabajo correcto es comienza probando en el entorno de Desarrollo. Cuando se ha comprobado que funciona correctamente, se replica en Gestión y finalmente, en Publicación que es de cara al público.
+Bases de datos (BD)
+En el Gobierno de Aragón se trabaja con bases de datos (BD, de ahora en adelante) de las que son propietarios cada uno de los Departamentos (SALUD, Energía, Medio Ambiente...) y a las que el IGEAR tiene acceso, puesto que es el encargado -en la mayoría de los casos- de ponerlas a disposición del público.
+Dentro de las que el IGEAR es propietario encontramos: bdideaigar y bdidearagon. Estas a su vez se organizan en esquemas:
+BDIDEAIGAR
+Carto
+Atlas
+Atlas3
+Icearagon
+...
+BDIDEARAGON
+Carto → es el esquema propietario del IGEAR, así como otros Dpto tienen el suyo propio (ej: saludp = Salud). La información generada por el IGEAR debería estar aquí.
+Geoext* → almacena información proveniente de fuentes externa (Catastro, IGN...)
+Geopub* → almacena información pública, que NO oficial
+Georca* → almacena información oficial (está recogida en el Registro Cartográfico de Aragón)
+Geores* → almacena información restringida
+Icearagon
+…
+*En los esquemas Geos hay información de muchos Departamentos, y es desde estos de dónde se publica en las diferentes apps
+Estas BD están en 2 Sistemas de Gestión de BD, Postrgres y Oracle. No contienen exactamente la misma información. La principal diferencia entre ambos es que el primero de ellos es OpenSource, y el segundo es privado. Anteriormente a la aparición de ArcGIS Pro, ArcGIS solo permitía conectarse a BD Oracle, pero con el nuevo porgrama ya es posible hacerlo también a Postrgres. Por su parte QGIS, da menos problemas al conectarse a BD Postgres. En IGEAR y su Infraestructura, se emplea presencialmente Postgres.
+En ellas almacenan tablas -que pueden tener o no una columna de geometría-, y vistas -que provienen de tablas o de otras vistas, permitiendo seleccionar solo una parte, añadiendo campos de otra...-.
+Figura 1: previsualización aspecto bdidearagon desde pgAdmin
+Acceso y conexiones a las BD
+Para acceder a la información de la BD hay varias maneras de conectarse:
+Desde un SIG
+Desde un gestor de BD
+PGAdmin para las bd de Postgres (las que terminan en V)
+Toad para las bd de Oracle (las que terminan en Z)
+La conexión es diferente dependiendo del entorno en el que quieras trabajar y del gestor de bd:
+Desarrollo → biz-01 y biv-02
+Producción/Gestión → boz-01 y bov-02
+Publicación → bov-03
+Pídele a un compañer@ que te ayude a conectarte a ellas (hay diferentes contraseñas).
+
+Servidores
+Toda la información almacenada en las BD que quiera ponerse a disposición del público hay que publicarla en la web. De esta manera, puede ser utilizada por nuestras propias aplicaciones y por los usuarios de servicios web (WMS, WMTS…).
+Para publicar en la web esta información tenemos varias formas dependiendo: 
+Si la BD es de Oracle, la publicación se hace desde ArcGIS Server / Enterprise → se publica desde aquí toda la información en formato ráster porque anteriormente la otra opción no lo permitía. 
+Si es desde Postgres (lo más habitual) se publica desde Geoserver. Como se ha comentado anteriormente todo está multiplicado por los entornos. Así encontramos:
+Desarrollo → https://idearagondes.aragon.es/geoserver/web/?11 
+Producción/Gestión → https://gestion4-idearagon.aragon.es/geoserver/web/?0 
+Publicación → como ya sabes este es el entorno “de cara al público”. Por ello, por si hay algún problema con el servidor los datos dejarán de verse. Para evitar esto, existen 2 nodos, por si uno se cae que siga el otro funcionando (aunque vaya algo más lento). Si ambos nodos funcionan correctamente, las consultas a los datos en web se dividen para que su funcionamiento sea más rápido. Cuando publicas un dato en uno de ellos, es necesario hacerlo también en el otro. Los nodos servidores de Publicación son: https://gestion1-idearagon.aragon.es/geoserver/web/ y https://gestion2-idearagon.aragon.es/geoserver/web/ 
+Además de introducir la información a publicar, es necesario especificar el estilo con el que se quiere visualizar posteriormente (exportar como .sld desde QGIS).
+Aplicaciones
+Y al final de todo este flujo tenemos las aplicaciones. Son los clientes que van a consumir los datos publicados por los servidores (independientemente de si son por ArcGIS Server / Enterprise o Geoserver) y los van a poner a disposición del usuario final -público general en el caso del entorno de Publicación-.
+Algunas de estas aplicaciones que muestran datos siguiendo este flujo de BD-Servidor-App son: Buscador, Visor 2D, Atlas, Cartoteca, Toponimia, SITA, Descargas, Servicos WMS, WMTS..… Si bien cada una de ellas requiere de algunos pasos más para lograr mostrar los datos (existen manuales de cada una de ellas, pregúntales a tus compañer@s que seguro te los pueden compartir).
+Para acceder a los entornos de esas aplicaciones, los enlaces son: 
+Desarrollo → https://icearagondes.aragon.es/portal/ (se añade des, tras icearagon)
+Producción/Gestión → no hay
+Publicación → https://icearagon.aragon.es/portal/ 
+
+4. Aplicación de gestión de ICEARAGÓN
+Además de las aplicaciones mencionadas anteriormente (aplicaciones frontales), existen aplicaciones para facilitar la gestión de los datos, y de las mismas aplicaciones frontales.
+Estas aplicaciones se aglutinan en la Plataforma de Servicios y Aplicaciones de IGEAR (PSA). Como en todo, existen varios entornos, que permiten gestionar los datos y aplicaciones de estos mismos (ej: Desarrollo con Desarrollo), sin cruzarse con otros. Los enlaces a los entornos de PSA:
+Desarrollo → https://icearagondes.aragon.es/psa/ (se añade des, tras icearagon)
+Producción/Gestión → no hay
+Publicación → https://icearagon.aragon.es/psa/ 
+Figura 2: aspecto de la PSA
+En la PSA puedes tener más o menos permisos y en función de ellos aparecerán más o menos cuadrados. Si necesitas para algo específico más permisos, consúltalo con la persona de la DGA que gestione las cuentas.
+A continuación, se van a explicar algunas de las herramientas o se indicará si hay ya un Manual disponible para su utilización.
+Geodatos
+Edición de geodatos
+Sincronización de geodatos
+Validador de geometrías
+Carga masiva de geodatos (GeoDataLoader)
+Se empela para subir capas del
+Test de geometrías
+Descargas
+Catálogo
+CISA
+Atlas
+Grafo
+5. METADATOS- GEONETWORK-RCA? FILEZILLA?
+Título de segundo nivel
+En el caso de....
+Título de tercer nivel
+Los párrafos utilizarán el estilo “Cuerpo de texto”. Utilizar negrita para destacar elementos importantes e itálica para palabras en otros idiomas como por ejemplo feature. El uso de subrayado se utiliza para destacar alguna parte también, pero no se suele usar.
+La redacción debe ser siempre en impersonal, evitando la primera persona del singular o del plural.
+Si hay código hay que usar este tipo de estilo:
+select distinct st_srid(<<columna_geom>>) from <<tabla>>;
+Si tiene sentido, mejor si puede ser con sintaxis coloreada (por ejemplo, no tiene mucho sentido para comandos de shell, pero sí para código javascript). Evitar pantallazos de código en lo posible. Para ello copiar el código en https://tohtml.com, seleccionar el lenguaje y el estilo eclipse y trasladar el resultado al documento word. Se recomienda cambiar tabuladores por dos espacios para que no quede muy estirado:
+select distinct st_srid(<<columna_geom>>) from <<tabla>>;
+
+if (rs_esquema.next()) {
+  if (rs_esquema.getString("esquema") != "") {
+    if (! rs_esquema.getString("esquema").equals("boundingbox")) {
+      xmin = rs_esquema.getString("xmin_f");
+      ymin = rs_esquema.getString("ymin_f");
+      xmax = rs_esquema.getString("xmax_f");
+      ymax = rs_esquema.getString("ymax_f");
+    }
+  }
+}
+
+Las figuras se referenciarán en el texto entre paréntesis y con su número (3), añadiendo en el menú desde “Insertar Referencia cruzada”. En el pie de figura se utilizará el estilo caption la secuencia Ilustración (ver ejemplo). Es importante que siempre haya pie de figura.
+Figura 3: pie de figura
+Las listas de elementos se mostrarán así:
+Item primer nivel.
+Item 2 de primer nivel.
+Item 3 de primer nivel con subitems.
+Subitem de segundo nivel.
+Las tablas se representarán así, incluyendo pie de tabla con secuencia tabla, y siendo referenciada desde el texto con su número como referencia cruzada:
+Tabla 1: ejemplo de tabla

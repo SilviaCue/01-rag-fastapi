@@ -1,0 +1,91 @@
+Pasos a Seguir 
+ 
+En vuestro portátil. 
+ 
+Instalar CUDA Toolkit 11.8 y cuDNN 11.8: 
+ 
+1. CUDA Toolkit 11.8 ( desinstalar versiones anteriores o posteriores): 
+Descargar e instalar desde NVIDIA CUDA Toolkit 11.8: 
+https://developer.nvidia.com/cuda-11-8-0-download-archive 
+ 
+2. cuDNN 11.8: 
+- 
+Descargar los archivos  cuDNN 11.8 desde 
+https://developer.nvidia.com/rdp/cudnn-archive 
+- 
+Descargar esta versión: Download cuDNN v8.9.7 (December 5th, 2023), for 
+CUDA 11.x 
+- 
+Extraer los archivos descargados . 
+ 
+3. Copiar y Reemplazar Archivos de cuDNN: 
+ 
+- 
+Ir a la carpeta de los archivos de cuDNN. 
+- 
+Copiar los archivos  bin,  include y lib y reemplázalos en los por los 
+RCHIVOS correspondiendentes en de CUDA Toolkit: 
+bin: 
+- 
+Enlace para encontrar el archivo  bin a reemplazar:   C:\Program 
+Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin 
+include: 
+- 
+Enlace para encontrar el archivo  includea reemplazar:   C:\Program 
+Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include 
+lib: 
+- 
+Enlace para encontrar el archivo lib a reemplazar:   C:\Program 
+Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\lib\x64 
+ 
+ 
+ 
+ 
+ 
+ 
+4. Agregar Rutas de CUDA y cuDNN al PATH del Sistema: Abrir el menú 
+Inicio y buscar "Variables de entorno". 
+ 
+ 
+5. Seleccionar "variables de entorno del sistema". Seleccionar la variable 
+Path, luego hacer clic en "Editar”. 
+ 
+ 
+6. Agregar una a una cada ruta por separado y  haciendo clic en "Nuevo" 
+para cada una de ellas: 
+ 
+ 
+7. Aceptar todo para guardar. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Siguientes pasos en Visual 
+8. Reemplazar las instalaciones en requirement.txt por estas: 
+fastapi 
+uvicorn 
+torch==2.3.1+cu118 
+torchvision==0.15.4+cu118 
+torchaudio==2.3.1+cu118 
+diffusers 
+Pillow 
+jinja2 
+transformers 
+tensorflow 
+accelerate 
+ 
+9. Instalar Dependencias:  pip install -r requirements.txt 
+ 
+10. Ejecutar al app : uvicorn main:app --reload 
+ 
+ 
+ 

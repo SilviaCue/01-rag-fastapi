@@ -1,0 +1,141 @@
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+1
+Gestión de tabla 
+normativa en RJT Visor 2D
+Sesión de formación
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+2
+ÍNDICE
+❑
+Introducción
+❑
+Conexión a tabla normativa (usando pgAdmin)
+❑
+Ver datos de una categoría
+❑
+Combinación de varios filtros y comodines
+❑
+Mostrar menos columnas y aplicar filtros
+❑
+Normalizar valores
+❑
+Notas finales
+❑
+Dudas y/o preguntas.
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+3 
+Introducción
+❑
+El Visor 2D de Idearagon incluye posibilidad de consulta del RJT definido
+❑
+Se establecen categorías para reflejar la normativa asociada:
+–
+General
+–
+Específica
+–
+Otros links
+❑
+La definición de la normativa se gestiona en una tabla en base de datos
+–
+Tabla editable desde herramienta pgAdmin (y otras)
+–
+Consultable usando lenguaje SQL y con interfaz gráfica
+–
+Aplicación de cambios inmediata
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+4 
+Introducción
+❑
+Para cada elemento de la tabla se almacena:
+–
+Identificadores (mantener secuencia)
+–
+Tipo (Especifica, General o “Otros links”)
+–
+Tema (relacionado con el visor)
+–
+Categoría  (según tipo toma unos valores u otros)
+–
+Descripción
+–
+Publicación (literal)
+–
+Tooltip
+–
+Url
+–
+ELI (columna a borrar)
+–
+Fecha alta y fecha baja
+❑
+Los valores de fecha alta y baja existentes no están bien formateados. Pendiente definir 
+formato.
+❑
+Las URL de acceso en lo posible se han definido según iniciativa ELI para posible 
+reaprovechamiento futuro + son persistentes en el tiempo
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+5 
+Introducción
+TIPO
+TEMA
+CATEGO
+DESCRIP
+PUBLICACION
+TOOLTIP + URL
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+6 
+Conexión a tabla normativa (usando pgAdmin)
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+7 
+Conexión a tabla normativa (usando pgAdmin)
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+8 
+Ver datos de una categoría
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+9 
+Combinación de varios filtros y comodines
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+10 
+Mostrar menos columnas y aplicar filtros
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+11 
+Normalizar valores
+¡Cuidado con espacios en 
+blanco!
+Importante ya que en el visor se agrupa según 
+catego
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+12 
+Notas finales
+❑
+Se puede editar directamente sobre la tabla, asegurándose de que se guardan cambios
+❑
+El visor solo carga la normativa de cada categoría una vez, las siguientes veces las 
+debería reaprovechar => recargar el visor (F5)
+❑
+La fecha alta/baja => ¿Fecha de publicación? ¿Fecha de entrada en vigor? ¿Fecha de la 
+norma?
+❑
+El resultado de las consultas se puede exportar a otros formatos e incluso se puede 
+copiar y pegar en Excel para seguir trabajando.
+Instituto Geográfico de Aragón (IGEAR) – Gobierno de Aragón
+Formación: Gestión de tabla normativa en RJT Visor 2D
+13 
+Notas finales
+❑
+Recomendable trabajar siempre que sea para hacer pruebas en desarrollo
+❑
+Es muy recomendable hacer copia (resguardo) antes de empezar y restaurarla si hace 
+falta.

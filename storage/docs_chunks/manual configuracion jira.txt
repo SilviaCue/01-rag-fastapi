@@ -1,0 +1,172 @@
+..1.1
+
+idearium
+Manual Jira
+
+..1.2
+
+Inscrita en el Registro Mercantil de Zaragoza, Tomo T 3715, F 109, S 8, H Z 48704, I/A 1- CIF: B-99.247.553
+ManualUsuario_Jira.odt
+03/09/2025                                                                                                        Página 1 de 7**Índice**
+Introducción..................................................................2
+Crear proyecto..............................................................2
+Crear una tarea............................................................5
+SPRINT.......................................................................5
+Crear una subtarea......................................................6
+Blacklog.....................................................................7
+
+**Introducción**
+Jira es una herramienta de software desarrollada por Atlassian, diseñada para la gestión de proyectos y seguimiento de incidencias. Es ampliamente utilizada por equipos de desarrollo ágil para planificar, rastrear y gestionar el progreso de sus proyectos. Ofrece funcionalidades como la creación de tareas, asignación de responsabilidades y monitoreo del rendimiento en tiempo real.
+
+**Crear proyecto**
+Crear proyecto
+
+Seleccionar cualquier plantillaPlantillas de
+proyectos
+
+Desarrollo de software
+Kanban
+Scrum
+Planificación de primer nivel
+
+Marcar gestionado por empresa
+
+Configuración simplificada
+Configuración de los partners
+
+Ponte en marcha rápidamente con una
+configuración simplificada
+Sácale partido a un control total con la
+configuración, personalización y flexibilidad de
+los partners.
+
+Cualquiera de tu equipo puede configurarlo y mantenerlo
+Configuración y mantenimiento a cargo de tus
+administradores de Jira
+
+La configuración no afecta al resto de los proyectos
+Configuración estandarizada compartida para todos los
+proyectos
+
+Configuración sencilla de tipos de incidencia y campos
+personalizados
+Control total sobre los tipos de incidencia y los campos
+personalizados
+
+Configuración sencilla para varios flujos de trabajo
+Flujos de trabajo, estados y transiciones de incidencias
+personalizables
+
+Permisos de niveles de acceso
+Esquemas de permisos detallados
+
+Selecciona un proyecto gestionado por el equipo
+Selecciona un proyecto gestionado por la empresa
+
+Marcar comparte configuración con otro proyecto (seleccionar la configuración template project. (idea.)(mp)
+
+Añadir detalles del proyecto
+Explora las posibilidades a la hora de colaborar con tu equipo. Edita los
+detalles de los proyectos en cualquier momento en su configuración.
+Los campos obligatorios están marcados con un asterisco *
+
+Nombre *
+Prueba Manual
+Clave *
+PM
+
+Comparte la configuración con un proyecto ya existente
+
+Plantilla      Cambiar plantilla
+Kanban
+Jira
+Visualiza tu proyecto y hazlo avanzar utilizando
+incidencias en un tablero lleno de posibilidades.
+
+Tipo     Tipo de cambio
+Gestionados por la empresa
+Trabaja con otros equipos en muchos proyectos
+de forma estándar.
+
+Cancelar     SiguienteComparte la configuración con un proyecto ya existente
+Template Project (Idea.) (MP)
+
+Crear una tarea
+
+Dentro de los proyectos se crean diferentes tareas
+
+
+SPRINT
+
+Uno de los aspectos más importantes a la hora de crear la tarea es el concepto **sprint**, la organización del proyecto, como se vera posteriormente esto determinara estar la tarea visualizable o no (Blacklog).
+
+Por lo general estarán activos una serie de sprint para dar versatibilidad a la hora de planificar la finalización de la tarea.Sprint
+Sprint 20240901
+Mostrar solo sprints de este proyecto (MIS)
+
+SPRINTS RECIENTES
+Sprint 20240801
+Idearium - By Assignee
+IGEAR Sprint 2024
+Idearium - By Assignee
+
+ACTIVO
+GeoDeep Entr6 20250218
+Idearium - By Assignee
+IGEAR Sprint 2024
+Idearium - By Assignee
+
+
+En relación a los sprint clasificados dentro de "futuro" señalar que "Sprint Ideas" como su nombre indica son ideas que surgen y que en un futuro se harán pero no corren urgencia y sprint99991231 son tareas que se han quedado un poco bloqueadas en el tiempo y seguramente se acaben cerrando.
+
+Ademas comentar que hay sprint orientados a la comunicación interna como puede ser Sprint20240801 y otros orientados a la comunicación oficial con el cliente como IGEAR Sprint 2024.
+
+
+Crear una subtarea
+
+Cuando tenemos un proyecto que se divide en pequeñas fases, es crucial contar con una herramienta eficiente para gestionar cada etapa del proceso. Crear una subtarea es una posible solución que permite heredar características de la principal así como ver el grado de consecución.
+
+Subtareas
+MS-164 Investigar CDE de los socios del proyecto ALERT-PYR
+MS-165 Proponer y determinar modelo de datos común a cada CDE
+MS-166 Asesoramiento y resolución implementación de la infraestructura tecnológica para publicar en WMS
+MS-167 Elaborar topográfico visualización en el visor2D Riesgos. Cargar información en BD, y aplicaciones asociadas
+
+TAREAS POR HACER
+TAREAS POR HACER
+TAREAS POR HACER
+TAREAS POR HACER
+
+Blacklog
+
+El Backlog en Jira es una característica esencial para la gestión ágil de proyectos. Este espacio funciona como una lista priorizada de tareas, historias de usuario, mejoras y errores que el equipo debe abordar en futuras iteraciones o sprints.IGEAR
+Proyectos / IGEAR / IG board
+Backlog
+
+IGEAR Sprint 2004 15 abr - 20 abr
+
+16-391 Catastro 2004
+
+16-401 Carga SIGPAC2024
+
+16-389 Difusión del Catálogo de Datos Espaciales de Aragón (CDEA)
+
+16-390 Enriquecimiento del Catálogo de Aragón
+
+16-404 Ayudar externa
+
+16-403 Actualización semestral del Nomenclátor Geográfico de Aragón (NGA)
+
+16-582 POCTERA ALERT-FYR
+
+Backlog
+16-183 Prueba de la cuadrícula IGEAR
+
+16-591 MacoGPF
+
+16-804 Implementación de un servicio de datastore de imágenes satélite a zipfile
+
+
+Inscrita en el Registro Mercantil de Zaragoza, Tomo T 3715, F 109, S 8, H Z 48704, I/A 1- CIF: B-99.247.553
+ManualUsuario_Jira.odt
+03/09/2025                                                                                                                  Página 1 de 7

@@ -59,19 +59,39 @@ idearium_rag_fastapi/
 - El endpoint `/chat/` permite preguntas en lenguaje natural (onboarding, emails, resúmenes, vacaciones…)
 - Recupera los fragmentos más relevantes y genera una respuesta contextualizada (por defecto Gemini 1.5 Pro)
 - Permite también crear reuniones y otros eventos directamente en Google Calendar con preguntas como:
-"Pon una reunión chatRAG mañana a las 12" o "Agenda sprint el 2 de agosto a las 11"
+  - "Pon una reunión chatRAG mañana a las 12"
+  - "Agenda sprint el 2 de agosto a las 11"
+- Endpoints disponibles para gestión documental y consultas:
+  - **`/upload-one/`** → Subir y procesar un único documento (PDF/DOCX).
+  - **`/upload-multiple/`** → Subir y procesar varios documentos en lote.
+  - **`/status/`** → Consultar el número total de chunks indexados en FAISS.
+  - **`/download/{filename}`** → Descargar un documento original desde `storage/docs_raw/`.
+  - **`/dias-vacaciones/{nombre}`** → Consultar los días de vacaciones, festivos y permisos de una persona según el Excel interno.
+  - **`/chat/`** → Consultas generales al sistema RAG (documentación, onboarding, emails, vacaciones, calendario).
+
 
 #### Integración directa con Google Calendar
 - Consulta de eventos existentes: vacaciones, reuniones, festivos, entregas, sprints
 - Filtros dinámicos: día, semana, mes, próximo evento
 - Creación automática de eventos:
-  - Título generado por IA
-  - Invitados añadidos automáticamente desde secret_keys.json
+  - **Título sugerido por IA** (el usuario puede **confirmarlo o cambiarlo** antes de crear)
+  - **Confirmación en dos pasos**:
+    1) Propuesta inicial con fecha/hora y **título sugerido**  
+    2) **Confirmación final** para crear (`ok`, `vale`, `sí`, `confirmo`, `crear`, `crea`)
+  - **Invitados**:
+    - Se añaden automáticamente los definidos en `ALERT_EMAILS` (archivo `secret_keys.json`)
+    - El usuario puede **añadir o quitar** invitados por email en cualquier momento:
+      - `añade: persona@ejemplo.com, otra@ejemplo.com`
+      - `quita: persona@ejemplo.com`
   - Email inmediato al crear
   - Recordatorio 24 h antes (automático en Calendar)
 
-#### Onboarding
-- Generación de emails personalizados usando fragmentos del manual interno
+
+#### Onboarding y consultas de documentos
+- Generación de emails personalizados usando fragmentos del manual interno.
+- Consulta de documentos indexados en el sistema mediante preguntas en lenguaje natural.
+- Soporte especial para documentos que contienen **descripciones de pasos a seguir con imágenes, pantallazos e indicaciones en vivo**, gracias a la integración con **Gemini Multimodal**.
+
 
 ---
 

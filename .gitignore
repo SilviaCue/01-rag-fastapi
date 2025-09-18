@@ -3,6 +3,4 @@ __pycache__/
 .env
 venv/
 *.log
-storage/docs_raw/
-storage/docs_chunks/
 app/config/secret_keys.json

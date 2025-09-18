@@ -1,0 +1,19 @@
+CREACIÓN DE MÁQUINA VIRTUALLa finalidad de este documento es crear una máquina virtual en los servicios de Google cloud.Acceder a https://console.cloud.google.com/compute con las credenciales de idearium.eu@gmail.comLe damos a crear instancia y configuraremos los siguientes apartados:1 - Configuración de la máquina:Importante cambiar la región a Bélgica que es más asequible que por ejemplo España.Interfaz de usuario gráfica, Texto, Aplicación
+
+El contenido generado por IA puede ser incorrecto.Elegiremos como tipo de instancia una E2.Luego cambiamos la config de la núcleos y memoria haciendo click en el desplegable:Interfaz de usuario gráfica, Texto, Aplicación, Correo electrónico
+
+El contenido generado por IA puede ser incorrecto.2 – SO y almacenamiento:Salvo requerimientos específicos del proyecto instalaremos un Ubuntu 24.Interfaz de usuario gráfica, Aplicación
+
+El contenido generado por IA puede ser incorrecto.Haremos click en cambiar:Interfaz de usuario gráfica, Texto, Aplicación
+
+El contenido generado por IA puede ser incorrecto.2 – SO y almacenamiento:Interfaz de usuario gráfica, Aplicación, Teams
+
+El contenido generado por IA puede ser incorrecto.Le damos a crear y la instancia empezará a montarse y prepararse:Cuando ya estéInterfaz de usuario gráfica, Aplicación
+
+El contenido generado por IA puede ser incorrecto.Podremos conectarnos vía SSH de diversas formas haciendo click en el desplegable:Interfaz de usuario gráfica, Texto, Aplicación, Correo electrónico
+
+El contenido generado por IA puede ser incorrecto.Texto
+
+El contenido generado por IA puede ser incorrecto.Desplegando contenedores en Instancias Implementa contenedores en instancias y MIG  |  Compute Engine Documentation  |  Google Cloud Interfaz de usuario gráfica, Aplicación
+
+El contenido generado por IA puede ser incorrecto.
