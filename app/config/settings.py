@@ -3,7 +3,7 @@ import os
 from app.config.secret_keys import SecretKeys
 
 secrets = SecretKeys()
-
+#variables de entorno modelos sellecinados por defecto
 # API KEYS
 GEMINI_API_KEY = secrets.gemini_api_key
 HUGGINGFACE_API_KEY = secrets.huggingface_api_key

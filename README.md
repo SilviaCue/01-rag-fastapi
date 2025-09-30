@@ -60,7 +60,7 @@ idearium_rag_fastapi/
 - Recupera los fragmentos más relevantes y genera una respuesta contextualizada (por defecto Gemini 1.5 Pro)
 - Permite también crear reuniones y otros eventos directamente en Google Calendar con preguntas como:
   - "Pon una reunión chatRAG mañana a las 12"
-  - "Agenda sprint el 2 de agosto a las 11"
+  - "Pon un sprint el 2 de agosto a las 11"
 - Endpoints disponibles para gestión documental y consultas:
   - **`/upload-one/`** → Subir y procesar un único documento (PDF/DOCX).
   - **`/upload-multiple/`** → Subir y procesar varios documentos en lote.

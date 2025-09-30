@@ -1,7 +1,7 @@
 # app/config/genai_client.py
 import google.generativeai as genai
 from app.config.settings import GEMINI_API_KEY
-
+#Sautenticación y configuración del cliente Gemini
 
 def configure_genai():
     print("Configurando Gemini...")

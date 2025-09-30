@@ -6,6 +6,11 @@ from typing import Optional
 from docx import Document
 from app.providers.gemini_multimodal import GeminiMultimodalExtractor
 
+
+'''módulo FileParser que automatiza la extracción de texto en PDF y Word.
+Para los PDFs escaneados, primero intenta con Gemini Multimodal, y si falla uso Tesseract OCR como respaldo.
+Para los DOCX, un lector directo que extrae los párrafos sin necesidad de OCR.
+Todo se guarda como .txt, lo que me permite integrarlo fácilmente en el pipeline RAG y consultar después la información'''
 # Configuración OCR local (fallback)
 pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 os.environ["TESSDATA_PREFIX"] = r"C:\\Program Files\\Tesseract-OCR\\tessdata"
@@ -40,10 +45,12 @@ class FileParser:
         prompt = """
 Extrae TODO el texto visible en esta imagen escaneada de un documento técnico.
 - El texto está en español.
+-Debes incluir absolutamente todas las direcciones URL tal como aparecen, incluso si están incompletas, cortadas, resaltadas o en color.
 - Extrae cuidadosamente cualquier dirección URL, incluso si está resaltada o en color.
 - Respeta la estructura: títulos, párrafos, saltos de línea y sangrías.
 - No inventes contenido. No completes frases ni rellenes huecos.
 - Si hay tablas o listas, representa su contenido como texto plano.
+- Si encuentras numeraciones, conserva el número original y el orden.
 - Devuelve solo texto, sin explicaciones ni resúmenes.
 """
 

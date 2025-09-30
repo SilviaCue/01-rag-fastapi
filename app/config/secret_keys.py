@@ -1,7 +1,7 @@
 
 import json
 import os
-
+#cargar las claves desde secret_keys.json
 class SecretKeys:
     def __init__(self):
         path = os.path.join(os.path.dirname(__file__), '../../secret_keys.json')

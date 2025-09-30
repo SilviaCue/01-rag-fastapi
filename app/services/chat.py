@@ -3,6 +3,12 @@ import os
 import re
 import glob  # AJUSTE MINIMO: para localizar los .txt generados de PDFs
 from datetime import datetime, date, timedelta
+'''
+Sirve para:
+– Crear un evento en Google Calendar (con confirmación previa e invitados),
+– Consultar eventos ya existentes (vacaciones, reuniones, entregas, sprints, festivos),
+– O responder usando información de documentos (PDF/DOCX procesados automáticamente con Gemini multimodal o buscados vía FAISS).'''
+
 
 # Función para unificar las fechas
 MESES = {
