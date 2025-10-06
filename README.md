@@ -64,9 +64,8 @@ idearium_rag_fastapi/
 - Endpoints disponibles para gestión documental y consultas:
   - **`/upload-one/`** → Subir y procesar un único documento (PDF/DOCX).
   - **`/upload-multiple/`** → Subir y procesar varios documentos en lote.
-  - **`/status/`** → Consultar el número total de chunks indexados en FAISS.
   - **`/download/{filename}`** → Descargar un documento original desde `storage/docs_raw/`.
-  - **`/dias-vacaciones/{nombre}`** → Consultar los días de vacaciones, festivos y permisos de una persona según el Excel interno.
+
   - **`/chat/`** → Consultas generales al sistema RAG (documentación, onboarding, emails, vacaciones, calendario).
 
 

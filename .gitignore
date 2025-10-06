@@ -2,5 +2,8 @@ __pycache__/
 *.pyc
 .env
 venv/
+*.bin
+*.pt
 *.log
+*.faiss
 app/config/secret_keys.json

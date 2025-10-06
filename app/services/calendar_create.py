@@ -3,7 +3,9 @@ from datetime import datetime
 from typing import Optional, List
 #calendar_create.py → solo se encarga de crear eventos (usa POST al script)
 # URL del script de Google Apps para crear eventos en Google Calendar
-CALENDAR_POST_URL = "https://script.google.com/macros/s/AKfycbzwM8osD7jWBqr3Dfsx_il59rEie4BE-oQ5usPDG0iNugiDEAbs50JKFsUKrqNiH8dQmg/exec"
+CALENDAR_POST_URL = "https://script.google.com/macros/s/AKfycbzliMNV1Sz7zp844nRFz_KHy4yLkRAob6w_B4jCBOUT8BcbV5h7HDuuxzW9Uee8tu7wxw/exec"
+
+#AKfycbzliMNV1Sz7zp844nRFz_KHy4yLkRAob6w_B4jCBOUT8BcbV5h7HDuuxzW9Uee8tu7wxw
 # Función para crear un evento en Google Calendar
 def crear_evento_en_calendar(
     titulo: str,
